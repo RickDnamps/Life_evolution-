@@ -22,13 +22,13 @@ On peut changer de profil à tout moment avec le bouton en haut de la page.
 | Activité | Ce qu'on y fait |
 |---|---|
 | 🌋 **Le grand début** | L'histoire avant les animaux, en 7 chapitres animés : le nuage d'où naît le Soleil, la Terre de lave, la naissance de la Lune, les premiers océans, la « recette de la vie », LUCA et les premières traces de vie. |
-| 🌳 **Arbre de la vie** | Un vrai arbre de l'évolution dessiné : le temps avance de gauche à droite, les branches se séparent à chaque ancêtre commun, les ères sont colorées et les extinctions marquées. Survoler un groupe illumine sa lignée. Les boutons « Montre ma lignée », « Le voyage » et « Plein écran » (pour le vidéoprojecteur) complètent l'arbre, et une vue « Liste » reste disponible. |
+| 🌳 **Arbre de la vie** | 150 groupes, des premières cellules au chien, au chat, au lion ou au T. rex, dans un vrai arbre de l'évolution dessiné : le temps avance de gauche à droite, les branches se séparent à chaque ancêtre commun, les ères sont colorées et les extinctions marquées. Survoler un groupe illumine sa lignée, et les raccourcis « Trouve dans l'arbre » (🐕 chien, 🐈 chat, 🦁 lion…) déplient l'arbre jusqu'à l'animal. Les boutons « Montre ma lignée », « Le voyage » et « Plein écran » (pour le vidéoprojecteur) complètent l'arbre, et une vue « Liste » reste disponible. |
 | 📖 **Fiche détaillée** | Grande image, texte adapté à l'âge, fait étonnant, lecture à voix haute 🔊, lien à partager 🔗. La rubrique « Pour les curieux » dit ce qu'il mangeait, où il vivait, sa taille et son super-pouvoir. La fiche montre aussi sa famille (ancêtres, descendants, groupes frères). |
 | 🕰️ **Ligne du temps** | Une frise horizontale « en accordéon », pour voir à la fois 3 700 millions d'années et 300 000 ans. Les ères sont colorées et les cinq grandes extinctions marquées. |
 | ⏰ **La Terre en 24 heures** | Une horloge montre à quelle heure chaque groupe apparaît : les humains arrivent dans les toutes dernières secondes ! |
 | 🧬 **Le voyage de tes ancêtres** | On remonte la lignée humaine étape par étape et on découvre ce qu'on a hérité de chaque ancêtre. |
 | 🤔 **Qui est apparu en premier ?** | Deux groupes tirés au hasard : l'enfant devine, puis le jeu explique leur lien de parenté. |
-| ❓ **Quiz** | 10 questions adaptées au profil d'âge, tirées dans une banque de 60. |
+| ❓ **Quiz** | 10 questions adaptées au profil d'âge, tirées dans une banque de 84. |
 | 🚀 **Remonter le temps** | « Si tu remontais le temps d'un an par seconde, il te faudrait… » |
 | 🍎 **Pour les enseignants** | Pistes d'utilisation par âge, notions clés, idées reçues corrigées, liens avec les programmes. |
 
