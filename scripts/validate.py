@@ -60,8 +60,26 @@ EVENT_FIELDS = [
     ("end_mya", (int, float), True),
     ("parent_id", (str, type(None)), False),
     ("color", (str, type(None)), False),
+    ("emoji", (str,), False),
     ("description_enfant", (str,), True),
     ("source", (str,), True),
+]
+
+STORY_SCENES = ["nebuleuse", "lave", "lune", "ocean", "recette", "luca", "microbes"]
+
+STORY_FIELDS = [
+    ("id", (str,), True),
+    ("title", (str,), True),
+    ("mya", (int, float), True),
+    ("date_label", (str,), False),
+    ("emoji", (str,), True),
+    ("scene", (str,), True),
+    ("text_enfant", (str,), True),
+    ("fun_fact", (str,), True),
+    ("question", (dict,), False),
+    ("node_id", (str, type(None)), False),
+    ("source", (str,), True),
+    ("source_url", (str,), False),
 ]
 
 QUIZ_FIELDS = [
@@ -140,6 +158,7 @@ class TreeReport:
         self.check_nodes(self.data.get("nodes", []))
         self.check_events(self.data.get("events", []))
         self.check_quiz(self.data.get("quiz", []))
+        self.check_story(self.data.get("story", []))
 
     def check_nodes(self, nodes):
         if not isinstance(nodes, list) or not nodes:
@@ -351,6 +370,44 @@ class TreeReport:
                 self.errors.append(f"{label} : node_id « {node_id} » n'existe pas")
 
 
+    def check_story(self, story):
+        """Chapitres du « Grand début » : facultatifs, mais bien formés et dans l'ordre du temps."""
+        if not isinstance(story, list):
+            self.errors.append("« story » doit être une liste")
+            return
+        ids, previous = set(), None
+        for index, chapter in enumerate(story):
+            label = f"Chapitre n° {index + 1}"
+            if isinstance(chapter, dict) and isinstance(chapter.get("id"), str):
+                label = f"Chapitre « {chapter['id']} »"
+            if not check_fields(chapter, STORY_FIELDS, label, self.errors):
+                continue
+            if chapter.get("id") in ids:
+                self.errors.append(f"{label} : id en double")
+            ids.add(chapter.get("id"))
+            if chapter.get("scene") not in STORY_SCENES:
+                self.errors.append(
+                    f"{label} : scène « {chapter.get('scene')} » inconnue (valeurs : {', '.join(STORY_SCENES)})"
+                )
+            mya = chapter.get("mya")
+            if is_number(mya):
+                if previous is not None and mya > previous[1]:
+                    self.errors.append(
+                        f"{label} : les chapitres doivent aller du plus ancien au plus récent"
+                        f" ({fmt_mya(mya)} après « {previous[0]} » = {fmt_mya(previous[1])})"
+                    )
+                previous = (chapter.get("id"), mya)
+            question = chapter.get("question")
+            if isinstance(question, dict) and not (
+                isinstance(question.get("question"), str) and question["question"].strip()
+                and isinstance(question.get("reponse"), str) and question["reponse"].strip()
+            ):
+                self.errors.append(f"{label} : « question » doit contenir « question » et « reponse »")
+            node_id = chapter.get("node_id")
+            if isinstance(node_id, str) and node_id not in self.nodes:
+                self.errors.append(f"{label} : node_id « {node_id} » n'existe pas")
+
+
 def main(argv):
     path = os.path.abspath(argv[1]) if len(argv) > 1 else DEFAULT_PATH
     print(f"Validation de {os.path.relpath(path, os.getcwd())}")
@@ -372,7 +429,11 @@ def main(argv):
     nodes = data.get("nodes", []) if isinstance(data, dict) else []
     events = data.get("events", []) if isinstance(data, dict) else []
     quiz = data.get("quiz", []) if isinstance(data, dict) else []
-    print(f"  {len(nodes)} nœuds, {len(events)} événements, {len(quiz)} questions de quiz")
+    story = data.get("story", []) if isinstance(data, dict) else []
+    print(
+        f"  {len(nodes)} nœuds, {len(events)} événements, {len(quiz)} questions de quiz,"
+        f" {len(story)} chapitres du « Grand début »"
+    )
 
     for warning in report.warnings:
         print(f"  ⚠ {warning}")

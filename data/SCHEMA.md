@@ -1,13 +1,14 @@
 # Format de `data/evolution_tree.json`
 
-Ce fichier est la **seule source de vérité** du site. Il contient quatre clés :
+Ce fichier est la **seule source de vérité** du site. Il contient cinq clés :
 
 ```json
 {
   "meta":   { ... },
   "nodes":  [ ... ],
   "events": [ ... ],
-  "quiz":   [ ... ]
+  "quiz":   [ ... ],
+  "story":  [ ... ]
 }
 ```
 
@@ -65,6 +66,7 @@ Toutes les clés sont facultatives ; chaque valeur est **une phrase courte pour 
 | `end_mya` | nombre | Fin (Ma). Pour un événement ponctuel, égal à `start_mya`. |
 | `parent_id` | texte ou `null` | Pour une période, l'id de son ère ; pour une ère, l'id de son éon. |
 | `color` | texte ou `null` | Couleur d'affichage (`#rrggbb`), pour les éons, ères et périodes. |
+| `emoji` | texte | Facultatif : emoji affiché sur la frise pour un événement. |
 | `description_enfant` | texte | Une ou deux phrases pour enfant. |
 | `source` | texte | Référence. |
 
@@ -78,3 +80,22 @@ Toutes les clés sont facultatives ; chaque valeur est **une phrase courte pour 
 | `answer` | nombre | Indice (à partir de 0) de la bonne réponse dans `choices`. |
 | `explanation` | texte | Explication affichée après la réponse. |
 | `node_id` | texte ou `null` | Nœud lié, pour ouvrir sa fiche. |
+
+## `story` : « Le grand début »
+
+Les chapitres racontent l'histoire de la Terre avant et jusqu'aux premiers êtres vivants. Ils sont rangés du plus ancien au plus récent.
+
+| Champ | Type | Obligatoire | Description |
+|---|---|---|---|
+| `id` | texte | oui | Identifiant unique. |
+| `title` | texte | oui | Titre du chapitre. |
+| `mya` | nombre | oui | Date, en Ma. |
+| `date_label` | texte | non | Remplace la date affichée quand elle est incertaine. |
+| `emoji` | texte | oui | Emoji du chapitre. |
+| `scene` | texte | oui | Décor animé : `nebuleuse`, `lave`, `lune`, `ocean`, `recette`, `luca` ou `microbes`. |
+| `text_enfant` | texte | oui | Le récit, 2 ou 3 phrases pour enfant. |
+| `fun_fact` | texte | oui | Un fait étonnant. |
+| `question` | objet | non | `{ "question": "...", "reponse": "..." }`. |
+| `node_id` | texte | non | Nœud de l'arbre lié (ouvre sa fiche). |
+| `source` | texte | oui | Référence scientifique. |
+| `source_url` | texte | non | Lien vers la source. |

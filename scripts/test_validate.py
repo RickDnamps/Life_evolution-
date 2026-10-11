@@ -104,6 +104,24 @@ class ValidatorTest(unittest.TestCase):
         self.nodes[2]["extinct_mya"] = 450
         self.assertTrue(any("avant d'apparaître" in e for e in self.errors(self.nodes)))
 
+    def story_errors(self, story):
+        data = make_data(self.nodes)
+        data["story"] = story
+        report = TreeReport(data, self.tmp.name)
+        report.run()
+        return report.errors
+
+    def test_story(self):
+        chapter = lambda cid, mya, **extra: {
+            "id": cid, "title": "t", "mya": mya, "emoji": "🌋", "scene": "lave",
+            "text_enfant": "x", "fun_fact": "f", "source": "s", **extra,
+        }
+        self.assertEqual(self.story_errors([chapter("a", 4540), chapter("b", 3700, node_id="vie")]), [])
+        errors = self.story_errors([chapter("a", 3700), chapter("b", 4540, scene="licorne", node_id="x")])
+        self.assertTrue(any("plus ancien au plus récent" in e for e in errors))
+        self.assertTrue(any("scène" in e for e in errors))
+        self.assertTrue(any("node_id" in e for e in errors))
+
     def test_exit_code(self):
         bad = copy.deepcopy(self.nodes)
         bad[2]["appeared_mya"] = 9999
