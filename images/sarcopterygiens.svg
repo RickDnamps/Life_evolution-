@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Dessin simple : Poissons à nageoires charnues, représenté par son emoji sur un fond aux couleurs de son ère">
+  <title>Poissons à nageoires charnues</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bff1d4"/>
+      <stop offset="1" stop-color="#84daa7"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="64" cy="255" r="7" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="582" cy="459" r="17" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="48" cy="101" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="415" cy="98" r="7" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="536" cy="66" r="9" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="252" cy="373" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="622" cy="425" r="6" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="523" cy="460" r="18" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="106" cy="115" r="19" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <path d="M0 410 Q100 380 200 410 T400 410 T600 410 T800 410 V500 H0 Z" fill="#72bd90" fill-opacity="0.55"/>
+  <circle cx="400" cy="250" r="190" fill="url(#halo)"/>
+  <text x="400" y="250" font-size="220" text-anchor="middle" dominant-baseline="central"
+        font-family="'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif">🐟</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Dessin simple : Premiers tétrapodes, représenté par son emoji sur un fond aux couleurs de son ère">
+  <title>Premiers tétrapodes</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d5f2b1"/>
+      <stop offset="1" stop-color="#a9dc6c"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="680" cy="90" r="52" fill="#fff6c2" fill-opacity="0.9"/>
+  <path d="M0 400 Q200 350 400 395 T800 380 V500 H0 Z" fill="#86ae56" fill-opacity="0.6"/>
+  <path d="M47 470 q4 -34 10 -40" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M581 470 q4 -25 10 -31" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M567 470 q4 -20 10 -26" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M488 470 q4 -18 10 -24" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M277 470 q4 -22 10 -28" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M510 470 q4 -36 10 -42" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M320 470 q4 -18 10 -24" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M201 470 q4 -39 10 -45" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M432 470 q4 -25 10 -31" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M486 470 q4 -39 10 -45" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M159 470 q4 -37 10 -43" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M781 470 q4 -39 10 -45" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M399 470 q4 -29 10 -35" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M464 470 q4 -33 10 -39" stroke="#6b8b44" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <circle cx="400" cy="250" r="190" fill="url(#halo)"/>
+  <text x="400" y="250" font-size="220" text-anchor="middle" dominant-baseline="central"
+        font-family="'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif">🦎</text>
+</svg>
