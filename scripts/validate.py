@@ -21,6 +21,7 @@ CATEGORIES = [
     "dinosaure", "oiseau", "mammifère", "primate", "humain",
 ]
 EVENT_TYPES = ["eon", "era", "period", "extinction", "event"]
+LEVELS = ["petits", "enfants", "grands", "adultes"]
 DETAIL_KEYS = ["alimentation", "habitat", "taille", "super_pouvoir", "aujourdhui"]
 
 ID_RE = re.compile(r"^[a-z0-9_]+$")
@@ -37,7 +38,9 @@ NODE_FIELDS = [
     ("category", (str,), True),
     ("description", (str,), True),
     ("description_enfant", (str,), True),
+    ("description_petits", (str,), False),
     ("fun_fact", (str,), True),
+    ("fun_fact_petits", (str,), False),
     ("emoji", (str,), True),
     ("image", (str,), True),
     ("image_alt", (str,), True),
@@ -75,6 +78,8 @@ STORY_FIELDS = [
     ("emoji", (str,), True),
     ("scene", (str,), True),
     ("text_enfant", (str,), True),
+    ("text_petits", (str,), False),
+    ("text_expert", (str,), False),
     ("fun_fact", (str,), True),
     ("question", (dict,), False),
     ("node_id", (str, type(None)), False),
@@ -89,6 +94,7 @@ QUIZ_FIELDS = [
     ("answer", (int,), True),
     ("explanation", (str,), True),
     ("node_id", (str, type(None)), False),
+    ("levels", (list,), False),
 ]
 
 
@@ -368,6 +374,9 @@ class TreeReport:
             node_id = item.get("node_id")
             if isinstance(node_id, str) and node_id not in self.nodes:
                 self.errors.append(f"{label} : node_id « {node_id} » n'existe pas")
+            levels = item.get("levels")
+            if isinstance(levels, list) and (not levels or any(level not in LEVELS for level in levels)):
+                self.errors.append(f"{label} : « levels » doit contenir des valeurs parmi {', '.join(LEVELS)}")
 
 
     def check_story(self, story):

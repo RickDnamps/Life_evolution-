@@ -18,7 +18,9 @@
       "category": "origine",
       "description": "Les plus anciennes traces possibles de vie sont de minuscules grains de graphite, pauvres en carbone 13, trouvés dans des roches d'environ 3 700 Ma à Isua (Groenland) ; leur origine biologique est encore débattue. Les premiers indices acceptés par la plupart des chercheurs sont les stromatolites de la formation Dresser (Australie), vieux d'environ 3 480 Ma. Tous les êtres vivants actuels descendent d'un même ancêtre commun unicellulaire, que les scientifiques appellent LUCA.",
       "description_enfant": "Il y a très, très longtemps, la Terre n'avait ni plantes ni animaux : seulement de minuscules microbes dans l'océan. Ce sont les tout premiers ancêtres de tout ce qui vit aujourd'hui, toi compris !",
+      "description_petits": "Il y a très, très longtemps, la Terre n'avait ni plantes ni animaux. Seulement de minuscules microbes, et parmi eux tes plus lointains ancêtres !",
       "fun_fact": "Si toute l'histoire de la Terre tenait dans une journée de 24 heures, la vie apparaîtrait vers 4 h 30 du matin… et les humains modernes seulement dans les 6 dernières secondes avant minuit !",
+      "fun_fact_petits": "Si l'histoire de la Terre durait une seule journée, les humains arriveraient juste quelques secondes avant minuit !",
       "emoji": "🦠",
       "image": "images/vie.svg",
       "image_alt": "Dessin simple : Premières traces de vie, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -55,7 +57,9 @@
       "category": "microbe",
       "description": "Les cyanobactéries sont des bactéries qui font la photosynthèse en rejetant de l'oxygène. Elles existaient au plus tard lors de la Grande Oxydation (vers 2 400 Ma), quand l'oxygène a commencé à s'accumuler dans l'atmosphère ; leur plus ancien fossile indiscutable, Eoentophysalis belcherensis (îles Belcher, Canada), a environ 2 000 Ma. Certains chercheurs pensent qu'elles sont bien plus anciennes, mais la question est encore discutée.",
       "description_enfant": "Les cyanobactéries sont de minuscules êtres verts qui fabriquent leur nourriture avec la lumière du Soleil. En le faisant, elles ont rempli l'air d'oxygène : c'est un peu grâce à elles que tu peux respirer !",
+      "description_petits": "Ces êtres minuscules fabriquent leur repas avec la lumière du Soleil. En faisant ça, ils ont rempli l'air de l'oxygène que tu respires !",
       "fun_fact": "Les petits grains verts qui fabriquent le sucre dans les feuilles des plantes, les chloroplastes, sont d'anciennes cyanobactéries qui se sont installées dans une autre cellule il y a plus d'un milliard d'années… et y sont restées !",
+      "fun_fact_petits": "Les petits grains verts des feuilles sont d'anciennes cyanobactéries, qui sont venues habiter là il y a très longtemps !",
       "emoji": "🫧",
       "image": "images/cyanobacteries.svg",
       "image_alt": "Dessin simple : Cyanobactéries, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -91,7 +95,9 @@
       "category": "microbe",
       "description": "Les eucaryotes sont les êtres vivants dont les cellules possèdent un noyau qui protège l'ADN, et en général des mitochondries, de petites « centrales » énergétiques. Les plus anciens fossiles indiscutables, comme Tappania et Shuiyousphaeridium (groupe de Ruyang, Chine du Nord), ont environ 1 650 Ma, et des molécules fossiles d'Australie d'environ 1 600 Ma vont dans le même sens. Plantes, champignons, animaux et de nombreux êtres unicellulaires, comme les amibes, sont des eucaryotes.",
       "description_enfant": "Un jour, des cellules sont devenues plus grandes et mieux rangées, avec un « coffre-fort » au milieu pour garder leurs instructions : le noyau. Toutes les cellules de ton corps sont construites sur ce modèle !",
+      "description_petits": "Les cellules sont les minuscules briques des êtres vivants. Un jour, certaines ont eu un coffre-fort au milieu, le noyau, comme les tiennes !",
       "fun_fact": "Les mitochondries, les petites centrales d'énergie de tes cellules, étaient autrefois des bactéries libres qui ont été « avalées » par une autre cellule… et ne sont jamais reparties ! Elles ont même gardé un peu de leur propre ADN.",
+      "fun_fact_petits": "Les petites usines à énergie de tes cellules étaient autrefois des microbes avalés… qui ne sont jamais ressortis !",
       "emoji": "🧫",
       "image": "images/eucaryotes.svg",
       "image_alt": "Dessin simple : Eucaryotes (cellules à noyau), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -127,7 +133,9 @@
       "category": "microbe",
       "description": "La multicellularité, le fait d'être formé de plusieurs cellules qui restent attachées et travaillent ensemble, existe chez les eucaryotes depuis au moins 1 635 Ma. Le plus ancien exemple connu est Qingshania magnifica, des filaments de cellules découverts dans la formation de Chuanlinggou (Chine du Nord) et décrits en 2024 ; il s'agissait probablement d'une algue. La vie multicellulaire est apparue plusieurs fois, séparément, dans différentes branches de l'arbre du vivant.",
       "description_enfant": "Au lieu de vivre chacune de son côté, des cellules sont restées collées en longs fils, comme des perles sur un collier. C'est le début des êtres faits de nombreuses cellules, comme toi !",
+      "description_petits": "Des cellules sont restées collées en longs fils, comme des perles sur un collier. Ton corps aussi est fait de cellules qui travaillent ensemble !",
       "fun_fact": "Être « multicellulaire » a été inventé plus d'une vingtaine de fois au cours de l'évolution, séparément : chez les algues, chez les champignons, chez les animaux… La nature a trouvé plusieurs fois la même bonne idée !",
+      "fun_fact_petits": "Algues, champignons, animaux : la nature a inventé plus de vingt fois, séparément, les êtres à plusieurs cellules !",
       "emoji": "🌿",
       "image": "images/multicellulaires.svg",
       "image_alt": "Dessin simple : Premiers êtres multicellulaires (algues), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -163,7 +171,9 @@
       "category": "invertébré",
       "description": "Les animaux sont des eucaryotes multicellulaires qui se nourrissent d'autres êtres vivants et se développent à partir d'un embryon. Le biote de Lantian (Chine du Sud, environ 600 Ma) contient des fossiles qui pourraient compter parmi les premiers animaux, mais leur nature est encore discutée ; les horloges moléculaires suggèrent une origine encore plus ancienne. Les éponges font partie des plus anciennes lignées d'animaux.",
       "description_enfant": "Voici les tout premiers animaux ! Ils ne ressemblaient pas du tout à des chiens ou à des chats : c'étaient sans doute de petites créatures molles, peut-être un peu comme des éponges, au fond de la mer.",
+      "description_petits": "Voici les premiers animaux ! Pas de chiens ni de chats : sans doute des bêtes molles, un peu comme des éponges, dans la mer.",
       "fun_fact": "Une éponge de mer n'a ni cerveau, ni muscles, ni estomac… et pourtant c'est bien un animal ! Elle filtre l'eau pour attraper sa nourriture.",
+      "fun_fact_petits": "Une éponge n'a ni cerveau, ni muscles, ni estomac… et pourtant, c'est bien un animal !",
       "emoji": "🧽",
       "image": "images/animaux.svg",
       "image_alt": "Dessin simple : Animaux, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -200,7 +210,9 @@
       "category": "invertébré",
       "description": "La faune d'Édiacara regroupe les premiers grands organismes complexes connus, apparus vers 575 Ma (assemblage d'Avalon, Mistaken Point, Terre-Neuve). Beaucoup avaient des formes de feuilles, de disques ou de matelas matelassés, très différentes des animaux actuels ; certains, comme Dickinsonia, étaient bien des animaux, comme l'ont montré des traces de cholestérol. La plupart disparaissent vers 539 Ma, au début du Cambrien.",
       "description_enfant": "Imagine un fond de mer couvert de drôles de « feuilles » et de « tapis » vivants qui ne bougeaient presque pas. C'était la faune d'Édiacara, parmi les premiers grands êtres vivants de l'histoire !",
+      "description_petits": "Au fond de la mer vivaient de drôles de créatures en forme de feuilles ou de tapis : parmi les premiers grands êtres vivants !",
       "fun_fact": "Le premier fossile d'Édiacara reconnu comme très ancien, Charnia, a été remarqué en 1957 en Angleterre par des adolescents : Tina Negus l'avait vu la première, mais personne ne l'avait crue ; c'est l'écolier Roger Mason qui a convaincu un géologue de venir le voir !",
+      "fun_fact_petits": "Une jeune fille, Tina, a vu la première un de ces fossiles… mais personne ne l'a crue !",
       "emoji": "🪸",
       "image": "images/ediacara.svg",
       "image_alt": "Dessin simple : Faune d'Édiacara, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -236,7 +248,9 @@
       "category": "invertébré",
       "description": "Les bilatériens sont les animaux à symétrie bilatérale : un côté gauche et un côté droit en miroir, un avant et un arrière, et en général un tube digestif avec une bouche et un anus. Parmi les plus anciens fossiles connus figurent Ikaria wariootia (Australie-Méridionale, environ 555 Ma), un petit animal en forme de grain de riz qui creusait le sédiment, et Kimberella (Russie). Presque tous les animaux actuels, des vers aux humains, appartiennent à ce groupe.",
       "description_enfant": "Plie une feuille de papier en deux : les deux moitiés sont pareilles ! Ces petits animaux étaient construits comme ça, avec un avant et un arrière, exactement comme toi.",
+      "description_petits": "Ton corps a deux moitiés pareilles, la gauche et la droite. Ces animaux étaient construits comme toi, avec aussi un avant et un arrière !",
       "fun_fact": "Ikaria wariootia n'était pas plus grand qu'un grain de riz… et pourtant, il ressemble beaucoup à ce que les scientifiques imaginent pour l'ancêtre de l'immense groupe qui réunit les vers, les insectes, les poissons et les humains !",
+      "fun_fact_petits": "Ikaria, grand comme un grain de riz, ressemble sans doute à l'ancêtre des vers, des insectes… et de toi !",
       "emoji": "🪱",
       "image": "images/bilateriens.svg",
       "image_alt": "Dessin simple : Bilatériens, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -273,7 +287,9 @@
       "category": "invertébré",
       "description": "Les arthropodes sont des animaux à squelette externe (une cuticule rigide) et à pattes articulées : insectes, araignées, crustacés, mille-pattes. Leurs plus anciens fossiles corporels largement acceptés sont les trilobites, vers 521 Ma, mais des traces de pas et de terriers un peu plus anciennes laissent penser que le groupe existait déjà avant. C'est aujourd'hui le plus grand groupe d'animaux, avec plus d'un million d'espèces décrites.",
       "description_enfant": "Les arthropodes portent leur squelette à l'extérieur, comme une armure, et ont des pattes qui se plient. Les crabes, les araignées, les papillons et les fourmis en font partie !",
+      "description_petits": "Ces animaux portent leur squelette dehors, comme une armure, et ont des pattes qui se plient. Crabes, araignées, papillons et fourmis en font partie !",
       "fun_fact": "Plus de 8 espèces d'animaux connues sur 10 sont des arthropodes : sur notre planète, ce sont eux les vrais champions du nombre !",
+      "fun_fact_petits": "Sur dix sortes d'animaux connues, plus de huit sont des arthropodes : ce sont les champions !",
       "emoji": "🦀",
       "image": "images/arthropodes.svg",
       "image_alt": "Dessin simple : Arthropodes, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -309,7 +325,9 @@
       "category": "invertébré",
       "description": "Les trilobites sont des arthropodes marins dont le corps est divisé en trois lobes dans le sens de la longueur. Apparus vers 521 Ma, ils ont donné plus de 20 000 espèces et ont vécu près de 270 millions d'années, avant de disparaître lors de la grande extinction de la fin du Permien, il y a 252 Ma. Leurs yeux, faits de lentilles de calcite, comptent parmi les plus anciens systèmes visuels connus.",
       "description_enfant": "Les trilobites ressemblaient un peu à de gros cloportes de mer. Ils ont vécu si longtemps… et ont pourtant disparu avant même l'arrivée des dinosaures !",
+      "description_petits": "Les trilobites ressemblaient un peu à de gros cloportes de mer. Ils ont vécu très, très longtemps… mais ont disparu avant l'arrivée des dinosaures !",
       "fun_fact": "Les yeux des trilobites étaient en cristal : leurs lentilles étaient faites de calcite, le même minéral que la craie ! C'est pour ça qu'on peut encore les voir sur les fossiles.",
+      "fun_fact_petits": "Les trilobites avaient des yeux en cristal, faits de la même matière que la craie !",
       "emoji": "🪲",
       "image": "images/trilobites.svg",
       "image_alt": "Dessin simple : Trilobites, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -345,7 +363,9 @@
       "category": "invertébré",
       "description": "Les insectes sont des arthropodes à six pattes, au corps divisé en trois parties (tête, thorax, abdomen). Le plus ancien insecte possible, Rhyniognatha hirsti, vient du chert de Rhynie (Écosse, environ 400 Ma), mais certains chercheurs pensent qu'il s'agit plutôt d'un mille-pattes ; les horloges moléculaires suggèrent une origine encore plus ancienne. Les insectes ont été les premiers animaux capables de voler et forment aujourd'hui le groupe le plus riche en espèces.",
       "description_enfant": "Les insectes ont six pattes, et beaucoup ont des ailes. Ils ont été les tout premiers animaux à voler, bien avant les oiseaux et même avant les dinosaures !",
+      "description_petits": "Les insectes ont six pattes, et beaucoup ont des ailes. Ils ont été les premiers animaux à voler, bien avant les dinosaures et les oiseaux !",
       "fun_fact": "Il y a environ 285 Ma vivait Meganeuropsis, un insecte géant cousin des libellules : ses ailes mesuraient environ 70 cm d'envergure, à peu près comme un pigeon aux ailes déployées !",
+      "fun_fact_petits": "Avant les dinosaures, un cousin géant des libellules avait des ailes aussi larges que celles d'un pigeon !",
       "emoji": "🦋",
       "image": "images/insectes.svg",
       "image_alt": "Dessin simple : Insectes, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -381,7 +401,9 @@
       "category": "poisson",
       "description": "Les vertébrés sont les animaux qui possèdent un crâne et, en général, une colonne vertébrale. Les plus anciens connus, Myllokunmingia et Haikouichthys, viennent du gisement de Chengjiang (Yunnan, Chine), vieux d'environ 518 Ma : c'étaient de petits poissons sans mâchoires, longs de 2 à 3 cm, que la plupart des chercheurs considèrent comme de vrais vertébrés primitifs. Leur squelette était encore fait de cartilage, pas d'os.",
       "description_enfant": "Voici les premiers poissons ! Plus petits que ton petit doigt et sans mâchoires, ils avaient déjà une tête avec des yeux et un axe solide le long du dos, comme toi.",
+      "description_petits": "Voici les premiers poissons, plus petits que ton petit doigt ! Ils avaient déjà une tête, des yeux et un dos solide, comme toi.",
       "fun_fact": "Les lamproies, qui vivent encore aujourd'hui, n'ont toujours pas de mâchoires : elles s'accrochent aux poissons avec une bouche ronde en forme de ventouse, garnie de petites dents !",
+      "fun_fact_petits": "La lamproie n'a toujours pas de mâchoire : sa bouche est une ventouse ronde pleine de petites dents !",
       "emoji": "🦴",
       "image": "images/vertebres.svg",
       "image_alt": "Dessin simple : Premiers vertébrés (poissons sans mâchoires), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -418,7 +440,9 @@
       "category": "poisson",
       "description": "Les ptéraspidomorphes sont des poissons sans mâchoires dont la tête était protégée par des plaques d'os, une véritable armure. Arandaspis, découvert en Australie centrale, est l'un des plus anciens vertébrés presque complets connus ; on le date souvent d'environ 480 à 470 Ma, mais des études plus récentes placent ses couches vers 465 Ma, à l'Ordovicien moyen. Le groupe disparaît à la fin du Dévonien, vers 359 Ma.",
       "description_enfant": "Ces poissons portaient un casque d'os sur la tête, comme des chevaliers ! Mais ils n'avaient toujours pas de mâchoires pour croquer.",
+      "description_petits": "Ces poissons portaient un casque en os sur la tête, comme des chevaliers ! Mais sans mâchoire, ils ne pouvaient toujours pas croquer.",
       "fun_fact": "Ces poissons cuirassés sont parmi les premiers animaux à avoir fabriqué de l'os : l'os est d'abord apparu dans la peau, sous forme d'armure, bien avant de former des squelettes comme le tien !",
+      "fun_fact_petits": "Les premiers os ont poussé dans la peau, comme une armure, bien avant les squelettes comme le tien !",
       "emoji": "🐟",
       "image": "images/poissons_cuirasses.svg",
       "image_alt": "Dessin simple : Poissons cuirassés sans mâchoires, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -454,7 +478,9 @@
       "category": "poisson",
       "description": "Les gnathostomes sont les vertébrés à mâchoires, soit aujourd'hui plus de 99 % des espèces de vertébrés. Leurs plus anciens fossiles sûrs sont des dents et des écailles de Qianodus et Fanjingshania (Guizhou, Chine, environ 439 Ma) et des poissons complets de Chongqing, comme Xiushanosteus (environ 436 Ma), décrits dans Nature en 2022. Les mâchoires ont permis de saisir et de mordre de grosses proies, ouvrant la voie à de nouveaux modes de vie.",
       "description_enfant": "Clac ! Les poissons ont enfin des mâchoires pour mordre et mâcher. Toi aussi, tu utilises cette super invention chaque fois que tu croques une pomme !",
+      "description_petits": "Voici les premiers poissons avec des mâchoires pour mordre, clac ! Toi aussi, tu utilises cette super invention quand tu croques une pomme.",
       "fun_fact": "Un des plus beaux gisements de ces premiers poissons à mâchoires a été découvert en Chine en 2019… grâce à un coup de pied de kung-fu ! En chahutant, un jeune paléontologue a été projeté contre la roche, qui s'est cassée et a révélé des fossiles.",
+      "fun_fact_petits": "En Chine, des fossiles de ces poissons ont été découverts grâce à… un coup de pied de kung-fu !",
       "emoji": "🦷",
       "image": "images/gnathostomes.svg",
       "image_alt": "Dessin simple : Poissons à mâchoires, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -491,7 +517,9 @@
       "category": "poisson",
       "description": "Les chondrichthyens (requins, raies et chimères) sont des poissons à mâchoires dont le squelette est fait de cartilage. Les plus anciens fossiles attribués à leur lignée sont des dents et des écailles de Qianodus et Fanjingshania, vieilles d'environ 439 Ma ; des écailles encore plus anciennes, de l'Ordovicien, font débat. Comme le cartilage se fossilise mal, on les connaît surtout par leurs dents.",
       "description_enfant": "Les requins nageaient déjà dans les océans il y a 439 Ma ! Leur squelette n'est pas en os mais en cartilage, la même matière souple que le bout de ton nez.",
+      "description_petits": "Les requins existaient bien avant les dinosaures ! Leur squelette n'est pas en os, mais en cartilage, comme le bout de ton nez.",
       "fun_fact": "Les requins sont plus anciens que les arbres ! Les plus anciennes forêts fossiles connues ont environ 385 Ma, alors que la lignée des requins existe depuis au moins 439 Ma.",
+      "fun_fact_petits": "Les requins sont plus vieux que les arbres : ils existaient avant les premières forêts !",
       "emoji": "🦈",
       "image": "images/requins.svg",
       "image_alt": "Dessin simple : Requins et raies (Chondrichthyens), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -527,7 +555,9 @@
       "category": "poisson",
       "description": "Les ostéichthyens, ou poissons osseux, ont un squelette interne fait d'os. Ils se divisent en deux grandes branches : les poissons à nageoires rayonnées et les poissons à nageoires charnues, dont descendent les tétrapodes. Des fossiles du Silurien supérieur comme Andreolepis et Lophosteus (environ 425 Ma) comptent parmi les plus anciens ; en 2026, la description d'Eosteus (Chongqing, environ 436 Ma) suggère que le groupe est encore plus ancien.",
       "description_enfant": "Ces poissons ont inventé un squelette en os à l'intérieur du corps, comme le tien. D'ailleurs, d'après l'arbre de famille du vivant, tu fais partie de leur grande famille !",
+      "description_petits": "Ces poissons avaient un squelette en os à l'intérieur du corps, comme toi. Les arêtes du poisson dans ton assiette sont des os !",
       "fun_fact": "Pour les scientifiques qui classent les êtres vivants, tu es un « poisson osseux » ! Les humains descendent de poissons osseux, et dans un arbre de famille, on ne quitte jamais la famille de ses ancêtres.",
+      "fun_fact_petits": "Pour les scientifiques, tu es toi aussi un poisson osseux : tes très lointains ancêtres en étaient !",
       "emoji": "🐟",
       "image": "images/poissons_osseux.svg",
       "image_alt": "Dessin simple : Poissons osseux, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -564,7 +594,9 @@
       "category": "poisson",
       "description": "Les actinoptérygiens sont les poissons à nageoires rayonnées : leurs nageoires sont soutenues par de fines baguettes osseuses, comme les branches d'un éventail. Leur plus ancien représentant possible est Andreolepis hedei (Silurien supérieur, Gotland, Suède), même si certains chercheurs le placent plutôt à la base de tous les poissons osseux. Avec plus de 30 000 espèces, ils représentent aujourd'hui environ la moitié de tous les vertébrés.",
       "description_enfant": "Le poisson rouge, le poisson-clown et le saumon ont des nageoires fines comme des éventails. Ce sont les champions des eaux : il en existe plus de 30 000 espèces !",
+      "description_petits": "Le poisson rouge, le poisson-clown et le saumon ont des nageoires fines comme des éventails. Presque tous les poissons sont de cette famille !",
       "fun_fact": "Environ une espèce de vertébré sur deux est un poisson à nageoires rayonnées, du minuscule Paedocypris, qui mesure moins d'un centimètre, au poisson-lune, qui peut dépasser 2 tonnes !",
+      "fun_fact_petits": "Le plus petit poisson est long comme un petit pois, et le poisson-lune peut peser plus qu'une voiture !",
       "emoji": "🐠",
       "image": "images/actinopterygiens.svg",
       "image_alt": "Dessin simple : Poissons à nageoires rayonnées, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -600,7 +632,9 @@
       "category": "poisson",
       "description": "Les sarcoptérygiens sont les poissons à nageoires charnues : la base de leurs nageoires contient des os et des muscles, comme un petit membre. Guiyu oneiros (Yunnan, Chine), de la fin du Silurien (environ 423-419 Ma), est l'un des plus anciens représentants possibles, même si sa position exacte est discutée. Aujourd'hui, il reste les cœlacanthes, les dipneustes… et les tétrapodes, qui descendent de ce groupe.",
       "description_enfant": "Ces poissons avaient des nageoires musclées avec des os dedans, un peu comme de petits bras. C'est de cette famille que viennent tous les animaux à quatre pattes… et donc toi !",
+      "description_petits": "Ces poissons avaient des nageoires musclées, avec des os, comme de petits bras. Les animaux à quatre pattes viennent d'eux… et toi aussi !",
       "fun_fact": "Le dipneuste d'Amérique du Sud, un poisson à nageoires charnues qui respire de l'air, possède le plus grand génome de tous les animaux connus : environ 30 fois plus d'ADN que toi !",
+      "fun_fact_petits": "Le dipneuste, un poisson de cette famille, a des poumons et respire de l'air, comme toi !",
       "emoji": "🐟",
       "image": "images/sarcopterygiens.svg",
       "image_alt": "Dessin simple : Poissons à nageoires charnues, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -637,7 +671,9 @@
       "category": "poisson",
       "description": "Les cœlacanthes (actinistiens) sont des poissons à nageoires charnues connus depuis le Dévonien inférieur : le plus ancien, Eoactinistia foreyi (Australie), n'est connu que par une mâchoire d'environ 409-407 Ma. On les croyait disparus depuis environ 66 Ma, jusqu'à la capture d'un cœlacanthe vivant en Afrique du Sud en 1938. Deux espèces vivent aujourd'hui, dans l'ouest de l'océan Indien et en Indonésie.",
       "description_enfant": "Le cœlacanthe, c'est le poisson qui a fait une énorme surprise aux scientifiques : on croyait qu'il avait disparu à la même époque que les grands dinosaures… et on en a pêché un vivant en 1938 !",
+      "description_petits": "On croyait le cœlacanthe disparu en même temps que les grands dinosaures… Et pourtant, des pêcheurs en ont attrapé un vivant !",
       "fun_fact": "Un cœlacanthe peut vivre environ 100 ans, et d'après une étude de 2021, la maman porte ses petits dans son ventre pendant environ 5 ans : ce serait un record chez les vertébrés !",
+      "fun_fact_petits": "Une maman cœlacanthe garde ses bébés dans son ventre environ cinq ans : sans doute un record !",
       "emoji": "🐟",
       "image": "images/coelacanthes.svg",
       "image_alt": "Dessin simple : Cœlacanthes, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -673,7 +709,9 @@
       "category": "poisson",
       "description": "Tiktaalik roseae est un poisson à nageoires charnues de la fin du Dévonien (environ 375 Ma), découvert en 2004 sur l'île d'Ellesmere (Nunavut, Canada) et décrit en 2006. Il mélange des caractères de poisson (écailles, nageoires, branchies) et de tétrapode (tête plate, cou mobile, poignet). Ce n'est pas notre ancêtre direct, mais un proche cousin des ancêtres des tétrapodes, qui montre à quoi ressemblait cette grande transition.",
       "description_enfant": "Tiktaalik était un poisson avec un cou ! Dans l'eau peu profonde, il pouvait sans doute s'appuyer sur ses nageoires avant, un peu comme quand tu fais des pompes.",
+      "description_petits": "Tiktaalik, un poisson avec un cou, pouvait sans doute s'appuyer sur ses nageoires. C'est un cousin de tes ancêtres, pas ton ancêtre !",
       "fun_fact": "Les chercheurs ont trouvé Tiktaalik parce qu'ils l'avaient… prévu ! Ils ont cherché des roches de la bonne époque (environ 375 Ma), formées au bord de rivières, et après plusieurs expéditions dans l'Arctique, ils l'ont découvert en 2004. Son nom signifie « gros poisson d'eau douce » en inuktitut.",
+      "fun_fact_petits": "Les scientifiques ont trouvé Tiktaalik en devinant dans quelles roches le chercher : une vraie chasse au trésor !",
       "emoji": "🐟",
       "image": "images/tiktaalik.svg",
       "image_alt": "Dessin simple : Tiktaalik, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -709,7 +747,9 @@
       "category": "amphibien",
       "description": "Les tétrapodes sont les vertébrés à quatre membres terminés par des doigts. Les premiers, comme Elginerpeton, Acanthostega et Ichthyostega (fin du Dévonien, environ 375-360 Ma), vivaient encore surtout dans l'eau et avaient souvent plus de cinq doigts. Des empreintes trouvées à Zachełmie (Pologne), vieilles d'environ 395 Ma, suggèrent que le groupe est encore plus ancien, mais leur interprétation est discutée.",
       "description_enfant": "Voici les premiers animaux à quatre pattes avec des doigts ! Au début, ils vivaient surtout dans l'eau, mais leurs pattes allaient permettre à leurs descendants de marcher sur la terre ferme.",
+      "description_petits": "Voici les premiers animaux à quatre pattes avec des doigts ! Ils vivaient surtout dans l'eau, mais leur famille allait conquérir la terre ferme.",
       "fun_fact": "Acanthostega avait huit doigts à chaque patte avant ! Les tout premiers tétrapodes avaient souvent six, sept ou huit doigts ; le nombre de cinq ne s'est imposé que plus tard.",
+      "fun_fact_petits": "L'un d'eux, Acanthostega, avait huit doigts à chaque patte avant : trois de plus que toi !",
       "emoji": "🦎",
       "image": "images/tetrapodes.svg",
       "image_alt": "Dessin simple : Premiers tétrapodes, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -746,7 +786,9 @@
       "category": "amphibien",
       "description": "Les lissamphibiens regroupent les grenouilles, les salamandres et les cécilies, des amphibiens à la peau nue et humide. Le plus ancien proche parent des grenouilles, Triadobatrachus massinoti, vient du Trias inférieur de Madagascar (environ 250 Ma) : il avait encore une petite queue et ne sautait probablement pas comme les grenouilles actuelles. L'origine exacte de ce groupe parmi les anciens amphibiens est encore discutée par les scientifiques.",
       "description_enfant": "Grenouilles et salamandres vivent souvent une double vie : bébés dans l'eau (comme les têtards), adultes sur terre. Leur plus vieux cousin connu ressemblait à une grenouille… avec une petite queue !",
+      "description_petits": "Beaucoup de grenouilles et de salamandres naissent dans l'eau, puis vivent sur terre. Un très vieux cousin des grenouilles avait encore une petite queue !",
       "fun_fact": "La grenouille des bois d'Amérique du Nord peut geler en hiver : son cœur s'arrête de battre… puis elle dégèle et se réveille au printemps comme si de rien n'était !",
+      "fun_fact_petits": "La grenouille des bois gèle en hiver, son cœur s'arrête… puis elle se réveille au printemps !",
       "emoji": "🐸",
       "image": "images/amphibiens_modernes.svg",
       "image_alt": "Dessin simple : Grenouilles et salamandres, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -783,7 +825,9 @@
       "category": "reptile",
       "description": "Les amniotes sont les vertébrés dont l'embryon grandit dans une poche de liquide, l'amnios, à l'intérieur d'un œuf protégé : leurs petits n'ont plus besoin de se développer dans l'eau. Le plus ancien amniote connu avec certitude, Hylonomus lyelli, vivait il y a environ 318 millions d'années dans les forêts marécageuses de l'actuelle Nouvelle-Écosse (Canada). Les reptiles, les oiseaux et les mammifères, donc nous aussi, descendent de ces premiers amniotes.",
       "description_enfant": "Imagine un œuf qui emporte sa propre petite mare à l'intérieur ! Grâce à cette invention, les animaux ont enfin pu pondre loin de l'eau et partir à la conquête de la terre ferme.",
+      "description_petits": "Imagine un œuf qui emporte sa propre petite mare à l'intérieur ! Grâce à lui, les animaux ont pu pondre loin de l'eau.",
       "fun_fact": "Les premiers fossiles d'Hylonomus ont été découverts au XIXe siècle à Joggins (Canada), à l'intérieur de souches d'arbres fossiles creuses : ces petits animaux y étaient tombés… ou s'y abritaient peut-être, les scientifiques en discutent encore.",
+      "fun_fact_petits": "Les fossiles d'Hylonomus, le plus ancien de ces animaux, étaient coincés dans des troncs d'arbres creux devenus pierre !",
       "emoji": "🥚",
       "image": "images/amniotes.svg",
       "image_alt": "Dessin simple : Amniotes (l'œuf à coquille), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -821,7 +865,9 @@
       "category": "reptile",
       "description": "Les sauropsides forment la grande branche des amniotes qui comprend tous les reptiles actuels (lézards, serpents, tortues, crocodiles) ainsi que les oiseaux. Ils se sont séparés de la branche des mammifères, les synapsides, dès le Carbonifère ; Hylonomus lyelli, vieux d'environ 318 millions d'années, est considéré comme l'un des plus anciens reptiles connus. Pour les scientifiques qui classent les êtres vivants selon leurs ancêtres, les oiseaux font donc partie des reptiles.",
       "description_enfant": "Lézards, tortues, crocodiles, serpents… et même oiseaux : ils font tous partie de la même grande famille, les sauropsides ! Leur très lointain ancêtre ressemblait à un petit lézard.",
+      "description_petits": "Lézards, serpents, tortues, crocodiles… et même oiseaux : tous font partie de la même grande famille ! Leur lointain ancêtre ressemblait à un petit lézard.",
       "fun_fact": "Un lézard est un cousin plus proche d'un pigeon que d'une souris : lézards et oiseaux sont tous deux des sauropsides, alors que la souris appartient à l'autre branche, celle des mammifères.",
+      "fun_fact_petits": "Un lézard est un cousin plus proche du pigeon que de la souris !",
       "emoji": "🦎",
       "image": "images/sauropsides.svg",
       "image_alt": "Dessin simple : Reptiles (Sauropsides), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -857,7 +903,9 @@
       "category": "reptile",
       "description": "Les squamates regroupent les lézards et les serpents : c'est aujourd'hui le plus grand groupe de reptiles, avec plus de 11 000 espèces. Le plus ancien squamate connu, Megachirella wachtleri, a vécu il y a environ 240 millions d'années dans l'actuelle région des Dolomites, en Italie. Les serpents sont en réalité des lézards dont les ancêtres ont perdu leurs pattes au fil de l'évolution.",
       "description_enfant": "Le caméléon qui change de couleur, le gecko qui marche au plafond et le serpent qui avance sans pattes sont tous cousins ! Leur famille existait déjà il y a 240 millions d'années, avant même les premiers dinosaures.",
+      "description_petits": "Le caméléon, le gecko qui marche au plafond et le serpent sans pattes sont cousins ! Leur famille existait déjà avant les dinosaures.",
       "fun_fact": "Le fossile de Megachirella dormait dans les collections depuis des années quand, en 2018, des images au scanner ont montré qu'il s'agissait du plus vieux squamate connu : d'un coup, l'histoire des lézards et des serpents a reculé d'environ 75 millions d'années !",
+      "fun_fact_petits": "Les serpents sont en fait des lézards dont les ancêtres ont perdu leurs pattes !",
       "emoji": "🐍",
       "image": "images/squamates.svg",
       "image_alt": "Dessin simple : Lézards et serpents, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -893,7 +941,9 @@
       "category": "reptile",
       "description": "Les tortues sont des reptiles reconnaissables à leur carapace, formée en grande partie de leurs côtes et de leur colonne vertébrale soudées à des plaques osseuses. Odontochelys semitestacea, vieille d'environ 220 millions d'années (Chine), avait déjà la carapace du ventre (le plastron) mais pas celle du dos, et portait encore des dents. Des parents plus anciens, comme Pappochelys (environ 240 millions d'années), n'avaient pas de carapace du tout, seulement des côtes très larges.",
       "description_enfant": "Une tortue ne peut pas sortir de sa carapace comme d'une maison : sa carapace fait partie de son squelette ! Il y a 220 millions d'années, ses ancêtres avaient encore des dents et seulement une moitié de carapace.",
+      "description_petits": "Une tortue ne peut pas sortir de sa carapace : elle fait partie de son squelette ! Les premières tortues avaient des dents et une demi-carapace.",
       "fun_fact": "Le nom Odontochelys semitestacea veut dire « tortue à dents avec une demi-carapace » : cette ancêtre avait des dents et seulement la carapace du ventre. Les tortues d'aujourd'hui n'ont plus aucune dent, mais un bec corné.",
+      "fun_fact_petits": "Odontochelys, une des premières tortues, avait une carapace sous le ventre… mais pas sur le dos !",
       "emoji": "🐢",
       "image": "images/tortues.svg",
       "image_alt": "Dessin simple : Tortues, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -930,7 +980,9 @@
       "category": "reptile",
       "description": "Les archosaures, ou « reptiles dominants », réunissent la lignée des crocodiles et celle des oiseaux, qui comprend aussi les ptérosaures et les dinosaures. Ils se sont diversifiés au début du Trias, juste après la plus grande extinction de tous les temps (fin du Permien, il y a environ 252 millions d'années) ; leurs plus anciens fossiles sûrs ont environ 248 millions d'années. Leurs seuls représentants vivants sont les crocodiliens et les oiseaux.",
       "description_enfant": "Un crocodile et une poule, cousins ? Oui ! Ils descendent tous les deux des archosaures, des reptiles qui ont pris le pouvoir sur Terre après une immense extinction.",
+      "description_petits": "Un crocodile et une poule sont cousins ! Tous deux viennent des archosaures, des reptiles qui sont devenus les rois de la Terre.",
       "fun_fact": "Les alligators respirent un peu comme les oiseaux : l'air circule à sens unique dans leurs poumons. Cette astuce, découverte en 2010, existait peut-être déjà chez les premiers archosaures du Trias.",
+      "fun_fact_petits": "L'alligator respire un peu comme un oiseau : dans ses poumons, l'air circule toujours dans le même sens !",
       "emoji": "👑",
       "image": "images/archosaures.svg",
       "image_alt": "Dessin simple : Archosaures, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -966,7 +1018,9 @@
       "category": "reptile",
       "description": "Les pseudosuchiens sont la branche des archosaures qui mène aux crocodiles. Au Trias, ils étaient bien plus variés qu'aujourd'hui : grands prédateurs à quatre pattes, herbivores cuirassés et même des espèces qui marchaient sur deux pattes. Les plus anciens, comme Ctenosauriscus (Allemagne) et Xilousuchus (Chine), ont environ 248 millions d'années et portaient une sorte de voile sur le dos.",
       "description_enfant": "Avant les dinosaures, ce sont les cousins des crocodiles qui dominaient la Terre ! Certains couraient même sur deux pattes.",
+      "description_petits": "Avant le grand règne des dinosaures, les cousins des crocodiles étaient les maîtres de la Terre ! Certains marchaient même sur deux pattes.",
       "fun_fact": "Effigia, un cousin des crocodiles qui vivait il y a environ 210 millions d'années, marchait sur deux pattes et avait un bec sans dents : il ressemblait tellement à un dinosaure « autruche » que son proche parent Shuvosaurus a d'abord été classé parmi les dinosaures !",
+      "fun_fact_petits": "Shuvosaurus, un cousin des crocodiles avec un bec, a d'abord été pris pour un dinosaure !",
       "emoji": "🐊",
       "image": "images/pseudosuchiens.svg",
       "image_alt": "Dessin simple : Lignée des crocodiles, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1003,7 +1057,9 @@
       "category": "reptile",
       "description": "Les crocodiliens regroupent les crocodiles, les alligators, les caïmans et les gavials : moins d'une trentaine d'espèces vivent aujourd'hui. Leur plus ancien représentant possible, Portugalosuchus azenhae, découvert au Portugal, a environ 95 millions d'années, mais les scientifiques discutent encore pour savoir s'il appartient vraiment au groupe moderne. Les crocodiles ne sont pas des « dinosaures vivants » : ce sont des cousins des dinosaures, issus de l'autre branche des archosaures.",
       "description_enfant": "Le crocodile n'est pas un dinosaure, mais c'est un cousin éloigné ! Et sais-tu qu'une maman crocodile peut transporter délicatement ses bébés dans sa gueule ?",
+      "description_petits": "Le crocodile n'est pas un dinosaure, mais un cousin éloigné ! Une maman crocodile peut porter ses bébés tout doucement dans sa gueule.",
       "fun_fact": "Chez les crocodiliens, ce n'est pas un chromosome qui décide si un bébé sera mâle ou femelle, mais la température du nid pendant l'incubation des œufs !",
+      "fun_fact_petits": "Chez les crocodiles, c'est la chaleur du nid qui décide si le bébé sera mâle ou femelle !",
       "emoji": "🐊",
       "image": "images/crocodiliens.svg",
       "image_alt": "Dessin simple : Crocodiliens modernes, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1040,7 +1096,9 @@
       "category": "reptile",
       "description": "Les avémétatarsaliens forment la branche des archosaures qui mène aux ptérosaures, aux dinosaures et donc aux oiseaux. L'un de leurs plus anciens représentants, Teleocrater rhadinus, vivait il y a environ 245 millions d'années dans l'actuelle Tanzanie. Surprise : il marchait à quatre pattes et avait des chevilles proches de celles des crocodiles, ce qui montre que les premiers parents des dinosaures ne ressemblaient pas encore à des dinosaures.",
       "description_enfant": "Teleocrater, un lointain parent des dinosaures et des oiseaux, ressemblait plutôt à un crocodile au long cou qui trottait à quatre pattes !",
+      "description_petits": "Voici la famille qui mène aux dinosaures et aux oiseaux. Un des premiers ressemblait pourtant à un crocodile au long cou, à quatre pattes !",
       "fun_fact": "Les premiers os de Teleocrater ont été découverts en Tanzanie en 1933, mais il a fallu attendre 2017, et de nouveaux fossiles, pour que les scientifiques comprennent enfin qu'il s'agissait d'un des plus anciens membres de la lignée des oiseaux.",
+      "fun_fact_petits": "Les os de Teleocrater ont attendu plus de quatre-vingts ans dans un musée avant qu'on comprenne qui il était !",
       "emoji": "🦴",
       "image": "images/avemetatarsaliens.svg",
       "image_alt": "Dessin simple : Lignée des oiseaux, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1076,7 +1134,9 @@
       "category": "reptile",
       "description": "Les ptérosaures sont des reptiles volants : ce sont les premiers vertébrés à avoir volé en battant des ailes, plus de 60 millions d'années avant les oiseaux. Leur aile était une membrane de peau tendue depuis un quatrième doigt immensément long. Ce ne sont pas des dinosaures, mais leurs proches cousins ; ils ont vécu d'environ 228 à 66 millions d'années, avant de disparaître lors de l'extinction de la fin du Crétacé.",
       "description_enfant": "Les ptérosaures ne sont ni des dinosaures ni des oiseaux : ce sont des reptiles volants avec des ailes de peau, un peu comme des chauves-souris géantes ! Certains étaient aussi hauts qu'une girafe.",
+      "description_petits": "Les ptérosaures ne sont ni des dinosaures ni des oiseaux, mais leurs cousins ! Ces reptiles volaient avec de grandes ailes de peau.",
       "fun_fact": "Quetzalcoatlus, l'un des plus grands ptérosaures, avait environ 10 à 11 m d'envergure, autant qu'un petit avion de tourisme ; posé au sol, il était à peu près aussi haut qu'une girafe.",
+      "fun_fact_petits": "Debout, Quetzalcoatlus était aussi haut qu'une girafe, et ses ailes aussi larges qu'un petit avion !",
       "emoji": "🪽",
       "image": "images/pterosaures.svg",
       "image_alt": "Dessin simple : Ptérosaures, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1112,7 +1172,9 @@
       "category": "dinosaure",
       "description": "Les dinosaures sont des archosaures aux pattes placées droites sous le corps, apparus il y a environ 233 millions d'années dans le sud de la Pangée (Brésil et Argentine actuels). Ils se divisent en trois grandes branches : les sauropodomorphes (à long cou), les théropodes et les ornithischiens. Ils ne sont pas tous éteints : les oiseaux sont des dinosaures théropodes qui ont survécu à l'extinction d'il y a 66 millions d'années.",
       "description_enfant": "Les dinosaures n'ont pas tous disparu : il y en a peut-être un sur ton balcon ! Les oiseaux sont les derniers dinosaures vivants.",
+      "description_petits": "Les dinosaures n'ont pas tous disparu ! Les oiseaux, comme le pigeon ou la poule, sont les derniers dinosaures vivants.",
       "fun_fact": "Aujourd'hui, il existe plus d'espèces de dinosaures (environ 11 000 espèces d'oiseaux) que d'espèces de mammifères (environ 6 500) ! Et le plus petit dinosaure connu est vivant : le colibri d'Elena, à Cuba, mesure environ 5 à 6 cm.",
+      "fun_fact_petits": "Le plus petit dinosaure connu est vivant : c'est un colibri à peine plus grand que ton pouce !",
       "emoji": "🦖",
       "image": "images/dinosaures.svg",
       "image_alt": "Dessin simple : Dinosaures, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1148,7 +1210,9 @@
       "category": "dinosaure",
       "description": "Les sauropodomorphes sont les dinosaures « à long cou ». Les premiers, comme Buriolestes au Brésil (environ 233 millions d'années) ou Panphagia et Eoraptor en Argentine (environ 231 millions d'années), étaient petits et marchaient sur deux pattes ; la place exacte d'Eoraptor dans l'arbre est encore discutée. Leurs descendants, les sauropodes comme Argentinosaurus ou Patagotitan, sont devenus les plus grands animaux ayant jamais marché sur la Terre.",
       "description_enfant": "Les plus grands animaux qui aient jamais marché sur Terre étaient des dinosaures à long cou ! Pourtant, leurs premiers ancêtres n'étaient pas plus lourds qu'un chien moyen.",
+      "description_petits": "Ces dinosaures à long cou ont donné les plus grands animaux à avoir marché sur Terre ! Pourtant, les premiers étaient petits comme un chien.",
       "fun_fact": "Les titanosaures géants, longs de plus de 30 m, sortaient d'œufs d'environ 12 à 15 cm de diamètre seulement, à peu près la taille d'un pamplemousse !",
+      "fun_fact_petits": "Les titanosaures géants, plus longs que deux autobus, sortaient d'œufs gros comme un pamplemousse !",
       "emoji": "🦕",
       "image": "images/sauropodomorphes.svg",
       "image_alt": "Dessin simple : Dinosaures à long cou, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1185,7 +1249,9 @@
       "category": "dinosaure",
       "description": "Les théropodes sont les dinosaures qui marchaient sur leurs pattes arrière, le plus souvent carnivores, avec des os creux et trois doigts principaux aux pieds. Parmi les plus anciens figurent Eodromaeus et Herrerasaurus (Argentine, environ 231 millions d'années), même si les scientifiques débattent encore de leur place exacte dans l'arbre. Ce groupe comprend Tyrannosaurus, les vélociraptors… et les oiseaux, qui sont des théropodes vivants.",
       "description_enfant": "T. rex, vélociraptor et… le pigeon de ta place ! Ils font tous partie de la famille des théropodes, des dinosaures qui marchent sur deux pattes.",
+      "description_petits": "Le tyrannosaure, le vélociraptor… et le pigeon de ta rue ! Ils font tous partie des théropodes, des dinosaures qui marchent sur deux pattes.",
       "fun_fact": "Beaucoup de théropodes avaient des plumes. Grâce à des pigments fossilisés, on sait que le petit Sinosauropteryx avait des plumes rousses et une queue rayée, un peu comme celle d'un raton laveur !",
+      "fun_fact_petits": "Le petit Sinosauropteryx avait des plumes rousses et une queue rayée, comme un raton laveur !",
       "emoji": "🐾",
       "image": "images/theropodes.svg",
       "image_alt": "Dessin simple : Théropodes, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1221,7 +1287,9 @@
       "category": "dinosaure",
       "description": "Tyrannosaurus rex est l'un des plus grands dinosaures carnivores ayant existé : environ 12 m de long pour 8 à 9 tonnes. Il a vécu dans l'ouest de l'Amérique du Nord tout à la fin du Crétacé, entre environ 68 et 66 millions d'années, notamment dans la Formation de Hell Creek. Son squelette le plus célèbre, « Sue », exposé au Field Museum de Chicago, est complet à environ 90 %.",
       "description_enfant": "Le « roi des lézards tyrans » avait des dents aussi grosses que des bananes et une mâchoire capable de broyer les os ! Et pourtant, c'est un cousin éloigné de la poule.",
+      "description_petits": "Le T. rex était un énorme dinosaure, long comme un autobus, avec des dents grosses comme des bananes. Il mangeait de la viande !",
       "fun_fact": "D'après des simulations par ordinateur, la morsure du T. rex pouvait atteindre 35 000 à 57 000 newtons au fond de la mâchoire, comme si le poids de 3 à 5 voitures appuyait sur une seule dent : la plus forte morsure estimée pour un animal terrestre.",
+      "fun_fact_petits": "Aucun animal connu de la terre ferme n'a mordu aussi fort que le T. rex : il broyait les os !",
       "emoji": "🦖",
       "image": "images/t_rex.svg",
       "image_alt": "Dessin simple : Tyrannosaurus rex, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1258,7 +1326,9 @@
       "category": "oiseau",
       "description": "Les avialiens regroupent les oiseaux et leurs plus proches parents disparus : ce sont des dinosaures théropodes à plumes, pour la plupart capables de voler. Archaeopteryx, vieux d'environ 150 millions d'années (Allemagne), en est le représentant le plus célèbre ; quelques fossiles chinois un peu plus anciens, comme Anchiornis, sont parfois classés dans le groupe, mais les scientifiques en discutent encore. Les premiers oiseaux avaient encore des dents, des griffes aux ailes et une longue queue osseuse.",
       "description_enfant": "Les oiseaux sont des dinosaures qui ont appris à voler ! Les tout premiers avaient même des dents et des griffes sur les ailes.",
+      "description_petits": "Les oiseaux sont de vrais dinosaures, avec des plumes et des ailes ! Les tout premiers avaient même des dents.",
       "fun_fact": "Les oiseaux ont perdu leurs dents il y a très longtemps, mais des chercheurs ont observé des embryons de poulets mutants qui commençaient à former des ébauches de dents pointues, un peu comme celles des crocodiles : un souvenir enfoui de leurs ancêtres !",
+      "fun_fact_petits": "Dans l'œuf, des poussins un peu spéciaux ont commencé à faire de petites dents pointues, comme leurs lointains ancêtres !",
       "emoji": "🐦",
       "image": "images/oiseaux.svg",
       "image_alt": "Dessin simple : Oiseaux (Avialiens), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1294,7 +1364,9 @@
       "category": "oiseau",
       "description": "Archaeopteryx est l'un des plus anciens oiseaux connus : il vivait il y a environ 150 millions d'années sur des îles bordant une mer chaude, dans l'actuelle Bavière (Allemagne). Il avait des plumes et des ailes comme un oiseau, mais aussi des dents, des griffes aux doigts et une longue queue osseuse comme un petit dinosaure. C'est l'un des fossiles les plus célèbres au monde, devenu le symbole des formes de transition entre deux grands groupes.",
       "description_enfant": "Moitié oiseau, moitié dinosaure : Archaeopteryx avait des plumes, mais aussi des dents et des griffes ! Il était à peu près de la taille d'un corbeau.",
+      "description_petits": "Archaeopteryx, grand comme un corbeau, est l'un des tout premiers oiseaux. Il avait des plumes, mais aussi des dents et des griffes !",
       "fun_fact": "Le premier squelette d'Archaeopteryx a été trouvé en 1861, juste deux ans après le célèbre livre de Darwin sur l'évolution : c'était exactement le genre de fossile « intermédiaire » que sa théorie prévoyait ! Depuis, on en a découvert environ une douzaine, presque tous dans les calcaires de Solnhofen, en Allemagne.",
+      "fun_fact_petits": "Ses fossiles sont si bien gardés dans la pierre qu'on y voit encore la forme de ses plumes !",
       "emoji": "🪶",
       "image": "images/archaeopteryx.svg",
       "image_alt": "Dessin simple : Archaeopteryx, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1331,7 +1403,9 @@
       "category": "oiseau",
       "description": "Les néornithes, ou oiseaux modernes, rassemblent tous les oiseaux vivants : ils n'ont plus de dents et possèdent un bec corné. Asteriornis maastrichtensis, surnommé « Wonderchicken », découvert en Belgique et vieux d'environ 66,8 millions d'années, est l'un des plus anciens fossiles sûrs du groupe ; un crâne de Vegavis trouvé en Antarctique, décrit en 2025, pourrait même atteindre 69 millions d'années. Ces oiseaux ont survécu à l'extinction qui a mis fin au règne des autres dinosaures.",
       "description_enfant": "Le poulet, le canard, le manchot et le perroquet ont tous des ancêtres qui ont vécu la chute de l'astéroïde il y a 66 millions d'années… et qui ont survécu !",
+      "description_petits": "Poule, canard, perroquet : les oiseaux d'aujourd'hui ont un bec sans dents. Leurs ancêtres ont survécu quand les autres dinosaures ont disparu !",
       "fun_fact": "Le crâne du « Wonderchicken » était caché dans un bloc de roche trouvé en Belgique en 2000 : il a fallu attendre un scanner, près de 20 ans plus tard, pour découvrir ce trésor. Il ressemblait à un mélange de poule et de canard !",
+      "fun_fact_petits": "Un de leurs plus vieux fossiles, trouvé en Belgique, ressemble à un mélange de poule et de canard !",
       "emoji": "🐔",
       "image": "images/oiseaux_modernes.svg",
       "image_alt": "Dessin simple : Oiseaux modernes, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1367,7 +1441,9 @@
       "category": "dinosaure",
       "description": "Les ornithischiens sont une grande branche de dinosaures surtout herbivores, reconnaissables à un os en forme de bec au bout de la mâchoire inférieure. On y trouve les stégosaures, les ankylosaures, les dinosaures à bec de canard, les pachycéphalosaures et les cératopsiens comme Triceratops. Leur plus ancien représentant sûr, Laquintasaura venezuelae, a vécu il y a environ 201 millions d'années au Venezuela ; Pisanosaurus, plus ancien (environ 229 millions d'années), est peut-être un ornithischien, mais les scientifiques en discutent.",
       "description_enfant": "Stégosaure, Triceratops, ankylosaure… la plupart de ces dinosaures broutaient tranquillement des plantes, et beaucoup étaient protégés par des plaques, des cornes ou des épines !",
+      "description_petits": "Ces dinosaures à bec, comme le stégosaure, mangeaient surtout des plantes. Beaucoup portaient des cornes, des plaques ou des piquants !",
       "fun_fact": "Ornithischien veut dire « hanche d'oiseau »… et pourtant les oiseaux ne descendent pas d'eux ! Les oiseaux descendent des théropodes, qui ont une « hanche de lézard » : la hanche des oiseaux a pris une forme semblable de son côté, au cours de l'évolution.",
+      "fun_fact_petits": "Certains avaient des centaines de dents qui repoussaient sans arrêt, pour mâcher les plantes dures !",
       "emoji": "🌿",
       "image": "images/ornithischiens.svg",
       "image_alt": "Dessin simple : Ornithischiens, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1403,7 +1479,9 @@
       "category": "dinosaure",
       "description": "Triceratops est un grand dinosaure herbivore à trois cornes et à collerette osseuse, l'un des derniers dinosaures non aviens. Il a vécu dans l'ouest de l'Amérique du Nord il y a environ 68 à 66 millions d'années, à la même époque que Tyrannosaurus. Son crâne, qui pouvait atteindre 2,5 m, est l'un des plus grands de tous les animaux terrestres.",
       "description_enfant": "Trois cornes, un bec de perroquet et une grande collerette : Triceratops était le voisin du T. rex, et il savait se défendre !",
+      "description_petits": "Triceratops avait trois cornes, un bec de perroquet et une grande collerette autour du cou. Il broutait des plantes, tout près du T. rex !",
       "fun_fact": "On a retrouvé une corne de Triceratops arrachée par une morsure de T. rex… qui avait ensuite cicatrisé : ce Triceratops a donc survécu à l'attaque !",
+      "fun_fact_petits": "Un Triceratops s'est fait arracher une corne par un T. rex… et il a guéri !",
       "emoji": "🦕",
       "image": "images/triceratops.svg",
       "image_alt": "Dessin simple : Triceratops, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1440,7 +1518,9 @@
       "category": "mammifère",
       "description": "Les synapsides forment la grande lignée qui mène aux mammifères ; ils se sont séparés des sauropsides (reptiles et oiseaux) peu après l'apparition de l'œuf amniotique, à la fin du Carbonifère. On les reconnaît à une seule ouverture du crâne derrière chaque œil. Dimetrodon, avec sa voile sur le dos, est un synapside du Permien : il est plus proche de nous que des dinosaures.",
       "description_enfant": "Il y a plus de 300 millions d'années, un petit animal ressemblant à un lézard a lancé une nouvelle famille : celle qui allait, bien plus tard, donner les mammifères… et toi !",
+      "description_petits": "Bien avant les dinosaures vivait un petit animal qui ressemblait à un lézard. Beaucoup plus tard, sa famille a donné les mammifères… et toi !",
       "fun_fact": "Dimetrodon, le célèbre animal à voile qu'on range souvent avec les dinosaures, n'en est pas un du tout : c'est un synapside, un lointain cousin de nos ancêtres, et il a disparu environ 40 millions d'années avant l'apparition des premiers dinosaures !",
+      "fun_fact_petits": "Dimetrodon, l'animal à voile, n'est pas un dinosaure : il est plus proche de toi que du T. rex !",
       "emoji": "🦎",
       "image": "images/synapsides.svg",
       "image_alt": "Dessin simple : Synapsides (lignée des mammifères), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1478,7 +1558,9 @@
       "category": "mammifère",
       "description": "Les premiers mammaliformes, comme Morganucodon, apparaissent à la fin du Trias, à peu près en même temps que les premiers grands dinosaures. Ils étaient minuscules, couverts de poils et avaient une mâchoire et des dents très proches de celles des mammifères actuels. Un fossile brésilien plus ancien, Brasilodon (environ 225 Ma), est parfois présenté comme le premier mammifère, mais beaucoup de scientifiques le contestent.",
       "description_enfant": "Les premiers mammifères étaient de toutes petites boules de poils, grandes comme une souris, qui trottinaient entre les pattes des dinosaures. Ce sont tes très, très lointains arrière-grands-parents !",
+      "description_petits": "Les premiers mammifères étaient de petites boules de poils, grandes comme une souris, qui vivaient au temps des dinosaures. Tes lointains ancêtres leur ressemblaient !",
       "fun_fact": "Les petits os de ton oreille (le marteau et l'enclume) étaient autrefois des os de la mâchoire ! Chez Morganucodon, on voit encore une mâchoire « à double articulation », une étape du voyage de ces os vers l'oreille.",
+      "fun_fact_petits": "Deux tout petits os de ton oreille étaient, chez tes très lointains ancêtres, des os de la mâchoire !",
       "emoji": "🐁",
       "image": "images/mammiferes.svg",
       "image_alt": "Dessin simple : Premiers mammifères, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1516,7 +1598,9 @@
       "category": "mammifère",
       "description": "Les monotrèmes sont les seuls mammifères actuels qui pondent des œufs : l'ornithorynque et les échidnés. Leur plus vieux représentant connu, Teinolophos trusleri, est une petite mâchoire du Crétacé inférieur trouvée en Australie (son âge exact et sa place précise dans l'arbre sont encore discutés). Ils ont conservé des caractères très anciens, hérités des premiers mammifères.",
       "description_enfant": "L'ornithorynque a un bec de canard, une queue de castor… et il pond des œufs ! Pourtant, c'est bien un mammifère : la maman nourrit ses bébés avec son lait.",
+      "description_petits": "L'ornithorynque a un bec de canard, et la maman pond des œufs ! Pourtant, c'est un mammifère : ses bébés boivent son lait.",
       "fun_fact": "L'ornithorynque n'a pas de tétines : le lait suinte directement de sa peau, et les bébés le lèchent ! En plus, sa fourrure brille d'une lueur bleu-vert sous la lumière ultraviolette (découverte publiée en 2020).",
+      "fun_fact_petits": "La maman ornithorynque n'a pas de tétines : son lait coule sur sa peau et les bébés le lèchent !",
       "emoji": "🦫",
       "image": "images/monotremes.svg",
       "image_alt": "Dessin simple : Monotrèmes (ornithorynque), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1553,7 +1637,9 @@
       "category": "mammifère",
       "description": "Les thériens regroupent les marsupiaux et les placentaires, c'est-à-dire tous les mammifères qui donnent naissance à des petits vivants, sans pondre d'œuf. Leurs deux branches s'étaient déjà séparées il y a au moins 160 millions d'années, comme le montre Juramaia, un petit fossile chinois du Jurassique rattaché à la lignée des placentaires. Ils ont aussi des molaires très efficaces pour couper et écraser.",
       "description_enfant": "Chez les thériens, les bébés ne sortent pas d'un œuf : ils naissent tout vivants ! Le kangourou, le chien, la baleine et toi, vous faites partie de cette grande famille.",
+      "description_petits": "Dans cette grande famille, les bébés ne sortent pas d'un œuf : ils naissent tout vivants ! Le kangourou, le chien et toi en faites partie.",
       "fun_fact": "Le nom de Juramaia veut dire « la mère du Jurassique » : ce petit animal plus léger qu'une souris montre que, il y a 160 millions d'années, la famille des marsupiaux et celle des placentaires s'étaient déjà séparées.",
+      "fun_fact_petits": "Juramaia, l'un de leurs plus vieux fossiles, pesait à peu près autant que trois morceaux de sucre !",
       "emoji": "🐾",
       "image": "images/theriens.svg",
       "image_alt": "Dessin simple : Thériens, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1590,7 +1676,9 @@
       "category": "mammifère",
       "description": "Les marsupiaux et leurs ancêtres (les métathériens) mettent au monde des petits minuscules qui terminent leur développement en tétant, souvent à l'abri d'une poche. Sinodelphys szalayi, un fossile chinois d'environ 125 millions d'années, a longtemps été présenté comme le plus ancien d'entre eux, mais une étude de 2018 l'a reclassé du côté des placentaires : les scientifiques en discutent encore. Nés dans l'hémisphère Nord, les marsupiaux ont gagné l'Australie en passant par l'Amérique du Sud et l'Antarctique.",
       "description_enfant": "Le bébé kangourou naît tout petit, à peine plus gros qu'un haricot, puis grimpe tout seul jusqu'à la poche de sa maman pour y grandir bien au chaud.",
+      "description_petits": "Le bébé kangourou naît tout petit, gros comme un haricot. Il grimpe tout seul dans la poche de sa maman pour grandir au chaud.",
       "fun_fact": "À sa naissance, un bébé kangourou roux pèse moins d'un gramme, à peu près le poids d'un haricot, alors que sa maman peut peser plus de 30 kg !",
+      "fun_fact_petits": "Le wombat, un cousin du koala, fait des crottes en forme de cubes !",
       "emoji": "🦘",
       "image": "images/marsupiaux.svg",
       "image_alt": "Dessin simple : Marsupiaux, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1627,7 +1715,9 @@
       "category": "mammifère",
       "description": "La lignée des placentaires (les euthériens) remonte au moins à Juramaia, il y a environ 160 millions d'années, même si les groupes modernes (rongeurs, primates, baleines…) ne se diversifient vraiment qu'autour de la disparition des dinosaures, il y a 66 millions d'années. Chez eux, le bébé grandit longtemps dans le ventre de sa mère, nourri par le placenta. Ils représentent aujourd'hui l'immense majorité des mammifères.",
       "description_enfant": "Comme toi, les bébés placentaires grandissent longtemps dans le ventre de leur maman, reliés à elle par un cordon. C'est la plus grande famille de mammifères !",
+      "description_petits": "Comme toi, le chaton et le bébé éléphant ont grandi longtemps dans le ventre de leur maman. C'est la plus grande famille de mammifères !",
       "fun_fact": "Pour fabriquer le placenta, les mammifères utilisent un gène « emprunté » à un ancien virus : il y a des millions d'années, un virus a laissé ce gène dans l'ADN de nos ancêtres, et il est devenu indispensable à la grossesse.",
+      "fun_fact_petits": "Le placenta, qui nourrit le bébé dans le ventre, utilise un bout de « recette » venu d'un vieux virus !",
       "emoji": "🤰",
       "image": "images/placentaires.svg",
       "image_alt": "Dessin simple : Lignée des placentaires (Euthériens), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1664,7 +1754,9 @@
       "category": "mammifère",
       "description": "Les proboscidiens apparaissent en Afrique peu après la disparition des dinosaures non aviens : Eritherium azzouzorum, trouvé au Maroc et âgé d'environ 60 millions d'années, est le plus ancien connu. Il avait la taille d'un lapin et pas encore de trompe ! Le groupe a ensuite donné les mastodontes, les mammouths et les éléphants actuels.",
       "description_enfant": "Le tout premier ancêtre des éléphants n'était pas plus gros qu'un lapin et n'avait pas de trompe. Il a fallu des millions d'années pour que ses descendants deviennent des géants !",
+      "description_petits": "Le plus ancien cousin connu des éléphants était petit comme un lapin, sans trompe ! Bien plus tard, sa famille a donné des géants.",
       "fun_fact": "Les plus proches cousins vivants des éléphants sont les lamantins, qui vivent dans l'eau, et les damans, de petites boules de poils qui ressemblent à de grosses marmottes !",
+      "fun_fact_petits": "Le lamantin, qui nage, et le daman, une petite boule de poils, sont les plus proches cousins de l'éléphant !",
       "emoji": "🐘",
       "image": "images/elephants.svg",
       "image_alt": "Dessin simple : Éléphants (Proboscidiens), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1701,7 +1793,9 @@
       "category": "mammifère",
       "description": "Les artiodactyles sont les mammifères « à nombre pair de doigts » : porcs, chameaux, cerfs, girafes, vaches, hippopotames… et, surprise, les baleines, qui font partie de ce groupe d'après la génétique et les fossiles. Le plus ancien représentant connu, Diacodexis, apparaît au tout début de l'Éocène, il y a environ 56 millions d'années. On les reconnaît notamment à un os de la cheville en forme de « double poulie ».",
       "description_enfant": "La vache, la girafe, le cochon et le chameau marchent sur deux doigts par pied, qui forment leurs sabots. Et devine qui fait aussi partie de leur famille ? La baleine !",
+      "description_petits": "La vache, le cochon et la girafe marchent sur deux doigts, avec des sabots. Devine qui fait aussi partie de leur famille : la baleine !",
       "fun_fact": "Selon la génétique et les fossiles, les baleines et les dauphins font partie des artiodactyles : une baleine est donc une cousine (très lointaine) de la vache et du cochon !",
+      "fun_fact_petits": "Le long cou de la girafe a le même nombre d'os que ton petit cou : sept !",
       "emoji": "🐄",
       "image": "images/artiodactyles.svg",
       "image_alt": "Dessin simple : Artiodactyles, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1737,7 +1831,9 @@
       "category": "mammifère",
       "description": "Les whippomorphes réunissent les cétacés (baleines, dauphins) et les hippopotames, qui sont leurs plus proches parents vivants. Leur ancêtre commun n'est pas connu par des fossiles ; on estime qu'il vivait il y a au moins 54 millions d'années (certaines études proposent 55 à 60 millions d'années). Attention : la baleine ne descend pas de l'hippopotame, ce sont deux groupes frères issus d'un même ancêtre.",
       "description_enfant": "La baleine et l'hippopotame sont des cousins : ils ont un arrière-arrière-…-grand-parent commun qui vivait il y a plus de 50 millions d'années.",
+      "description_petits": "La baleine et l'hippopotame sont cousins ! Ils ont un très, très lointain grand-parent en commun, qui vivait après les grands dinosaures.",
       "fun_fact": "Le nom « whippomorphe » vient de l'anglais whale (baleine) et hippo (hippopotame) : un mot inventé exprès pour réunir ces deux cousins inattendus !",
+      "fun_fact_petits": "Le bébé hippopotame sait téter sous l'eau, comme son cousin le bébé baleine !",
       "emoji": "🦛",
       "image": "images/whippomorphes.svg",
       "image_alt": "Dessin simple : Whippomorphes, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1773,7 +1869,9 @@
       "category": "mammifère",
       "description": "Les cétacés descendent de petits mammifères terrestres qui vivaient au bord de l'eau en Asie du Sud, à l'Éocène. Les plus anciens, comme Pakicetus (environ 50 Ma ; Himalayacetus, vers 53,5 Ma, est discuté), marchaient encore sur quatre pattes. En une dizaine de millions d'années, leurs descendants sont devenus des nageurs, perdant peu à peu leurs pattes arrière.",
       "description_enfant": "Les ancêtres des baleines avaient quatre pattes et marchaient sur la terre ! Petit à petit, génération après génération, ils sont retournés vivre dans l'eau.",
+      "description_petits": "Les ancêtres des baleines avaient quatre pattes et marchaient sur la terre ! Petit à petit, leurs descendants sont allés vivre dans l'eau.",
       "fun_fact": "Certaines baleines et dauphins ont encore, cachés dans leur corps, de petits os du bassin : un souvenir des pattes arrière de leurs ancêtres qui marchaient !",
+      "fun_fact_petits": "Dans leur corps, les baleines cachent encore de tout petits os de hanches : un souvenir des pattes de leurs ancêtres !",
       "emoji": "🐋",
       "image": "images/cetaces.svg",
       "image_alt": "Dessin simple : Cétacés, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1810,7 +1908,9 @@
       "category": "mammifère",
       "description": "Pakicetus est l'un des plus anciens cétacés connus ; il vivait il y a environ 50 millions d'années dans l'actuel Pakistan. Il marchait sur quatre pattes et ressemblait plutôt à un chien, mais son oreille interne a la forme typique de celle des baleines. Les scientifiques discutent encore de la quantité de temps qu'il passait dans l'eau : terrestre selon certains, en partie aquatique selon d'autres.",
       "description_enfant": "Pakicetus avait l'air d'un chien avec une longue queue… mais c'est une des toutes premières baleines ! Il vivait au bord des rivières et y trempait sûrement souvent les pattes.",
+      "description_petits": "Pakicetus ressemblait à un chien avec une longue queue, mais c'est l'une des toutes premières baleines ! Il vivait au bord de l'eau.",
       "fun_fact": "Pakicetus ressemblait à un chien, mais on sait que c'est une baleine grâce à un os de son oreille, épais et bombé, qu'on ne trouve que chez les cétacés !",
+      "fun_fact_petits": "Un os de son oreille, pareil à celui des baleines et des dauphins, montre que c'était une baleine !",
       "emoji": "🐕",
       "image": "images/pakicetus.svg",
       "image_alt": "Dessin simple : Pakicetus, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1847,7 +1947,9 @@
       "category": "mammifère",
       "description": "Les néocètes regroupent les deux grandes familles actuelles : les baleines à fanons (mysticètes), qui filtrent l'eau, et les cétacés à dents (odontocètes), comme les dauphins et les cachalots, qui chassent grâce à l'écholocation. Le plus ancien néocète connu, Mystacodon selenensis, a vécu au Pérou il y a environ 36,4 millions d'années : c'était un ancêtre des baleines à fanons… qui avait encore des dents et de minuscules pattes arrière !",
       "description_enfant": "Les baleines et les dauphins d'aujourd'hui sont des champions de l'océan : certains chantent, d'autres « voient » avec des sons, et la baleine bleue est l'animal le plus gros de notre époque !",
+      "description_petits": "Les dauphins « voient » avec des sons, et la baleine bleue, plus longue que deux autobus, est le plus gros animal vivant !",
       "fun_fact": "Avant de naître, les bébés des baleines à fanons commencent à fabriquer des bourgeons de dents… qui disparaissent avant la naissance ! C'est un souvenir de leurs ancêtres à dents.",
+      "fun_fact_petits": "Dans le ventre de leur maman, certains bébés baleines commencent à faire des dents… qui disparaissent avant leur naissance !",
       "emoji": "🐬",
       "image": "images/cetaces_modernes.svg",
       "image_alt": "Dessin simple : Baleines et dauphins modernes, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1884,7 +1986,9 @@
       "category": "mammifère",
       "description": "Les hippopotames sont les plus proches parents vivants des cétacés, mais leurs premiers fossiles sont bien plus récents : Kenyapotamus, connu au Kenya vers 16 millions d'années, surtout par des dents. Ils descendraient d'un groupe d'animaux disparus, les anthracothères, mais les scientifiques discutent encore des détails. Ils vivent aujourd'hui seulement en Afrique.",
       "description_enfant": "L'hippopotame passe ses journées dans l'eau pour garder la peau au frais, et sort la nuit pour brouter. C'est le cousin des baleines, mais il ne sait pas nager !",
+      "description_petits": "L'hippopotame passe ses journées au frais dans l'eau, et sort la nuit pour brouter l'herbe. C'est un cousin des baleines !",
       "fun_fact": "L'hippopotame fabrique sa propre crème solaire : un liquide qui devient rouge-orangé sur sa peau, protège des rayons du soleil et freine certains microbes !",
+      "fun_fact_petits": "L'hippopotame fabrique sa propre crème solaire : un liquide rouge-orangé qui protège sa peau du soleil !",
       "emoji": "🦛",
       "image": "images/hippopotames.svg",
       "image_alt": "Dessin simple : Hippopotames, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1921,7 +2025,9 @@
       "category": "mammifère",
       "description": "Les périssodactyles sont les mammifères à sabots dont l'axe de la patte passe par le doigt du milieu : chevaux, rhinocéros et tapirs. Ils apparaissent brusquement en Amérique du Nord, en Europe et en Asie il y a environ 56 millions d'années, au début de l'Éocène ; leurs plus proches parents connus, les cambaythères, ont été trouvés en Inde. Très nombreux autrefois, ils ne comptent plus qu'environ 17 espèces.",
       "description_enfant": "Le cheval, le rhinocéros et le tapir sont de la même famille : celle des animaux à sabots qui s'appuient surtout sur leur doigt du milieu.",
+      "description_petits": "Le cheval, le rhinocéros et le tapir sont de la même famille. Sur chaque patte, ils s'appuient surtout sur le doigt du milieu !",
       "fun_fact": "Un parent des rhinocéros, Paraceratherium, est l'un des plus grands mammifères terrestres de tous les temps : il n'avait pas de corne et pouvait brouter les feuilles à plus de 5 mètres de haut !",
+      "fun_fact_petits": "Un cousin géant du rhinocéros, sans corne, pouvait manger des feuilles à plus de cinq mètres de haut !",
       "emoji": "🦏",
       "image": "images/perissodactyles.svg",
       "image_alt": "Dessin simple : Périssodactyles, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1958,7 +2064,9 @@
       "category": "mammifère",
       "description": "Les équidés, la famille du cheval, apparaissent en Amérique du Nord au tout début de l'Éocène. Le plus ancien, Sifrhippus sandrae, vivait dans le Wyoming il y a environ 56 millions d'années et n'était pas plus gros qu'un petit chien. Pendant des dizaines de millions d'années, la famille a évolué surtout en Amérique du Nord, avec de nombreuses espèces aux tailles et aux nombres de doigts variés.",
       "description_enfant": "Les premiers chevaux étaient tout petits, pas plus gros qu'un chat ou un petit chien, et vivaient dans les forêts. Ils avaient plusieurs doigts à chaque patte !",
+      "description_petits": "Les premiers chevaux étaient gros comme un chat ou un petit chien ! Ils vivaient dans les forêts et avaient plusieurs doigts par patte.",
       "fun_fact": "Pendant un épisode de réchauffement climatique il y a 56 millions d'années, le petit cheval Sifrhippus a rapetissé jusqu'à la taille d'un chat (environ 4 kg), puis il a regrandi quand le climat s'est refroidi !",
+      "fun_fact_petits": "Pendant un grand réchauffement, ces chevaux ont rapetissé, de parents en enfants, jusqu'à la taille d'un chat !",
       "emoji": "🐴",
       "image": "images/equides.svg",
       "image_alt": "Dessin simple : Équidés, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -1994,7 +2102,9 @@
       "category": "mammifère",
       "description": "Eohippus, le « cheval de l'aube », est l'un des premiers équidés ; il vivait en Amérique du Nord au début de l'Éocène. Il avait quatre doigts aux pattes avant et trois aux pattes arrière, chacun terminé par un petit sabot, et des dents adaptées aux feuilles tendres. On l'a longtemps rangé dans le genre Hyracotherium, nommé en 1841 par Richard Owen, qui trouvait à son fossile un air de daman.",
       "description_enfant": "Eohippus, le « cheval de l'aube », était un petit cheval de la taille d'un chien, avec plusieurs doigts à chaque patte. Il se cachait dans les forêts et mangeait des feuilles.",
+      "description_petits": "Eohippus était l'un des tout premiers chevaux. Grand comme un petit chien, il mangeait des feuilles tendres dans la forêt.",
       "fun_fact": "En 1841, le savant Richard Owen a trouvé que le crâne d'un de ces tout premiers chevaux ressemblait à celui d'un daman, une petite bête cousine des éléphants : il l'a donc appelé Hyracotherium, la « bête-daman » !",
+      "fun_fact_petits": "Eohippus avait quatre doigts aux pattes de devant et trois aux pattes de derrière, chacun avec un petit sabot !",
       "emoji": "🐎",
       "image": "images/eohippus.svg",
       "image_alt": "Dessin simple : Eohippus, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -2030,7 +2140,9 @@
       "category": "mammifère",
       "description": "Le genre Equus réunit les chevaux, les ânes et les zèbres. D'après l'ADN d'un cheval fossile vieux d'environ 700 000 ans conservé dans le pergélisol du Canada, la lignée est née il y a 4 à 4,5 millions d'années en Amérique du Nord. Les chevaux y ont disparu il y a environ 10 000 ans, avant d'y revenir avec les Européens à partir de la fin du XVe siècle.",
       "description_enfant": "Les chevaux, les ânes et les zèbres sont de la même famille, Equus. Ils marchent sur un seul doigt par patte, protégé par un gros ongle : le sabot !",
+      "description_petits": "Chevaux, ânes et zèbres sont de la même famille. Ils marchent sur un seul doigt par patte, protégé par un gros ongle : le sabot !",
       "fun_fact": "En 2013, des scientifiques ont lu l'ADN d'un cheval vieux d'environ 700 000 ans, resté congelé dans le sol du Canada : c'était à l'époque le plus vieux génome jamais déchiffré !",
+      "fun_fact_petits": "Les chevaux sont apparus en Amérique, y ont disparu, puis y sont revenus en bateau avec les Européens !",
       "emoji": "🐎",
       "image": "images/chevaux_modernes.svg",
       "image_alt": "Dessin simple : Chevaux modernes (Equus), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -2067,7 +2179,9 @@
       "category": "primate",
       "description": "Les primates forment l'ordre de mammifères qui réunit les lémuriens, les tarsiers, les singes et les humains. Les plus anciens primates « modernes » connus, comme Teilhardina, apparaissent il y a environ 56 Ma, au tout début de l'Éocène, pendant un réchauffement brutal du climat ; un proche parent plus ancien, Purgatorius, vivait déjà il y a environ 66 Ma, juste après la disparition des grands dinosaures. Leurs points communs : des mains qui agrippent, des ongles plats au lieu de griffes et des yeux tournés vers l'avant, des adaptations à la vie dans les arbres.",
       "description_enfant": "Les primates, c'est la grande famille des lémuriens, des singes… et de toi ! Tout a commencé avec de minuscules animaux aux grands yeux qui sautaient de branche en branche.",
+      "description_petits": "Les lémuriens, les singes et toi, vous êtes tous des primates ! Les premiers, petits comme une souris, vivaient dans les arbres.",
       "fun_fact": "Le plus vieux primate moderne connu, Teilhardina, était à peu près aussi petit qu'une souris : il ne pesait sans doute que quelques dizaines de grammes. Et il avait déjà de minuscules ongles au bout des doigts, comme toi !",
+      "fun_fact_petits": "Un des plus vieux primates connus avait déjà de minuscules ongles au bout des doigts, comme toi !",
       "emoji": "🐒",
       "image": "images/primates.svg",
       "image_alt": "Dessin simple : Primates, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -2105,7 +2219,9 @@
       "category": "primate",
       "description": "Les hominoïdes regroupent les gibbons, les orangs-outans, les gorilles, les chimpanzés, les bonobos et les humains ; ils se distinguent des autres singes notamment par l'absence de queue et des épaules très mobiles. Le plus ancien fossile connu, Rukwapithecus fleaglei, est un fragment de mâchoire daté de 25,2 Ma, découvert dans le rift de Rukwa en Tanzanie. Il montre que la lignée des grands singes s'était déjà séparée de celle des singes de l'Ancien Monde (babouins, macaques…) dès l'Oligocène.",
       "description_enfant": "Les hominoïdes, ce sont les singes sans queue : gibbons, orangs-outans, gorilles, chimpanzés, bonobos… et toi ! Regarde derrière toi : pas de queue, comme tous tes cousins grands singes.",
+      "description_petits": "Gibbons, orangs-outans, gorilles, chimpanzés… et toi : vous êtes de la même famille, celle des singes sans queue. Regarde : pas de queue !",
       "fun_fact": "Pourquoi n'avons-nous pas de queue ? En 2024, des chercheurs ont découvert un petit morceau d'ADN glissé dans un gène appelé TBXT, que partagent les grands singes et les humains, mais pas les singes à queue : il aurait aidé la queue à disparaître chez notre ancêtre commun. Tu en gardes un souvenir : le coccyx, tout en bas de ton dos !",
+      "fun_fact_petits": "En bas de ton dos, un petit os, le coccyx, est un souvenir de la queue de tes ancêtres !",
       "emoji": "🦧",
       "image": "images/hominoides.svg",
       "image_alt": "Dessin simple : Grands singes (Hominoïdes), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -2143,7 +2259,9 @@
       "category": "primate",
       "description": "Ce nœud représente la lignée qui réunit les humains et leurs plus proches cousins vivants, les chimpanzés et les bonobos (appelée Hominini dans certaines classifications, avec deux sous-tribus : Panina et Hominina). Leur dernier ancêtre commun vivait en Afrique il y a environ 7 à 6 Ma selon la plupart des estimations, mais aucun fossile ne peut être identifié avec certitude comme cet ancêtre, et les estimations génétiques varient selon les méthodes : les scientifiques en discutent encore. Humains et chimpanzés ne descendent pas les uns des autres : ce sont deux branches cousines issues du même tronc.",
       "description_enfant": "Il y a environ 7 millions d'années vivait en Afrique un grand singe qui est l'arrière-arrière-…-grand-parent à la fois des chimpanzés et des humains. Le chimpanzé n'est donc pas ton ancêtre : c'est ton cousin !",
+      "description_petits": "Il y a très, très longtemps vivait en Afrique un grand singe, lointain grand-parent des chimpanzés et des humains. Le chimpanzé est ton cousin !",
       "fun_fact": "Si l'on compare nos « lettres » d'ADN une à une, celles des humains et des chimpanzés sont identiques à près de 99 %. Pourtant, ce petit pour cent de différence, et la façon dont les gènes s'allument ou s'éteignent, suffit à faire de grandes différences entre nous !",
+      "fun_fact_petits": "La « recette » de ton corps, l'ADN, est presque la même que celle du chimpanzé, ton cousin !",
       "emoji": "🧬",
       "image": "images/hominini.svg",
       "image_alt": "Dessin simple : Ancêtre commun humains–chimpanzés, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -2181,7 +2299,9 @@
       "category": "primate",
       "description": "Le genre Pan comprend deux espèces : le chimpanzé commun (Pan troglodytes) et le bonobo (Pan paniscus), qui se sont séparés il y a environ 1 à 2 Ma de part et d'autre du fleuve Congo. Leur lignée s'est séparée de la nôtre il y a environ 7 à 6 Ma, mais leurs fossiles sont extrêmement rares : les premiers connus, quelques dents d'environ 500 000 ans trouvées au Kenya, n'ont été décrits qu'en 2005. Ils fabriquent et utilisent des outils et vivent en groupes aux relations sociales très riches.",
       "description_enfant": "Les chimpanzés et les bonobos sont nos plus proches cousins vivants. Ils jouent, se font des câlins, rient quand on les chatouille et savent même fabriquer des outils !",
+      "description_petits": "Les chimpanzés et les bonobos sont tes plus proches cousins vivants. Ils jouent, se font des câlins, rient aux chatouilles et fabriquent des outils !",
       "fun_fact": "En 1960, la chercheuse Jane Goodall a vu un chimpanzé effeuiller une brindille pour « pêcher » des termites dans leur nid. À l'époque, on pensait que seuls les humains fabriquaient des outils : cette découverte a surpris le monde entier !",
+      "fun_fact_petits": "Une savante, Jane Goodall, a vu un chimpanzé « pêcher » des termites, de petits insectes, avec une brindille !",
       "emoji": "🐵",
       "image": "images/chimpanzes.svg",
       "image_alt": "Dessin simple : Chimpanzés et bonobos, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -2218,7 +2338,9 @@
       "category": "primate",
       "description": "Les hominines regroupent toutes les espèces plus proches des humains actuels que des chimpanzés : Sahelanthropus, Orrorin, Ardipithecus, les australopithèques, les Paranthropus et le genre Homo. Le plus ancien candidat est Toumaï (Sahelanthropus tchadensis), un crâne d'environ 7 Ma découvert en 2001 au Tchad par l'équipe franco-tchadienne de Michel Brunet. Sa place exacte dans notre lignée et sa capacité à marcher debout font encore débat chez les scientifiques.",
       "description_enfant": "Voici le début de ta famille à toi : la lignée humaine ! Ses premiers membres ressemblaient encore beaucoup à des grands singes, mais certains commençaient peut-être déjà à se dresser sur leurs deux jambes.",
+      "description_petits": "Voici le début de ta branche, la branche humaine ! Ses premiers membres ressemblaient encore à des grands singes, mais marchaient peut-être déjà debout.",
       "fun_fact": "Le crâne de Toumaï a été trouvé en plein désert du Djourab, au Tchad, là où s'étendaient autrefois des lacs, des forêts et des savanes. Son surnom veut dire « espoir de vie » en langue gorane.",
+      "fun_fact_petits": "Le crâne de Toumaï dormait dans un désert où, autrefois, il y avait des lacs et des forêts !",
       "emoji": "🚶",
       "image": "images/hominines.svg",
       "image_alt": "Dessin simple : Lignée humaine (Hominines), représenté par son emoji sur un fond aux couleurs de son ère",
@@ -2256,7 +2378,9 @@
       "category": "primate",
       "description": "Les australopithèques (« singes du Sud ») sont des hominines africains qui marchaient sur deux jambes tout en restant de bons grimpeurs, avec un cerveau à peine plus gros que celui d'un chimpanzé. Le genre apparaît avec Australopithecus anamensis vers 4,2 Ma et compte plusieurs espèces, dont A. afarensis, à laquelle appartient le célèbre squelette de Lucy (environ 3,2 Ma, Éthiopie). Les derniers, comme A. sediba en Afrique du Sud, vivaient encore il y a environ 2 Ma, à la même époque que les premiers Homo.",
       "description_enfant": "Les australopithèques marchaient debout comme toi, mais savaient aussi très bien grimper aux arbres. La plus célèbre d'entre eux s'appelle Lucy !",
+      "description_petits": "Les australopithèques marchaient debout comme toi, mais grimpaient aussi très bien aux arbres. La plus célèbre, Lucy, était à peu près grande comme toi !",
       "fun_fact": "Lucy doit son nom à une chanson des Beatles, « Lucy in the Sky with Diamonds », que l'équipe écoutait le soir de sa découverte, en 1974. En Éthiopie, on l'appelle aussi Dinknesh, ce qui veut dire « tu es merveilleuse » en amharique.",
+      "fun_fact_petits": "Lucy porte le nom d'une chanson que les chercheurs écoutaient le soir où ils l'ont trouvée !",
       "emoji": "👣",
       "image": "images/australopitheques.svg",
       "image_alt": "Dessin simple : Australopithèques, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -2294,7 +2418,9 @@
       "category": "humain",
       "description": "Le genre Homo, auquel nous appartenons, apparaît en Afrique de l'Est : son plus ancien fossile connu est une demi-mâchoire inférieure (LD 350-1) d'environ 2,8 Ma découverte à Ledi-Geraru, en Éthiopie, qui mêle des traits d'australopithèque et des dents de type Homo (son attribution est encore discutée par certains chercheurs). Au fil du temps, ses espèces (Homo habilis, H. erectus, H. neanderthalensis, H. sapiens…) se dotent d'un cerveau plus grand et d'outils de plus en plus élaborés. Plusieurs espèces humaines ont souvent vécu en même temps : leur histoire ressemble à un buisson, pas à une échelle.",
       "description_enfant": "Voici ton genre à toi : Homo, qui veut dire « homme » en latin ! Ses membres avaient un cerveau qui grandissait au fil du temps et des mains habiles pour tailler des outils en pierre.",
+      "description_petits": "Homo veut dire « homme » : c'est ton groupe ! Ces humains taillaient des outils en pierre, et leur cerveau a grossi au fil du temps.",
       "fun_fact": "Les plus vieux outils en pierre connus, trouvés à Lomekwi, au Kenya, ont environ 3,3 Ma : ils sont plus anciens que le genre Homo ! Qui les a taillés ? Peut-être un australopithèque ou un autre cousin : les scientifiques en discutent encore.",
+      "fun_fact_petits": "Les plus vieux outils en pierre connus sont encore plus vieux que les premiers Homo : un vrai mystère !",
       "emoji": "🪨",
       "image": "images/homo.svg",
       "image_alt": "Dessin simple : Genre Homo, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -2332,7 +2458,9 @@
       "category": "humain",
       "description": "Homo erectus est une espèce humaine aux proportions déjà proches des nôtres, avec de longues jambes adaptées à la marche sur de grandes distances ; son plus ancien fossile connu, un crâne de Drimolen (Afrique du Sud), date d'environ 2,04 Ma. C'est l'une des premières espèces humaines à avoir quitté l'Afrique : on la retrouve en Géorgie, en Chine et en Indonésie, et elle a fabriqué des bifaces. Elle a survécu très longtemps : ses derniers représentants connus vivaient à Ngandong, sur l'île de Java, il y a environ 117 000 à 108 000 ans.",
       "description_enfant": "Homo erectus, « l'homme debout », était un grand marcheur : il est parti d'Afrique pour explorer l'Asie ! Il taillait de belles pierres en forme de goutte, les bifaces.",
+      "description_petits": "Homo erectus, « l'homme debout », était un grand marcheur. Il est allé d'Afrique jusqu'en Asie, et taillait des pierres en forme de goutte !",
       "fun_fact": "Homo erectus a existé pendant près de 2 millions d'années : c'est environ six fois plus longtemps que notre propre espèce, Homo sapiens, qui n'a « que » 300 000 ans !",
+      "fun_fact_petits": "Homo erectus est resté sur Terre environ six fois plus longtemps que nous jusqu'ici !",
       "emoji": "🔥",
       "image": "images/homo_erectus.svg",
       "image_alt": "Dessin simple : Homo erectus, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -2369,7 +2497,9 @@
       "category": "humain",
       "description": "Les Néandertaliens sont des humains adaptés aux climats souvent froids d'Europe et d'Asie occidentale, au corps trapu et au cerveau aussi gros que le nôtre, voire un peu plus. Leur lignée est attestée il y a environ 430 000 ans par les fossiles de la Sima de los Huesos (Atapuerca, Espagne), dont l'ADN les rattache à la branche néandertalienne (certains chercheurs les appellent plutôt « pré-Néandertaliens ») ; ils disparaissent il y a environ 40 000 ans. Loin de l'image de brutes, ils fabriquaient des outils élaborés, maîtrisaient le feu, enterraient certains de leurs morts et ont eu des enfants avec des Homo sapiens.",
       "description_enfant": "Les Néandertaliens étaient des humains costauds qui vivaient en Europe et en Asie pendant les périodes glaciaires. Ils étaient malins : ils fabriquaient des outils, faisaient du feu et prenaient soin les uns des autres.",
+      "description_petits": "Les Néandertaliens étaient des humains costauds et malins. Ils fabriquaient des outils, faisaient du feu et prenaient soin les uns des autres.",
       "fun_fact": "Si tes ancêtres ont vécu hors d'Afrique, environ 1 à 2 % de ton ADN vient sans doute de Néandertaliens ! Néandertaliens et Homo sapiens se sont rencontrés et ont eu des enfants ensemble. Même de nombreuses personnes d'origine africaine en portent un tout petit peu.",
+      "fun_fact_petits": "Nos ancêtres ont eu des bébés avec des Néandertaliens : beaucoup d'entre nous en gardent un tout petit peu !",
       "emoji": "🧔",
       "image": "images/neandertaliens.svg",
       "image_alt": "Dessin simple : Néandertaliens, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -2406,7 +2536,9 @@
       "category": "humain",
       "description": "Homo sapiens, notre espèce, est apparue en Afrique : les plus anciens fossiles attribués à notre lignée, découverts à Jebel Irhoud (Maroc), ont environ 315 000 ans et associent un visage déjà moderne à une boîte crânienne encore allongée. Pour de nombreux chercheurs, notre espèce s'est formée à travers tout le continent africain, avant de se répandre sur toute la planète, surtout à partir d'il y a environ 60 000 à 50 000 ans. En chemin, elle a croisé d'autres humains, comme les Néandertaliens et les Dénisoviens, et a parfois eu des enfants avec eux.",
       "description_enfant": "C'est toi ! Homo sapiens veut dire « homme sage » en latin. Notre espèce est née en Afrique il y a environ 300 000 ans, puis elle a exploré toute la Terre.",
+      "description_petits": "Homo sapiens, c'est toi, ta famille et tous les humains ! Nous sommes nés en Afrique, puis nous avons exploré toute la Terre.",
       "fun_fact": "Il y a environ 60 000 ans, Homo sapiens n'était pas seul : d'autres humains vivaient sur Terre en même temps, comme les Néandertaliens, les Dénisoviens et le minuscule Homo floresiensis, haut d'environ 1,05 m. Aujourd'hui, nous sommes la dernière espèce humaine.",
+      "fun_fact_petits": "Autrefois, d'autres humains vivaient en même temps que nous, dont certains pas plus grands que toi !",
       "emoji": "🧑",
       "image": "images/homo_sapiens.svg",
       "image_alt": "Dessin simple : Homo sapiens, représenté par son emoji sur un fond aux couleurs de son ère",
@@ -2903,7 +3035,11 @@
       ],
       "answer": 1,
       "explanation": "Bravo si tu as trouvé ! Les premiers poissons nageaient déjà il y a environ 518 millions d'années, presque 300 millions d'années avant les premiers dinosaures.",
-      "node_id": "vertebres"
+      "node_id": "vertebres",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q02",
@@ -2915,7 +3051,12 @@
       ],
       "answer": 2,
       "explanation": "C'est une idée reçue très répandue ! Les grands dinosaures ont disparu il y a 66 millions d'années, et notre espèce n'est apparue qu'il y a environ 300 000 ans. Mais les oiseaux, qui sont des dinosaures, vivent bien avec nous !",
-      "node_id": "homo_sapiens"
+      "node_id": "homo_sapiens",
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q03",
@@ -2928,7 +3069,12 @@
       ],
       "answer": 2,
       "explanation": "Surprenant, non ? Baleines et hippopotames partagent un ancêtre commun qui vivait sur la terre ferme il y a environ 54 millions d'années.",
-      "node_id": "whippomorphes"
+      "node_id": "whippomorphes",
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q04",
@@ -2940,7 +3086,12 @@
       ],
       "answer": 0,
       "explanation": "Eh oui ! Les oiseaux descendent de petits dinosaures théropodes à plumes : quand tu regardes un pigeon, tu regardes un dinosaure.",
-      "node_id": "oiseaux"
+      "node_id": "oiseaux",
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q05",
@@ -2953,7 +3104,12 @@
       ],
       "answer": 0,
       "explanation": "Bien joué ! Nos ancêtres et ceux des chimpanzés et des bonobos se sont séparés il y a environ 7 à 6 millions d'années.",
-      "node_id": "chimpanzes"
+      "node_id": "chimpanzes",
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q06",
@@ -2966,7 +3122,11 @@
       ],
       "answer": 3,
       "explanation": "Exactement ! Il y a 375 millions d'années, Tiktaalik avait un cou, des poumons et des nageoires solides pour se soulever dans les eaux peu profondes : un cousin des premiers animaux à quatre pattes.",
-      "node_id": "tiktaalik"
+      "node_id": "tiktaalik",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q07",
@@ -2979,7 +3139,11 @@
       ],
       "answer": 3,
       "explanation": "Oui ! Un astéroïde d'environ 10 km de large est tombé à Chicxulub, au Mexique. Des éruptions volcaniques en Inde ont aussi abîmé le climat à la même époque.",
-      "node_id": "dinosaures"
+      "node_id": "dinosaures",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q08",
@@ -2991,7 +3155,12 @@
       ],
       "answer": 2,
       "explanation": "Il y a environ 252 millions d'années, d'énormes volcans en Sibérie ont fait disparaître environ 9 espèces marines sur 10, dont les derniers trilobites. C'est encore pire que pour les dinosaures !",
-      "node_id": "trilobites"
+      "node_id": "trilobites",
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q09",
@@ -3004,7 +3173,12 @@
       ],
       "answer": 2,
       "explanation": "Bravo ! La Terre s'est formée il y a environ 4,54 milliards d'années. C'est tellement long qu'il est difficile de l'imaginer !",
-      "node_id": null
+      "node_id": null,
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q10",
@@ -3017,7 +3191,12 @@
       ],
       "answer": 3,
       "explanation": "Incroyable mais vrai ! Sur cette horloge, les premiers dinosaures arrivent vers 22 h 46, et nous seulement 6 secondes avant minuit.",
-      "node_id": "homo_sapiens"
+      "node_id": "homo_sapiens",
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q11",
@@ -3029,7 +3208,11 @@
       ],
       "answer": 0,
       "explanation": "Oui ! La vie est apparue il y a environ 3,7 milliards d'années, mais les premiers animaux seulement vers 600 millions d'années. Pendant très longtemps, la Terre n'a abrité presque que des microbes.",
-      "node_id": "animaux"
+      "node_id": "animaux",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q12",
@@ -3042,7 +3225,11 @@
       ],
       "answer": 0,
       "explanation": "Bien vu ! Grâce à la lumière du Soleil, les cyanobactéries ont fabriqué tant d'oxygène qu'il a commencé à s'accumuler dans l'air il y a environ 2,4 milliards d'années : c'est la Grande Oxydation.",
-      "node_id": "cyanobacteries"
+      "node_id": "cyanobacteries",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q13",
@@ -3054,7 +3241,12 @@
       ],
       "answer": 2,
       "explanation": "Étonnant, non ? Le Stégosaure vivait au Jurassique, il y a environ 150 millions d'années, et T. rex il y a 68 à 66 millions d'années. T. rex a donc vécu plus près de nous que du Stégosaure !",
-      "node_id": "t_rex"
+      "node_id": "t_rex",
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q14",
@@ -3066,7 +3258,11 @@
       ],
       "answer": 1,
       "explanation": "Les premiers dinosaures datent d'environ 233 millions d'années et les premiers mammifères d'environ 205 millions d'années. Ensuite, les petits mammifères ont vécu près de 140 millions d'années à côté des dinosaures !",
-      "node_id": "mammiferes"
+      "node_id": "mammiferes",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q15",
@@ -3079,7 +3275,12 @@
       ],
       "answer": 3,
       "explanation": "Bravo ! Les scientifiques ne le connaissaient qu'en fossile et pensaient qu'il avait disparu en même temps que les dinosaures. Puis un pêcheur en a attrapé un vivant en Afrique du Sud en 1938 !",
-      "node_id": "coelacanthes"
+      "node_id": "coelacanthes",
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q16",
@@ -3092,7 +3293,11 @@
       ],
       "answer": 3,
       "explanation": "Tout juste ! Les premiers tétrapodes, il y a environ 370 millions d'années, descendent de poissons aux nageoires charnues et osseuses. Les os de tes bras ressemblent encore à ceux de leurs nageoires !",
-      "node_id": "tetrapodes"
+      "node_id": "tetrapodes",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q17",
@@ -3104,7 +3309,11 @@
       ],
       "answer": 1,
       "explanation": "Oui ! À partir de 538,8 millions d'années, en quelques dizaines de millions d'années, apparaissent dans la mer des animaux avec des yeux, des pattes et des carapaces, comme les trilobites.",
-      "node_id": "arthropodes"
+      "node_id": "arthropodes",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q18",
@@ -3117,7 +3326,11 @@
       ],
       "answer": 0,
       "explanation": "Bravo ! Des spores fossiles de 470 millions d'années montrent que de petites plantes, proches des mousses, avaient déjà quitté l'eau.",
-      "node_id": null
+      "node_id": null,
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q19",
@@ -3129,7 +3342,11 @@
       ],
       "answer": 2,
       "explanation": "Exactement ! Enfouis pendant des millions d'années, ces arbres se sont transformés en charbon. C'est d'ailleurs pour ça que cette période s'appelle le Carbonifère.",
-      "node_id": null
+      "node_id": null,
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q20",
@@ -3141,7 +3358,12 @@
       ],
       "answer": 1,
       "explanation": "C'est un piège fréquent ! Les ptérosaures sont apparus il y a environ 228 millions d'années sur la même branche que les dinosaures, mais ce n'en sont pas. Ils ont disparu avec eux, il y a 66 millions d'années.",
-      "node_id": "pterosaures"
+      "node_id": "pterosaures",
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q21",
@@ -3154,7 +3376,12 @@
       ],
       "answer": 0,
       "explanation": "Bien joué ! Quelques oiseaux ont survécu, comme les ancêtres des canards et des poules. Asteriornis, un oiseau moderne de 66,8 millions d'années, vivait juste avant la catastrophe.",
-      "node_id": "oiseaux_modernes"
+      "node_id": "oiseaux_modernes",
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q22",
@@ -3166,7 +3393,11 @@
       ],
       "answer": 1,
       "explanation": "Oui ! Lucy a vécu il y a environ 3,2 millions d'années. Elle marchait déjà debout sur ses deux jambes, mais savait aussi grimper aux arbres.",
-      "node_id": "australopitheques"
+      "node_id": "australopitheques",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q23",
@@ -3178,7 +3409,11 @@
       ],
       "answer": 2,
       "explanation": "Bravo ! Les Néandertaliens vivaient en Europe et en Asie et ont disparu il y a environ 40 000 ans. Beaucoup d'humains d'aujourd'hui portent encore un tout petit peu de leur ADN !",
-      "node_id": "neandertaliens"
+      "node_id": "neandertaliens",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q24",
@@ -3190,8 +3425,13 @@
         "un poisson"
       ],
       "answer": 0,
-      "explanation": "Encore une idée reçue ! Dimetrodon était un synapside, de la lignée qui a donné les mammifères. Il a vécu au Permien, plus de 40 millions d'années avant les premiers dinosaures.",
-      "node_id": "synapsides"
+      "explanation": "Encore une idée reçue ! Dimetrodon était un synapside, de la lignée qui a donné les mammifères. Il a vécu au Permien, il y a plus de 270 millions d'années, bien avant les premiers dinosaures (environ 233 millions d'années).",
+      "node_id": "synapsides",
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q25",
@@ -3202,8 +3442,12 @@
         "sur la terre ferme, sur quatre pattes"
       ],
       "answer": 2,
-      "explanation": "Exactement ! Pakicetus, un ancêtre des baleines, il y a environ 50 millions d'années, ressemblait à un loup et vivait près des rivières. Ses descendants sont peu à peu retournés à la mer.",
-      "node_id": "pakicetus"
+      "explanation": "Exactement ! Pakicetus, un ancêtre des baleines, il y a environ 50 millions d'années, ressemblait un peu à un chien et vivait près des rivières. Ses descendants sont peu à peu retournés à la mer.",
+      "node_id": "pakicetus",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q26",
@@ -3214,8 +3458,12 @@
         "Les tyrannosaures"
       ],
       "answer": 1,
-      "explanation": "Bravo ! Les requins sont apparus il y a environ 440 millions d'années, plus de 200 millions d'années avant les dinosaures. Ils ont survécu à quatre grandes extinctions !",
-      "node_id": "requins"
+      "explanation": "Bravo ! La lignée des requins est apparue il y a environ 440 millions d'années, plus de 200 millions d'années avant les dinosaures. Elle a traversé quatre grandes extinctions !",
+      "node_id": "requins",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q27",
@@ -3228,7 +3476,12 @@
       ],
       "answer": 1,
       "explanation": "C'est ça ! Fin de l'Ordovicien, Dévonien supérieur, Permien-Trias, Trias-Jurassique et Crétacé-Paléogène. Après chacune, la vie est repartie avec de nouveaux groupes.",
-      "node_id": null
+      "node_id": null,
+      "levels": [
+        "enfants",
+        "grands",
+        "adultes"
+      ]
     },
     {
       "id": "q28",
@@ -3241,7 +3494,11 @@
       ],
       "answer": 0,
       "explanation": "Bien vu ! Le mammouth laineux, un cousin des éléphants, vivait en Europe pendant la glaciation, à côté des humains. Les glaciers ont fondu il y a environ 11 700 ans.",
-      "node_id": "elephants"
+      "node_id": "elephants",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q29",
@@ -3254,7 +3511,11 @@
       ],
       "answer": 3,
       "explanation": "Oui ! Les premières traces de vie, il y a environ 3,7 milliards d'années, viennent de microbes. Ils formaient parfois des stromatolites, des sortes de récifs en couches que l'on voit encore aujourd'hui.",
-      "node_id": "vie"
+      "node_id": "vie",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
     },
     {
       "id": "q30",
@@ -3267,7 +3528,492 @@
       ],
       "answer": 3,
       "explanation": "Bravo ! Il y a environ 318 millions d'années, l'œuf amniotique a permis de pondre loin des mares. Toi aussi, tu as grandi dans une enveloppe héritée de cet œuf : l'amnios !",
-      "node_id": "amniotes"
+      "node_id": "amniotes",
+      "levels": [
+        "enfants",
+        "grands"
+      ]
+    },
+    {
+      "id": "p_01",
+      "question": "Qui est arrivé en premier sur la Terre ?",
+      "choices": [
+        "🐱 Les chats",
+        "🦖 Les dinosaures",
+        "🧒 Les humains"
+      ],
+      "answer": 1,
+      "explanation": "Bravo ! Les dinosaures vivaient il y a très, très longtemps, bien avant les chats et bien avant les humains.",
+      "node_id": "dinosaures",
+      "levels": [
+        "petits"
+      ]
+    },
+    {
+      "id": "p_02",
+      "question": "Les tout premiers êtres vivants étaient…",
+      "choices": [
+        "🦠 Des microbes minuscules",
+        "🦒 Des girafes",
+        "🌳 De grands arbres"
+      ],
+      "answer": 0,
+      "explanation": "Oui ! Les premiers êtres vivants étaient si petits qu'il faudrait un microscope pour les voir.",
+      "node_id": "vie",
+      "levels": [
+        "petits"
+      ]
+    },
+    {
+      "id": "p_03",
+      "question": "Où vivaient les tout premiers animaux ?",
+      "choices": [
+        "🏔️ Sur les montagnes",
+        "☁️ Dans les nuages",
+        "🌊 Dans la mer"
+      ],
+      "answer": 2,
+      "explanation": "Bien joué ! Les premiers animaux vivaient dans la mer, et leurs descendants ne sont sortis de l'eau que bien plus tard.",
+      "node_id": "animaux",
+      "levels": [
+        "petits"
+      ]
+    },
+    {
+      "id": "p_04",
+      "question": "Lequel de ces animaux d'aujourd'hui est un dinosaure ?",
+      "choices": [
+        "🐊 Le crocodile",
+        "🐦 L'oiseau",
+        "🐸 La grenouille"
+      ],
+      "answer": 1,
+      "explanation": "Eh oui ! Les oiseaux sont des dinosaures : le moineau de ton jardin est un petit cousin du T. rex !",
+      "node_id": "oiseaux",
+      "levels": [
+        "petits"
+      ]
+    },
+    {
+      "id": "p_05",
+      "question": "Les humains ont-ils vu des T. rex vivants ?",
+      "choices": [
+        "🦖 Oui, ils jouaient ensemble",
+        "🏰 Oui, au temps des châteaux forts",
+        "🚫 Non, jamais"
+      ],
+      "answer": 2,
+      "explanation": "Bravo ! Les grands dinosaures avaient disparu depuis très, très longtemps quand les premiers humains sont arrivés.",
+      "node_id": "homo_sapiens",
+      "levels": [
+        "petits"
+      ]
+    },
+    {
+      "id": "p_06",
+      "question": "Que mangeait le T. rex ?",
+      "choices": [
+        "🍖 De la viande",
+        "🥕 Des carottes",
+        "🍦 Des glaces"
+      ],
+      "answer": 0,
+      "explanation": "Exact ! Le T. rex était un grand chasseur aux dents énormes : il mangeait d'autres dinosaures.",
+      "node_id": "t_rex",
+      "levels": [
+        "petits"
+      ]
+    },
+    {
+      "id": "p_07",
+      "question": "Comment naissaient les bébés dinosaures ?",
+      "choices": [
+        "🌸 Dans une fleur",
+        "🥚 Dans un œuf",
+        "🎁 Dans une boîte"
+      ],
+      "answer": 1,
+      "explanation": "Oui ! Les bébés dinosaures sortaient d'un œuf, comme les poussins d'aujourd'hui.",
+      "node_id": "dinosaures",
+      "levels": [
+        "petits"
+      ]
+    },
+    {
+      "id": "p_08",
+      "question": "Quel grand animal tout poilu vivait en même temps que les humains de la préhistoire ?",
+      "choices": [
+        "🦖 Le T. rex",
+        "🦕 Le diplodocus",
+        "🦣 Le mammouth laineux"
+      ],
+      "answer": 2,
+      "explanation": "Bien vu ! Le mammouth laineux, un cousin de l'éléphant couvert de longs poils, vivait à côté des humains de la préhistoire.",
+      "node_id": "elephants",
+      "levels": [
+        "petits"
+      ]
+    },
+    {
+      "id": "p_09",
+      "question": "Quel animal avait des ancêtres qui marchaient sur la terre ferme ?",
+      "choices": [
+        "🐳 La baleine",
+        "🐟 Le poisson rouge",
+        "🦈 Le requin"
+      ],
+      "answer": 0,
+      "explanation": "Incroyable mais vrai : il y a très longtemps, les ancêtres des baleines avaient quatre pattes et vivaient au bord des rivières !",
+      "node_id": "pakicetus",
+      "levels": [
+        "petits"
+      ]
+    },
+    {
+      "id": "p_10",
+      "question": "Comment était la Terre quand elle était toute jeune ?",
+      "choices": [
+        "❄️ Couverte de neige",
+        "🌳 Pleine de forêts",
+        "🔥 Brûlante et couverte de lave"
+      ],
+      "answer": 2,
+      "explanation": "Exactement ! La toute jeune Terre était une boule brûlante couverte de lave, où rien ne pouvait vivre.",
+      "node_id": null,
+      "levels": [
+        "petits",
+        "enfants"
+      ]
+    },
+    {
+      "id": "p_11",
+      "question": "D'où vient la Lune ?",
+      "choices": [
+        "⭐ D'une étoile tombée du ciel",
+        "💥 D'un énorme choc entre la jeune Terre et une autre planète",
+        "☀️ D'un morceau du Soleil"
+      ],
+      "answer": 1,
+      "explanation": "Bravo ! D'après les scientifiques, une autre planète a cogné la jeune Terre, et les morceaux se sont rassemblés pour former la Lune.",
+      "node_id": null,
+      "levels": [
+        "petits",
+        "enfants"
+      ]
+    },
+    {
+      "id": "p_12",
+      "question": "Qu'est-ce qu'un fossile ?",
+      "choices": [
+        "🦴 Une trace de vie gardée dans la pierre",
+        "🍬 Un bonbon très dur",
+        "🌠 Une étoile filante"
+      ],
+      "answer": 0,
+      "explanation": "Bravo ! Les fossiles, comme des os de dinosaures devenus pierre, nous racontent la vie d'il y a très longtemps.",
+      "node_id": null,
+      "levels": [
+        "petits",
+        "enfants"
+      ]
+    },
+    {
+      "id": "p_13",
+      "question": "Parmi ces animaux, lequel est notre plus proche cousin ?",
+      "choices": [
+        "🐶 Le chien",
+        "🐠 Le poisson rouge",
+        "🐵 Le chimpanzé"
+      ],
+      "answer": 2,
+      "explanation": "Exactement ! Il y a très longtemps, les chimpanzés et les humains avaient les mêmes ancêtres : nous sommes cousins !",
+      "node_id": "chimpanzes",
+      "levels": [
+        "petits"
+      ]
+    },
+    {
+      "id": "p_14",
+      "question": "Qu'est-ce qui a fait disparaître les grands dinosaures ?",
+      "choices": [
+        "🐭 Les souris",
+        "☄️ Un énorme caillou venu de l'espace",
+        "🧒 Les premiers humains"
+      ],
+      "answer": 1,
+      "explanation": "Bien joué ! Un énorme caillou venu de l'espace, un astéroïde, a frappé la Terre ; mais les oiseaux, eux, ont survécu !",
+      "node_id": "dinosaures",
+      "levels": [
+        "petits"
+      ]
+    },
+    {
+      "id": "p_15",
+      "question": "Les ancêtres des animaux à quatre pattes étaient…",
+      "choices": [
+        "🐟 Des poissons",
+        "🐌 Des escargots",
+        "🦋 Des papillons"
+      ],
+      "answer": 0,
+      "explanation": "Oui ! Petit à petit, des poissons aux nageoires solides ont donné les premiers animaux à quatre pattes… et, bien plus tard, toi !",
+      "node_id": "tetrapodes",
+      "levels": [
+        "petits"
+      ]
+    },
+    {
+      "id": "x_01",
+      "question": "Au sens phylogénétique, les « poissons » forment-ils un groupe naturel (un ancêtre et tous ses descendants) ?",
+      "choices": [
+        "Oui : tous les poissons descendent d'un ancêtre commun dont tous les descendants sont des poissons",
+        "Oui, à condition d'en exclure les requins et les raies",
+        "Non : le plus petit groupe qui contient tous les poissons contient aussi les tétrapodes, donc nous",
+        "Non, car les poissons sont apparus plusieurs fois indépendamment"
+      ],
+      "answer": 2,
+      "explanation": "Les « poissons » forment un groupe paraphylétique : l'ancêtre commun d'un saumon et d'un cœlacanthe est aussi le nôtre. Les tétrapodes sont des poissons osseux à nageoires charnues (sarcoptérygiens) : un cœlacanthe est plus proche parent d'un humain que d'un saumon !",
+      "node_id": "poissons_osseux",
+      "levels": [
+        "grands",
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_02",
+      "question": "Parmi les animaux actuels, quel groupe est le plus proche parent des oiseaux ?",
+      "choices": [
+        "Les lézards et les serpents",
+        "Les crocodiliens",
+        "Les tortues",
+        "Les chauves-souris"
+      ],
+      "answer": 1,
+      "explanation": "Oiseaux et crocodiliens sont les deux seuls groupes d'archosaures encore vivants ; leurs lignées se sont séparées il y a environ 250 millions d'années. Un crocodile est donc plus proche parent d'un moineau que d'un lézard, malgré les apparences.",
+      "node_id": "archosaures",
+      "levels": [
+        "grands",
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_03",
+      "question": "D'après la plupart des analyses génomiques actuelles, les tortues sont le groupe frère de quel ensemble ?",
+      "choices": [
+        "Les lézards et les serpents (squamates)",
+        "Les amphibiens",
+        "Les mammifères",
+        "Les archosaures (crocodiliens et oiseaux)"
+      ],
+      "answer": 3,
+      "explanation": "Les phylogénies fondées sur les génomes placent les tortues à côté des archosaures, dans un groupe appelé Archelosauria. Leur crâne sans fenêtres temporales les avait longtemps fait classer parmi des « anapsides » primitifs ; on pense aujourd'hui que ces ouvertures se sont refermées secondairement. Des fossiles comme Pappochelys (environ 240 millions d'années) éclairent l'origine de la carapace, mais certains points restent débattus.",
+      "node_id": "tortues",
+      "levels": [
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_04",
+      "question": "Comment estime-t-on la date de séparation de deux lignées quand les fossiles manquent ?",
+      "choices": [
+        "Par le carbone 14 mesuré chez les espèces actuelles",
+        "Grâce à une horloge moléculaire, calibrée par des fossiles bien datés",
+        "En comparant la taille des espèces actuelles",
+        "En comptant les couches de sédiments qui séparent les deux espèces"
+      ],
+      "answer": 1,
+      "explanation": "Les différences d'ADN entre deux lignées s'accumulent à un rythme à peu près régulier : plus elles sont nombreuses, plus la séparation est ancienne. Mais ce rythme varie selon les groupes et doit être calibré par des fossiles datés ; les estimations ont donc souvent de larges marges d'erreur et sont parfois en désaccord avec les plus vieux fossiles connus.",
+      "node_id": null,
+      "levels": [
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_05",
+      "question": "Comment date-t-on un fossile de Tyrannosaurus vieux d'environ 67 millions d'années ?",
+      "choices": [
+        "Au carbone 14, directement sur l'os",
+        "D'après la profondeur où il a été trouvé (1 mètre = 1 million d'années)",
+        "En datant par radiochronologie des cendres volcaniques situées au-dessus et au-dessous de lui",
+        "On ne peut pas dater un fossile aussi ancien"
+      ],
+      "answer": 2,
+      "explanation": "Le carbone 14, dont la demi-vie est d'environ 5 730 ans, n'est utilisable que jusqu'à environ 50 000 ans. Pour les fossiles plus anciens, on date des minéraux volcaniques avec des isotopes à très longue demi-vie (uranium-plomb, argon-argon) : l'âge du fossile est encadré par celui des couches voisines, puis précisé grâce aux fossiles stratigraphiques et au paléomagnétisme.",
+      "node_id": "t_rex",
+      "levels": [
+        "grands",
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_06",
+      "question": "Les plus vieux minéraux terrestres connus, des zircons de Jack Hills (Australie), ont environ 4,4 milliards d'années. Que suggèrent leurs isotopes de l'oxygène ?",
+      "choices": [
+        "Qu'il existait déjà de l'eau liquide à la surface de la Terre",
+        "Que la Lune n'était pas encore formée",
+        "Que des microbes vivaient déjà dans ces roches",
+        "Que la surface était encore entièrement un océan de magma"
+      ],
+      "answer": 0,
+      "explanation": "Ces zircons sont enrichis en oxygène 18 : la matière dont ils ont cristallisé avait été altérée par de l'eau liquide à basse température. Moins de 150 millions d'années après la formation de la Terre, il y aurait donc déjà eu une croûte et des océans. Cette interprétation est largement admise, mais encore discutée.",
+      "node_id": null,
+      "levels": [
+        "grands",
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_07",
+      "question": "Quelle est l'hypothèse la plus acceptée pour expliquer la formation de la Lune ?",
+      "choices": [
+        "La capture par la Terre d'un astéroïde de passage",
+        "Le détachement d'un morceau de la Terre, qui tournait trop vite sur elle-même",
+        "La formation de la Lune avant celle de la Terre",
+        "L'impact géant d'une protoplanète, Théia, sur la jeune Terre"
+      ],
+      "answer": 3,
+      "explanation": "Le modèle d'impact géant explique notamment le petit noyau de fer de la Lune et le moment cinétique du système Terre-Lune ; des zircons rapportés par Apollo 14 montrent que la Lune a au moins 4,51 milliards d'années. En revanche, la quasi-identité isotopique des roches lunaires et terrestres reste difficile à expliquer : la taille de Théia et le déroulement exact de la collision sont encore débattus.",
+      "node_id": null,
+      "levels": [
+        "grands",
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_08",
+      "question": "Qu'est-ce que LUCA ?",
+      "choices": [
+        "Le plus ancien fossile d'être vivant connu",
+        "Le tout premier être vivant apparu sur Terre",
+        "Le dernier ancêtre commun de tous les êtres vivants actuels",
+        "Une bactérie qui vit encore aujourd'hui dans les sources chaudes"
+      ],
+      "answer": 2,
+      "explanation": "LUCA (Last Universal Common Ancestor) n'est connu par aucun fossile : on le reconstitue à partir des gènes partagés par les bactéries, les archées et les eucaryotes. Ce n'était sans doute pas le premier être vivant, car d'autres lignées ont pu exister à côté de lui sans laisser de descendants. Une étude de 2024 fondée sur une horloge moléculaire l'estime à environ 4,2 milliards d'années, une date encore discutée.",
+      "node_id": "vie",
+      "levels": [
+        "grands",
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_09",
+      "question": "Que sont les stromatolites ?",
+      "choices": [
+        "Des structures en couches construites par des tapis de microbes qui piègent des sédiments",
+        "Les fossiles des premiers animaux à coquille",
+        "Des cristaux formés dans la lave en refroidissant",
+        "Des météorites contenant des acides aminés"
+      ],
+      "answer": 0,
+      "explanation": "Les stromatolites de la formation Dresser (Australie), vieux d'environ 3,48 milliards d'années, comptent parmi les plus anciennes traces de vie largement acceptées. Des indices plus anciens, comme le graphite d'Isua (Groenland, environ 3,7 milliards d'années), restent débattus, car certaines structures minérales peuvent imiter des traces biologiques. Des stromatolites se forment encore aujourd'hui, par exemple à Shark Bay, en Australie.",
+      "node_id": "vie",
+      "levels": [
+        "grands",
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_10",
+      "question": "Quelle est la cause principale de l'extinction Permien-Trias, il y a environ 252 millions d'années ?",
+      "choices": [
+        "La chute d'un astéroïde géant",
+        "Les éruptions géantes des trapps de Sibérie",
+        "Une glaciation qui a recouvert le Gondwana",
+        "La concurrence des premiers dinosaures"
+      ],
+      "answer": 1,
+      "explanation": "Les trapps de Sibérie ont rejeté d'énormes quantités de CO2, en partie en brûlant des couches de charbon traversées par le magma : réchauffement brutal, acidification et manque d'oxygène dans les océans. Environ 9 espèces marines sur 10 ont disparu (les estimations vont de 80 à plus de 90 %), dont les derniers trilobites. Les premiers dinosaures ne sont apparus que vers 233 millions d'années.",
+      "node_id": "trilobites",
+      "levels": [
+        "grands",
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_11",
+      "question": "Laquelle des cinq grandes extinctions (les « Big Five ») est principalement liée à une glaciation ?",
+      "choices": [
+        "Celle du Permien-Trias",
+        "Celle du Crétacé-Paléogène",
+        "Celle du Trias-Jurassique",
+        "Celle de la fin de l'Ordovicien"
+      ],
+      "answer": 3,
+      "explanation": "Il y a environ 445 millions d'années, des glaciers ont recouvert le sud du Gondwana : le niveau des mers a baissé, les océans se sont refroidis et environ 85 % des espèces marines ont disparu. Les extinctions Permien-Trias et Trias-Jurassique sont surtout liées à de gigantesques éruptions volcaniques, et celle du Crétacé-Paléogène à l'impact de Chicxulub, peut-être aggravé par les trapps du Deccan.",
+      "node_id": null,
+      "levels": [
+        "grands",
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_12",
+      "question": "Les ailes des ptérosaures, des oiseaux et des chauves-souris sont un exemple de…",
+      "choices": [
+        "convergence évolutive : le vol est apparu indépendamment dans chaque lignée",
+        "caractère hérité d'un ancêtre commun qui volait déjà",
+        "transfert de gènes entre ces trois groupes",
+        "évolution dirigée vers un but"
+      ],
+      "answer": 0,
+      "explanation": "Leur dernier ancêtre commun, un amniote d'il y a au moins 318 millions d'années, ne volait pas : chaque lignée a construit son aile autrement (membrane tendue par un quatrième doigt très allongé chez les ptérosaures, par plusieurs doigts chez les chauves-souris, plumes portées par le bras et la main chez les oiseaux). Les os du membre antérieur, eux, sont homologues : ils viennent tous du membre des premiers tétrapodes.",
+      "node_id": "pterosaures",
+      "levels": [
+        "grands",
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_13",
+      "question": "Le thylacine, ou « loup de Tasmanie », disparu au XXe siècle, ressemblait beaucoup à un chien. Pourquoi ?",
+      "choices": [
+        "C'était un proche parent des loups et des chiens",
+        "C'était un chien sauvage arrivé en Australie avec les humains, comme le dingo",
+        "Par convergence : ce marsupial a évolué vers un mode de vie de prédateur comparable",
+        "Parce que les chiens descendent du thylacine"
+      ],
+      "answer": 2,
+      "explanation": "Le thylacine était un marsupial, plus proche parent du kangourou que du chien : les lignées des marsupiaux et des placentaires se sont séparées il y a environ 160 millions d'années. Des contraintes de sélection semblables, liées à un mode de vie de prédateur, ont produit des formes semblables : c'est la convergence évolutive.",
+      "node_id": "marsupiaux",
+      "levels": [
+        "grands",
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_14",
+      "question": "Que signifie « l'humain et le chimpanzé ont un ancêtre commun » ?",
+      "choices": [
+        "Que l'humain descend du chimpanzé",
+        "Qu'une population ancestrale, ni humaine ni chimpanzé, a donné les deux lignées il y a environ 7 à 6 millions d'années",
+        "Que le chimpanzé est un humain resté « moins évolué »",
+        "Que les deux espèces se sont séparées il y a quelques milliers d'années"
+      ],
+      "answer": 1,
+      "explanation": "Humains et chimpanzés sont deux branches cousines issues du même tronc : depuis la séparation, les deux lignées ont évolué aussi longtemps l'une que l'autre. Aucun fossile ne peut être identifié avec certitude comme cet ancêtre commun. Au sens phylogénétique, nous sommes d'ailleurs bien des grands singes (hominoïdes).",
+      "node_id": "hominini",
+      "levels": [
+        "grands",
+        "adultes"
+      ]
+    },
+    {
+      "id": "x_15",
+      "question": "Pourquoi l'expression « fossile vivant », souvent employée pour le cœlacanthe, est-elle trompeuse ?",
+      "choices": [
+        "Parce que le cœlacanthe est en réalité un mammifère marin",
+        "Parce qu'on ne connaît aucun fossile de cœlacanthe",
+        "Parce que le cœlacanthe est apparu après la disparition des dinosaures",
+        "Parce que les espèces actuelles ont continué d'évoluer, même si leur forme générale a peu changé"
+      ],
+      "answer": 3,
+      "explanation": "La lignée des cœlacanthes remonte à environ 410 millions d'années, mais le genre actuel, Latimeria, n'est pas connu à l'état fossile. Ses gènes évoluent plus lentement que ceux de nombreux vertébrés, mais ils évoluent : une évolution morphologique lente n'est pas une absence d'évolution.",
+      "node_id": "coelacanthes",
+      "levels": [
+        "grands",
+        "adultes"
+      ]
     }
   ],
   "story": [
@@ -3278,6 +4024,8 @@
       "emoji": "✨",
       "scene": "nebuleuse",
       "text_enfant": "Il y a environ 4,6 milliards d'années, un gigantesque nuage de gaz et de poussières s'est effondré sur lui-même. En son centre, le Soleil s'est allumé ! Tout autour, des grains de poussière se sont collés les uns aux autres pour former des cailloux, puis d'énormes rochers.",
+      "text_petits": "Au tout début, un immense nuage de gaz et de poussières tournait dans l'espace. En son centre, le Soleil s'est allumé, comme une lampe géante !",
+      "text_expert": "Il y a environ 4,567 milliards d'années, un fragment de nuage moléculaire s'est effondré sous sa propre gravité pour former la nébuleuse protosolaire, un disque de gaz et de poussières en rotation. Au centre, le proto-Soleil a concentré l'essentiel de la masse ; dans le disque, les grains se sont agglomérés par accrétion en planétésimaux, puis en embryons planétaires. Cet âge provient de la datation uranium-plomb des inclusions réfractaires (CAI) des météorites chondritiques, les plus vieux solides du Système solaire. Des isotopes radioactifs à courte durée de vie, comme l'aluminium 26, montrent que de la matière fraîchement produite par des étoiles a été incorporée, mais on débat encore de ce qui a déclenché l'effondrement (supernova voisine, vents d'étoiles massives…).",
       "fun_fact": "Une partie de la matière dont tu es fait a été fabriquée dans des étoiles qui ont explosé bien avant la naissance du Soleil : tu es fait de poussière d'étoiles !",
       "question": {
         "question": "Comment les scientifiques savent-ils quel âge a le Système solaire ?",
@@ -3293,6 +4041,8 @@
       "emoji": "🌋",
       "scene": "lave",
       "text_enfant": "Les rochers se sont rassemblés pour former notre planète. Au début, la Terre était une boule brûlante couverte de lave : pas d'eau liquide, pas d'air respirable, et aucun être vivant.",
+      "text_petits": "Des poussières et des rochers se sont rassemblés pour former notre Terre. Au début, elle était toute brûlante, couverte d'un océan de lave !",
+      "text_expert": "La Terre s'est formée par accrétion de planétésimaux et d'embryons planétaires ; l'énergie des collisions et la radioactivité l'ont en grande partie fondue, avec un océan de magma en surface. Le fer, plus dense, a migré vers le centre : c'est la différenciation en un noyau métallique et un manteau silicaté. L'âge de 4,54 milliards d'années (± 50 millions d'années) provient de la datation radiométrique des météorites, cohérente avec celle des plus vieux matériaux terrestres et lunaires. Comme la croissance de la planète s'est étalée sur des dizaines de millions d'années, la Terre n'a pas de « date de naissance » unique, et la durée exacte de l'accrétion reste discutée.",
       "fun_fact": "Il faisait si chaud que toute la surface de la Terre était un océan de roche fondue, bien plus chaud qu'un four à pizza !",
       "question": {
         "question": "Si la Terre était si chaude, aurait-on pu y vivre ?",
@@ -3308,6 +4058,8 @@
       "emoji": "🌕",
       "scene": "lune",
       "text_enfant": "Une planète de la taille de Mars, que les scientifiques appellent Théia, a percuté la jeune Terre. Les morceaux projetés dans l'espace se sont rassemblés en orbite… et ont formé la Lune !",
+      "text_petits": "Les scientifiques pensent qu'une autre planète a cogné la jeune Terre : boum ! Les morceaux projetés se sont rassemblés pour former la Lune.",
+      "text_expert": "Selon l'hypothèse de l'impact géant, la proto-Terre a été percutée par Théia, une protoplanète souvent décrite comme de la taille de Mars ; les débris éjectés ont formé un disque autour de la Terre, dans lequel la Lune s'est accrétée. Ce scénario explique notamment le petit noyau de fer de la Lune et le moment cinétique du système Terre-Lune. Des zircons lunaires rapportés par la mission Apollo 14 indiquent que la Lune a au moins 4,51 milliards d'années. Mais la quasi-identité isotopique des roches lunaires et terrestres (oxygène, titane…) reste difficile à expliquer : la taille de Théia, l'angle et la violence du choc sont encore débattus, et certains modèles proposent même plusieurs impacts successifs.",
       "fun_fact": "La Lune s'éloigne encore de nous d'environ 3,8 cm chaque année, à peu près la vitesse à laquelle poussent tes ongles !",
       "question": {
         "question": "La Lune était-elle plus grosse dans le ciel autrefois ?",
@@ -3323,6 +4075,8 @@
       "emoji": "🌊",
       "scene": "ocean",
       "text_enfant": "En refroidissant, la Terre s'est couverte d'une croûte de roche. La vapeur d'eau rejetée par les volcans, et peut-être apportée par des météorites, est retombée en pluie. Peu à peu, les premiers océans se sont formés.",
+      "text_petits": "En refroidissant, la Terre s'est couverte de nuages, et il a plu, plu, plu ! L'eau a rempli les creux et formé les premiers océans.",
+      "text_expert": "En refroidissant, la surface s'est couverte d'une croûte solide, et la vapeur d'eau de l'atmosphère primitive s'est condensée en océans. Un zircon détritique de Jack Hills (Australie-Occidentale), daté d'environ 4,4 milliards d'années, est enrichi en oxygène 18 : la matière dont il a cristallisé aurait été altérée par de l'eau liquide à basse température. Des océans existaient donc peut-être moins de 150 millions d'années après la formation de la Terre, en plein Hadéen. Cette interprétation est largement admise mais encore discutée, et l'origine de l'eau terrestre (dégazage de matériaux chondritiques accrétés, apports de météorites ou de comètes) n'est pas tranchée.",
       "fun_fact": "Le plus vieux morceau de Terre connu est un minuscule cristal de zircon trouvé en Australie : il a environ 4,4 milliards d'années, et il montre qu'il y avait déjà de l'eau liquide !",
       "question": {
         "question": "Pourquoi l'eau est-elle si importante pour la vie ?",
@@ -3339,6 +4093,8 @@
       "emoji": "🧪",
       "scene": "recette",
       "text_enfant": "Dans l'eau, de minuscules briques se sont assemblées : des acides aminés, des sucres… Un jour, certaines molécules ont réussi à fabriquer des copies d'elles-mêmes. C'était le tout début de la vie !",
+      "text_petits": "Dans l'eau, de minuscules briques se sont assemblées, puis certaines ont réussi à se copier. Personne ne sait encore exactement comment, mais c'était le début de la vie !",
+      "text_expert": "La chimie prébiotique cherche comment des molécules simples (eau, dioxyde de carbone, azote, cyanure d'hydrogène, composés soufrés…) ont pu former les briques du vivant : acides aminés, sucres, bases azotées et lipides. L'expérience de Miller (1953) a montré que des décharges électriques dans un mélange de gaz produisent des acides aminés, et l'on en trouve aussi dans des météorites comme celle de Murchison. Selon l'hypothèse du monde à ARN, l'ARN, capable à la fois de porter une information héréditaire et de catalyser des réactions (ribozymes), aurait précédé l'ADN et les protéines. Ni le lieu (sources hydrothermales, mares volcaniques soumises à des cycles d'assèchement…) ni la date, souvent placée entre 4,4 et 4,2 milliards d'années, ne sont connus, et aucune expérience n'a encore recréé la vie à partir de molécules simples.",
       "fun_fact": "En 1953, le chercheur Stanley Miller a mis de l'eau et des gaz dans des bocaux, puis il a fait jaillir des étincelles, comme de petits éclairs. Quelques jours plus tard, des acides aminés, des briques de la vie, étaient apparus !",
       "question": {
         "question": "Où la vie est-elle apparue ?",
@@ -3354,6 +4110,8 @@
       "emoji": "🦠",
       "scene": "luca",
       "text_enfant": "Toutes les plantes, tous les animaux, tous les champignons et tous les microbes d'aujourd'hui descendent d'un même petit ancêtre : LUCA. C'était un microbe, invisible à l'œil nu, qui vivait dans l'eau.",
+      "text_petits": "Tous les êtres vivants d'aujourd'hui, les fleurs, les chats et toi, descendent d'un même tout petit microbe. On l'appelle LUCA, et c'est notre ancêtre à tous : quelle grande famille !",
+      "text_expert": "LUCA (Last Universal Common Ancestor) est le dernier ancêtre commun de tous les êtres vivants actuels : bactéries, archées et eucaryotes. Aucun fossile ne le représente, mais en comparant les génomes actuels on reconstitue un ensemble de gènes probablement hérités de lui : c'était sans doute déjà une cellule complexe, avec un code génétique, des ribosomes et une membrane. Une étude de 2024 fondée sur une horloge moléculaire calibrée par des fossiles l'estime à environ 4,2 milliards d'années, avec une large marge d'incertitude, et cette date reste débattue. LUCA n'était probablement pas le premier être vivant : d'autres lignées ont pu coexister avec lui sans laisser de descendants, et les transferts horizontaux de gènes compliquent sa reconstruction.",
       "fun_fact": "LUCA veut dire en anglais « Last Universal Common Ancestor » : le dernier ancêtre commun à tous les êtres vivants. Toi, un champignon et une bactérie, vous êtes donc tous cousins !",
       "question": {
         "question": "Comment peut-on connaître LUCA sans aucun fossile ?",
@@ -3370,6 +4128,8 @@
       "scene": "microbes",
       "node_id": "vie",
       "text_enfant": "Les plus vieilles traces de vie retrouvées ont environ 3,7 milliards d'années. Ce sont des microbes : pendant très, très longtemps, ils ont été les seuls habitants de la Terre !",
+      "text_petits": "Pendant très, très longtemps, les seuls habitants de la Terre étaient des microbes invisibles à l'œil nu. Certains construisaient même des coussins de pierre qu'on voit encore !",
+      "text_expert": "Les plus anciennes traces possibles de vie sont des grains de graphite appauvris en carbone 13, dans des roches d'environ 3,7 milliards d'années à Isua (Groenland), mais leur origine biologique est débattue. Les premiers indices largement acceptés sont les stromatolites de la formation Dresser (Pilbara, Australie), vieux d'environ 3,48 milliards d'années : des structures en couches construites par des tapis microbiens qui piègent et précipitent des sédiments. D'autres annonces anciennes, comme de possibles stromatolites à Isua ou des microfossiles à Nuvvuagittuq (Canada), restent contestées, car certaines structures minérales imitent très bien des traces biologiques. Des stromatolites se forment encore aujourd'hui, par exemple à Shark Bay (Australie), ce qui aide à interpréter les fossiles.",
       "fun_fact": "Certains microbes construisaient des sortes de coussins de pierre, les stromatolites. On peut encore en voir pousser aujourd'hui en Australie, dans la baie Shark Bay !",
       "question": {
         "question": "Et après les microbes, que s'est-il passé ?",
