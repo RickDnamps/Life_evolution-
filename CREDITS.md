@@ -73,3 +73,5 @@ Ce fichier est généré par `scripts/make_credits.py` à partir de `data/evolut
 | 🧑 Homo sapiens | `images/homo_sapiens.svg` | Illustration originale du projet La grande aventure de la vie | CC0 1.0 | [lien](https://github.com/RickDnamps/Life_evolution-) |
 
 Les illustrations originales du projet (fichiers `.svg`) sont placées dans le domaine public (CC0 1.0).
+
+Les contours des continents du globe de l'accueil viennent de [Natural Earth](https://www.naturalearthdata.com/) (domaine public).

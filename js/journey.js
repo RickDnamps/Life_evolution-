@@ -2,7 +2,7 @@
 // (Homo sapiens par défaut), une étape à la fois. Pour la lignée humaine, chaque étape
 // rappelle ce que tu as hérité de cet ancêtre (champ `heritage`).
 
-import { ancestors, eraColor, formatAgo, h, nodeImage } from './utils.js';
+import { ancestors, eraColor, formatAgo, h, nodeImage, nodeSummary } from './utils.js';
 
 const DEFAULT_TARGET = 'homo_sapiens';
 
@@ -49,7 +49,7 @@ export function mount(container, ctx) {
     if (rebuildMap) {
       map.replaceChildren(...path.map((node, i) => h('li', {},
         h('button', {
-          type: 'button', class: 'jr-dot', title: node.name_fr, 'aria-label': `Étape ${i + 1} : ${node.name_fr}`,
+          type: 'button', class: 'jr-dot', 'data-tip-node': node.id, 'aria-label': `Étape ${i + 1} : ${node.name_fr}`,
           style: { '--era-color': eraColor(data.events, node.appeared_mya) },
           onclick: () => go(i),
         }, node.emoji))));
@@ -92,7 +92,7 @@ export function mount(container, ctx) {
         h('p', { class: 'jr-when' }, `🕰️ ${formatAgo(node.appeared_mya)} · ${node.era}`),
         h('h3', { class: 'jr-heading' }, heading),
         h('p', { class: 'jr-name' }, h('span', { 'aria-hidden': 'true' }, node.emoji), ` ${node.name_fr}`),
-        h('p', {}, node.description_enfant),
+        h('p', {}, nodeSummary(node)),
         heritage,
         last ? h('p', { class: 'jr-finish' }, isHuman
           ? `Bravo ! Tu viens de parcourir ${formatAgo(path[0].appeared_mya).replace('il y a ', '')} d'histoire en ${path.length} étapes. Tous ces êtres vivants font partie de ta grande famille !`
@@ -106,5 +106,6 @@ export function mount(container, ctx) {
   }
 
   render();
+  document.addEventListener('level-change', () => render(false));
   return {};
 }

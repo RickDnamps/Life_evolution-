@@ -1,7 +1,8 @@
 // « Le grand début » : l'histoire de la Terre, de sa naissance aux premiers êtres vivants,
 // racontée chapitre par chapitre avec un décor animé (données : `story`).
 
-import { EARTH_AGE_MYA, formatAgo, h } from './utils.js';
+import { EARTH_AGE_MYA, chapterText, formatAgo, h } from './utils.js';
+import { speakButton } from './speech.js';
 
 // Position sur l'horloge de 24 heures (0 h 00 = naissance de la Terre).
 function clockLabel(mya) {
@@ -135,7 +136,8 @@ export function mount(container, ctx) {
           h('span', { class: 'chip' }, `🕰️ ${chapter.date_label || formatAgo(chapter.mya)}`),
           h('span', { class: 'chip' }, `⏰ ${clockLabel(chapter.mya)}`)),
         h('h3', { class: 'st-title' }, h('span', { 'aria-hidden': 'true' }, chapter.emoji), ` ${chapter.title}`),
-        h('p', { class: 'st-text' }, chapter.text_enfant),
+        h('p', { class: 'st-text' }, chapterText(chapter)),
+        speakButton(() => `${chapter.title}. ${chapterText(chapter)}`),
         h('div', { class: 'fun-fact' },
           h('span', { class: 'fun-fact-icon', 'aria-hidden': 'true' }, '🤩'),
           h('div', {}, h('strong', {}, 'Le savais-tu ?'), chapter.fun_fact)),
@@ -148,5 +150,6 @@ export function mount(container, ctx) {
   }
 
   render();
+  document.addEventListener('level-change', render);
   return {};
 }

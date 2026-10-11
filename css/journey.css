@@ -4,7 +4,7 @@
 .jr-label { font-family: var(--font-title); font-weight: 600; margin-right: 6px; }
 .jr-select {
   min-height: 48px; max-width: 100%; padding: 0 14px;
-  border-radius: 999px; border: 3px solid var(--border);
+  border-radius: 999px; border: 1px solid var(--border-strong);
   background: var(--surface); color: var(--text);
   font: inherit; font-weight: 700;
 }
@@ -45,7 +45,7 @@
 .jr-card {
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
   border-radius: calc(var(--radius) + 6px); overflow: hidden;
-  background: var(--surface); border: 4px solid var(--era-color);
+  background: var(--surface); border: 3px solid var(--era-color);
   box-shadow: var(--shadow-strong);
   animation: jr-in 0.45s cubic-bezier(.2, 1.2, .4, 1) both;
 }
@@ -53,7 +53,7 @@
 .jr-card-img .node-img { aspect-ratio: 1 / 1; height: 100%; }
 .jr-card-body { padding: clamp(16px, 3vw, 28px); }
 .jr-when { font-weight: 800; color: var(--muted); margin-bottom: 4px; }
-.jr-heading { font-size: 1.15em; color: var(--primary); margin-bottom: 2px; }
+.jr-heading { font-size: 1.15em; color: var(--primary-strong); margin-bottom: 2px; }
 .jr-name { font-family: var(--font-title); font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.3rem); font-weight: 700; margin-bottom: 8px; line-height: 1.15; }
 
 .jr-heritage {

@@ -12,6 +12,10 @@ Ce fichier est la **seule source de vérité** du site. Il contient cinq clés :
 }
 ```
 
+## Profils d'âge
+
+Au premier chargement, le visiteur choisit son profil : `petits` (5-7 ans), `enfants` (8-10 ans), `grands` (11-14 ans) ou `adultes`. Le texte principal d'un groupe est alors `description_petits`, `description_enfant` ou `description` (11 ans et plus).
+
 ## `nodes` : l'arbre phylogénétique
 
 Chaque nœud est un **groupe d'êtres vivants** (pas un événement). L'arbre est
@@ -27,8 +31,10 @@ phylogénétique : deux groupes frères partagent un nœud ancêtre commun.
 | `parent_id` | texte ou `null` | oui | `id` du nœud parent ; `null` pour la seule racine. |
 | `category` | texte | oui | Une valeur parmi : `origine`, `microbe`, `invertébré`, `poisson`, `amphibien`, `reptile`, `dinosaure`, `oiseau`, `mammifère`, `primate`, `humain`. |
 | `description` | texte | oui | Version adulte, 2 ou 3 phrases. |
-| `description_enfant` | texte | oui | Version enfant, 1 ou 2 phrases, ton chaleureux, tutoiement. |
+| `description_enfant` | texte | oui | Version enfant (8-10 ans), 1 ou 2 phrases, ton chaleureux, tutoiement. |
+| `description_petits` | texte | non | Version pour les 5-7 ans : 25 mots au plus, sans grands nombres. |
 | `fun_fact` | texte | oui | Un fait étonnant pour les enfants. |
+| `fun_fact_petits` | texte | non | Fait étonnant pour les 5-7 ans (20 mots au plus). |
 | `emoji` | texte | oui | Un emoji représentatif. |
 | `image` | texte | oui | Chemin relatif vers l'image (ex. `images/tiktaalik.webp`). Le fichier doit exister. |
 | `image_alt` | texte | oui | Texte alternatif décrivant l'image. |
@@ -80,6 +86,7 @@ Toutes les clés sont facultatives ; chaque valeur est **une phrase courte pour 
 | `answer` | nombre | Indice (à partir de 0) de la bonne réponse dans `choices`. |
 | `explanation` | texte | Explication affichée après la réponse. |
 | `node_id` | texte ou `null` | Nœud lié, pour ouvrir sa fiche. |
+| `levels` | liste de textes | Profils d'âge concernés : `petits` (5-7 ans), `enfants` (8-10 ans), `grands` (11-14 ans), `adultes`. Absent : tous. |
 
 ## `story` : « Le grand début »
 
@@ -93,7 +100,9 @@ Les chapitres racontent l'histoire de la Terre avant et jusqu'aux premiers être
 | `date_label` | texte | non | Remplace la date affichée quand elle est incertaine. |
 | `emoji` | texte | oui | Emoji du chapitre. |
 | `scene` | texte | oui | Décor animé : `nebuleuse`, `lave`, `lune`, `ocean`, `recette`, `luca` ou `microbes`. |
-| `text_enfant` | texte | oui | Le récit, 2 ou 3 phrases pour enfant. |
+| `text_enfant` | texte | oui | Le récit, 2 ou 3 phrases pour les 8-10 ans. |
+| `text_petits` | texte | non | Version pour les 5-7 ans. |
+| `text_expert` | texte | non | Version pour les 11 ans et plus, avec les termes scientifiques. |
 | `fun_fact` | texte | oui | Un fait étonnant. |
 | `question` | objet | non | `{ "question": "...", "reponse": "..." }`. |
 | `node_id` | texte | non | Nœud de l'arbre lié (ouvre sa fiche). |
