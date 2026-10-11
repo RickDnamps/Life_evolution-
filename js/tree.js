@@ -2,7 +2,7 @@
 // Chaque groupe a une flèche ▸ qui dévoile ses descendants ; son nom ouvre sa fiche.
 // Clavier : ↑ ↓ pour se déplacer, → pour ouvrir, ← pour fermer ou remonter au parent.
 
-import { CATEGORY_INFO, ancestors, eraColor, formatAgo, h, intervalAt } from './utils.js';
+import { ancestors, eraColor, formatAgo, h, intervalAt } from './utils.js';
 
 export function mountTree(container, ctx) {
   const { data, index, validation, openCard } = ctx;
@@ -13,7 +13,6 @@ export function mountTree(container, ctx) {
   const build = (node, depth) => {
     const kids = index.children.get(node.id) || [];
     const color = eraColor(data.events, node.appeared_mya);
-    const category = CATEGORY_INFO[node.category];
     const childrenId = `tree-children-${node.id}`;
 
     const toggle = kids.length
@@ -25,9 +24,8 @@ export function mountTree(container, ctx) {
       : h('span', { class: 'tree-toggle-spacer', 'aria-hidden': 'true' }, '•');
 
     const name = h('button', {
-      type: 'button', class: 'tree-name', 'data-id': node.id,
+      type: 'button', class: 'tree-name', 'data-id': node.id, 'data-tip-node': node.id,
       onclick: () => openCard(node.id),
-      title: category ? category.label : '',
     },
     h('span', { class: 'tree-emoji', 'aria-hidden': 'true' }, node.emoji),
     h('span', { class: 'tree-label' },
@@ -133,7 +131,6 @@ export function mountTree(container, ctx) {
     event.preventDefault();
   });
 
-  ctx.revealInTree = (id) => { ctx.navigate('arbre'); setTimeout(() => reveal(id), 80); };
   return { reveal };
 }
 

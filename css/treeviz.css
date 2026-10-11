@@ -1,0 +1,381 @@
+/* ==========================================================================
+   L'arbre de l'évolution illustré (.tv-…) : chronogramme en SVG.
+   Uniquement des variables du thème : le mode sombre fonctionne tout seul.
+   ========================================================================== */
+
+.tv-root {
+  --tv-halo: var(--surface);
+  --tv-band: 0.17;
+  --tv-period: 0.62;
+  --tv-ext: #d62839;
+  --tv-ink: #1d1d1f;
+  --tv-glow: #ffb703;
+  --tv-flow: #ffffff;
+  --tv-frame-bg: linear-gradient(180deg, var(--surface) 0%, color-mix(in srgb, var(--surface) 92%, var(--bg)) 100%);
+  min-width: 0;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tv-root { --tv-band: 0.12; --tv-period: 0.26; --tv-ext: #ff5d6c; --tv-glow: #ffd166; }
+}
+:root[data-theme="dark"] .tv-root { --tv-band: 0.12; --tv-period: 0.26; --tv-ext: #ff5d6c; --tv-glow: #ffd166; }
+
+/* ---------- Barre d'outils ---------- */
+
+.tv-toolbar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;
+  margin: 14px 0 8px;
+}
+.tv-toolbar-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.tv-btn-lineage {
+  background: linear-gradient(135deg, #ff6b9a 0%, #ff8a3d 100%);
+  color: #1d1d1f;
+}
+.tv-btn-lineage.is-active {
+  background: linear-gradient(135deg, #ffd166 0%, #ff9f1c 100%);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--tv-glow) 45%, transparent), var(--shadow);
+}
+.tv-btn-lineage.is-active::after { content: '✓'; margin-left: 2px; }
+.tv-btn-full[aria-pressed="true"] { border-color: var(--secondary); }
+.tv-short { display: none; }
+
+.tv-hint { margin: 0 0 12px; color: var(--muted); font-weight: 700; font-size: 0.92em; }
+.tv-note { margin: 10px 0 0; color: var(--muted); font-weight: 600; font-size: 0.88em; max-width: 75ch; }
+
+/* ---------- Cadre et défilement ---------- */
+
+.tv-frame {
+  position: relative;
+  border-radius: var(--radius);
+  background: var(--tv-frame-bg);
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.tv-scroller {
+  height: clamp(420px, 74vh, 880px);
+  overflow: auto;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x pan-y;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--muted) 60%, transparent) transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+.tv-scroller.is-dragging { cursor: grabbing; user-select: none; }
+.tv-scroller.is-dragging .tv-node { cursor: grabbing; }
+
+.tv-canvas { position: relative; margin: 0 auto; }
+
+.tv-head {
+  position: sticky; top: 0; z-index: 3;
+  display: block; overflow: visible;
+  box-shadow: 0 3px 8px rgba(40, 25, 0, 0.08);
+  user-select: none;
+}
+.tv-svg { display: block; overflow: visible; user-select: none; -webkit-user-select: none; }
+
+/* ---------- Bandeau du temps ---------- */
+
+.tv-head-bg { fill: var(--surface); opacity: 0.95; }
+.tv-era { opacity: 0.92; }
+.tv-era-name {
+  font-family: var(--font-title); font-weight: 700; font-size: 13px; letter-spacing: 0.02em;
+  fill: var(--tv-ink); text-anchor: middle; dominant-baseline: central;
+}
+.tv-loupe { fill: #ffffff; opacity: 0.88; stroke: rgba(29, 29, 31, 0.18); stroke-width: 1; }
+.tv-loupe-name {
+  font-family: var(--font-title); font-weight: 700; font-size: 12px;
+  fill: var(--tv-ink); text-anchor: middle; dominant-baseline: central;
+}
+.tv-period { opacity: var(--tv-period); }
+.tv-period-name {
+  font-family: var(--font-body); font-weight: 800; font-size: 11px;
+  fill: var(--text); text-anchor: middle; dominant-baseline: central;
+}
+.tv-axis { stroke: color-mix(in srgb, var(--muted) 70%, transparent); stroke-width: 1.5; }
+.tv-tick { stroke: color-mix(in srgb, var(--muted) 70%, transparent); stroke-width: 1.2; }
+.tv-tick.is-major { stroke: var(--muted); stroke-width: 1.6; }
+.tv-tick-label {
+  font-family: var(--font-body); font-weight: 700; font-size: 11px;
+  fill: var(--muted); text-anchor: middle; dominant-baseline: central;
+}
+.tv-tick-label.is-major { fill: var(--text); font-weight: 800; }
+.tv-today-name {
+  font-family: var(--font-body); font-weight: 800; font-size: 12px;
+  fill: var(--text); text-anchor: middle; dominant-baseline: central;
+}
+.tv-fold { fill: none; stroke: var(--muted); stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+
+.tv-ext-mark { cursor: help; outline: none; }
+.tv-ext-mark circle { fill: var(--surface); stroke: var(--tv-ext); stroke-width: 2; transform-box: fill-box; transform-origin: 50% 50%; transition: transform 0.15s; }
+.tv-ext-mark:hover circle, .tv-ext-mark:focus-visible circle { transform: scale(1.15); }
+.tv-ext-mark:focus-visible circle { stroke: var(--focus); stroke-width: 3; }
+.tv-ext-emoji { font-size: 13px; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+
+/* ---------- Fond : périodes, extinctions, aujourd'hui ---------- */
+
+.tv-band { opacity: var(--tv-band); }
+.tv-era-sep { stroke: color-mix(in srgb, var(--muted) 35%, transparent); stroke-width: 1.5; }
+.tv-fold-seam { stroke: color-mix(in srgb, var(--muted) 30%, transparent); stroke-width: 1.5; stroke-dasharray: 2 7; }
+.tv-ext-line { stroke: var(--tv-ext); stroke-width: 1.6; stroke-dasharray: 7 6; opacity: 0.5; }
+.tv-today { stroke: var(--text); stroke-width: 2; opacity: 0.22; }
+
+/* ---------- Branches ---------- */
+
+.tv-branch { transition: opacity 0.35s ease; }
+.tv-branch.is-hidden { opacity: 0; }
+.tv-link { fill: none; stroke-linecap: round; stroke-linejoin: round; transition: filter 0.2s; }
+.tv-life { fill: none; stroke-width: 2.2; stroke-linecap: round; opacity: 0.6; }
+.tv-life.is-dead { opacity: 1; stroke-width: 2.6; }
+.tv-wedge { opacity: 0.15; }
+.tv-end-dot { opacity: 0.85; }
+.tv-dagger-disc { fill: none; stroke: none; }
+.tv-end.is-badge .tv-dagger-disc { fill: var(--surface); stroke: var(--muted); stroke-width: 1.5; }
+.tv-end.is-badge .tv-dagger { font-size: 11px; stroke: none; }
+.tv-dagger {
+  font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 14px;
+  fill: var(--muted); text-anchor: middle; dominant-baseline: central;
+  paint-order: stroke; stroke: var(--tv-halo); stroke-width: 3px; stroke-linejoin: round;
+}
+
+/* ---------- Nœuds ---------- */
+
+.tv-node { cursor: pointer; outline: none; transition: opacity 0.35s ease; -webkit-tap-highlight-color: transparent; }
+.tv-node.is-hidden { opacity: 0 !important; pointer-events: none; }
+
+.tv-medal { transform-box: fill-box; transform-origin: 50% 50%; transition: transform 0.2s cubic-bezier(.2, 1.4, .4, 1); }
+.tv-node:hover .tv-medal, .tv-node:focus-visible .tv-medal { transform: scale(1.14); }
+.tv-pulse { fill: none; stroke: none; }
+.tv-disc { fill: var(--surface); }
+.tv-shadow { fill: rgb(40, 25, 0); opacity: 0.09; }
+.tv-ring { fill: none; stroke: var(--cat); stroke-width: 3.2; }
+.tv-emoji { text-anchor: middle; dominant-baseline: central; }
+.tv-img { pointer-events: none; }
+.tv-focus { fill: none; stroke: var(--focus); stroke-width: 3.5; opacity: 0; }
+.tv-node:focus-visible .tv-focus { opacity: 1; }
+
+.tv-name {
+  font-family: var(--font-title); font-weight: 600;
+  fill: var(--text);
+  paint-order: stroke; stroke: var(--tv-halo); stroke-width: 4.5px; stroke-linejoin: round;
+}
+.tv-sub {
+  font-family: var(--font-body); font-weight: 700;
+  fill: var(--muted);
+  paint-order: stroke; stroke: var(--tv-halo); stroke-width: 4px; stroke-linejoin: round;
+}
+.tv-sci { font-style: italic; display: none; }
+.show-sci .tv-sci { display: inline; }
+.tv-node:hover .tv-name { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+/* Bouton +/− sous le médaillon */
+.tv-toggle { cursor: pointer; }
+.tv-hit { fill: transparent; stroke: none; }
+.tv-toggle-bg { fill: var(--surface); stroke: var(--cat); stroke-width: 2; }
+.tv-toggle-text {
+  font-family: var(--font-body); font-weight: 800; font-size: 12px;
+  fill: var(--text); text-anchor: middle; dominant-baseline: central; pointer-events: none;
+}
+.tv-toggle.is-closed .tv-toggle-bg { fill: var(--cat); stroke: var(--surface); }
+.tv-toggle.is-closed .tv-toggle-text { fill: var(--tv-ink); }
+.tv-toggle:not(.is-closed) { opacity: 0.7; transition: opacity 0.2s; }
+.tv-node:hover .tv-toggle, .tv-node:focus-visible .tv-toggle { opacity: 1; }
+.tv-toggle:hover .tv-toggle-bg { stroke-width: 3; }
+
+/* Badge rouge « ! » : problème dans les données */
+.tv-invalid circle { fill: var(--danger); stroke: var(--surface); stroke-width: 2; }
+.tv-invalid-text {
+  font-family: var(--font-body); font-weight: 800; font-size: 11px;
+  fill: #ffffff; text-anchor: middle; dominant-baseline: central;
+}
+
+/* Brille quand on arrive sur un groupe (reveal) */
+.tv-pulse { transform-box: fill-box; transform-origin: 50% 50%; }
+.tv-node.is-pulsing .tv-pulse { stroke: var(--tv-glow); stroke-width: 4; animation: tv-pulse 0.9s ease-out 3; }
+@keyframes tv-pulse {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.9); }
+}
+
+/* ---------- Lignée : survol et « Montre ma lignée » ---------- */
+
+.tv-svg.is-tracing .tv-node:not(.is-tracing-on),
+.tv-svg.is-pinned:not(.is-tracing) .tv-node:not(.is-pinned-on) { opacity: 0.32; }
+.tv-svg.is-tracing .tv-branch:not(.is-tracing-on),
+.tv-svg.is-pinned:not(.is-tracing) .tv-branch:not(.is-pinned-on) { opacity: 0.16; }
+.tv-branch.is-tracing-on .tv-link,
+.tv-svg:not(.is-tracing) .tv-branch.is-pinned-on .tv-link { filter: drop-shadow(0 0 3px var(--cat)); }
+.tv-node.is-tracing-on .tv-name, .tv-node.is-pinned-on .tv-name { font-weight: 700; }
+
+.tv-flow-glow {
+  fill: none; stroke: var(--tv-glow); stroke-width: 13; stroke-linecap: round; stroke-linejoin: round;
+  opacity: 0.32; filter: blur(3px);
+  transition: opacity 0.3s;
+}
+.tv-flow {
+  fill: none; stroke: var(--tv-flow); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 1 15; opacity: 0.95;
+  animation: tv-flow 1.1s linear infinite;
+  transition: opacity 0.3s;
+}
+.tv-svg.is-tracing .tv-flow, .tv-svg.is-tracing .tv-flow-glow { opacity: 0.12; }
+.tv-flow.is-moving, .tv-flow-glow.is-moving { opacity: 0; transition: none; }
+@keyframes tv-flow { to { stroke-dashoffset: -32; } }
+
+/* ---------- Zoom ---------- */
+
+.tv-zoom {
+  position: absolute; left: 12px; bottom: 12px; z-index: 4;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.tv-zoom-btn {
+  display: grid; place-items: center;
+  width: 44px; height: 44px; padding: 0;
+  border-radius: 50%; border: 2px solid var(--border);
+  background: var(--surface); color: var(--text);
+  font-family: var(--font-title); font-size: 1.5rem; font-weight: 700; line-height: 1;
+  box-shadow: var(--shadow); cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+}
+.tv-zoom-btn:hover { transform: scale(1.08); border-color: var(--secondary); }
+.tv-zoom-btn:disabled { opacity: 0.45; cursor: default; transform: none; }
+.tv-zoom-level {
+  width: auto; height: 28px; min-width: 52px; padding: 0 8px; border-radius: 999px; white-space: nowrap;
+  font-family: var(--font-body); font-size: 0.72rem; font-weight: 800;
+}
+
+/* Invitation à faire glisser l'arbre (disparaît au premier défilement) */
+.tv-swipe {
+  position: absolute; right: 14px; bottom: 14px; z-index: 4;
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 14px; border-radius: 999px;
+  background: color-mix(in srgb, var(--text) 82%, transparent); color: var(--surface);
+  font-weight: 800; font-size: 0.85em;
+  pointer-events: none;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.tv-swipe.is-gone { opacity: 0; transform: translateY(8px); }
+.tv-swipe-arrow { display: inline-block; font-size: 1.2em; animation: tv-nudge 1.4s ease-in-out infinite; }
+@keyframes tv-nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(6px); } }
+
+/* ---------- Bandeau « ta lignée » ---------- */
+
+.tv-banner {
+  position: absolute; left: 12px; top: 94px; right: 12px; z-index: 4;
+  width: fit-content;
+  max-width: 720px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px;
+  padding: 6px 8px 6px 12px; border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  backdrop-filter: blur(6px);
+  border: 3px solid var(--tv-glow);
+  box-shadow: var(--shadow-strong);
+  animation: tv-banner-in 0.35s cubic-bezier(.2, 1.3, .4, 1) both;
+}
+.tv-banner[hidden] { display: none; }
+.tv-banner p { flex: 1 1 220px; margin: 0; font-size: 0.88em; font-weight: 700; line-height: 1.3; }
+.tv-banner-emoji { font-size: 1.7rem; line-height: 1; }
+.tv-banner .btn { min-height: 38px; font-size: 0.88em; padding: 0.2em 0.9em; box-shadow: none; }
+.tv-banner-actions { display: flex; align-items: center; gap: 6px; margin-left: auto; flex: none; }
+.tv-banner-close {
+  width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--border);
+  background: var(--surface-2); color: var(--text); font-weight: 800; cursor: pointer;
+}
+@keyframes tv-banner-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Le voyage le long de la lignée ---------- */
+
+.tv-journey {
+  position: absolute; left: 12px; right: 12px; top: 96px; z-index: 5;
+  width: fit-content; margin: 0 auto;
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 16px 8px 8px; border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  backdrop-filter: blur(6px);
+  border: 3px solid var(--tv-glow); box-shadow: var(--shadow-strong);
+  font-family: var(--font-title); font-size: 1.05em; line-height: 1.2;
+  pointer-events: none;
+  animation: tv-banner-in 0.3s ease both;
+}
+.tv-journey strong { font-weight: 600; }
+.tv-journey small { color: var(--muted); font-family: var(--font-body); font-weight: 700; font-size: 0.78em; }
+.tv-journey-step {
+  flex: none; padding: 3px 9px; border-radius: 999px;
+  background: var(--tv-glow); color: #1d1d1f; font-family: var(--font-body); font-weight: 800; font-size: 0.75em;
+}
+.tv-journey-emoji { font-size: 1.6em; line-height: 1; }
+.tv-journey-you {
+  padding: 3px 10px; border-radius: 999px; background: #ef476f; color: #fff; font-weight: 700;
+  animation: tv-pop 0.6s cubic-bezier(.2, 1.6, .4, 1) both;
+}
+.tv-journey.is-end { border-color: #ef476f; }
+.tv-frame.is-touring .tv-scroller { cursor: default; }
+@keyframes tv-pop { from { transform: scale(0.3); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* ---------- Légende ---------- */
+
+.tv-legend { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 20px; margin-top: 14px; }
+.tv-legend-cats { display: flex; flex-wrap: wrap; gap: 6px; }
+.tv-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 3px 10px 3px 6px; border-radius: 999px;
+  background: var(--surface); border: 2px solid var(--border);
+  font-weight: 800; font-size: 0.82em;
+}
+.tv-chip-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--cat); box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.35); }
+.tv-legend-keys {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px;
+  color: var(--muted); font-weight: 700; font-size: 0.85em;
+}
+.tv-legend-keys > span { display: inline-flex; align-items: center; gap: 6px; }
+.tv-key-live { display: inline-block; width: 26px; height: 3px; border-radius: 3px; background: var(--secondary); position: relative; }
+.tv-key-live::after { content: ''; position: absolute; right: -2px; top: -2.5px; width: 8px; height: 8px; border-radius: 50%; background: var(--secondary); }
+.tv-key-dead { font-family: Georgia, serif; font-weight: 700; font-size: 1.2em; color: var(--muted); }
+.tv-key-ext { font-size: 1.05em; }
+.tv-key-more {
+  display: inline-grid; place-items: center; min-width: 26px; height: 18px; padding: 0 6px;
+  border-radius: 999px; background: #57cc99; color: #1d1d1f; font-size: 0.8em; font-weight: 800;
+}
+
+/* ---------- Plein écran ---------- */
+
+.tv-root.is-fullscreen {
+  display: flex; flex-direction: column;
+  padding: 12px 16px 16px; background: var(--bg); overflow: auto;
+}
+.tv-root.is-fullscreen .tv-toolbar { margin-top: 0; }
+.tv-root.is-fullscreen .tv-frame { flex: 1 1 auto; min-height: 0; display: flex; }
+.tv-root.is-fullscreen .tv-scroller { height: auto; flex: 1 1 auto; }
+.tv-root.is-fullscreen .tv-hint, .tv-root.is-fullscreen .tv-note { display: none; }
+.tv-root.is-fullscreen .tv-legend { margin-top: 8px; }
+
+/* ---------- Petits écrans ---------- */
+
+@media (max-width: 600px) {
+  .tv-toolbar { gap: 8px; }
+  .tv-toolbar .btn { flex: 1 1 auto; }
+  .tv-toolbar-group { flex: 1 1 100%; }
+  .tv-btn-full .tv-btn-text, .tv-long { display: none; }
+  .tv-short { display: inline; }
+  .tv-journey { top: 92px; font-size: 0.92em; }
+  .tv-btn-full { flex: 0 0 auto !important; }
+  .tv-scroller { height: clamp(380px, 68vh, 640px); }
+  .tv-frame { border-radius: var(--radius-small, 14px); border-width: 2px; }
+  .tv-zoom { left: 8px; bottom: 8px; gap: 5px; }
+  .tv-zoom-btn { width: 40px; height: 40px; font-size: 1.3rem; }
+  .tv-zoom-btn.tv-zoom-level { display: none; }
+  .tv-zoom-btn { width: 38px; height: 38px; }
+  .tv-swipe { font-size: 0.8em; right: 8px; bottom: 8px; }
+  .tv-banner { left: 8px; right: 8px; top: 90px; gap: 6px; padding: 8px 10px; border-radius: var(--radius-small, 14px); }
+  .tv-banner-emoji { display: none; }
+  .tv-banner-actions { margin-left: 0; }
+  .tv-legend { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tv-flow { animation: none; stroke-dasharray: 1 9; }
+  .tv-swipe-arrow { animation: none; }
+  .tv-node.is-pulsing .tv-pulse { animation: none; opacity: 1; }
+  .tv-medal, .tv-node, .tv-branch { transition: none; }
+}
