@@ -137,3 +137,55 @@ export function nodeImage(node, className = '') {
 }
 
 export const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ---------- Profils d'âge ----------
+// Le visiteur choisit son âge au premier chargement ; les textes s'adaptent.
+
+export const LEVELS = {
+  petits:  { label: '5-7 ans', name: 'Petit explorateur', emoji: '🧸' },
+  enfants: { label: '8-10 ans', name: 'Explorateur', emoji: '🎒' },
+  grands:  { label: '11-14 ans', name: 'Grand explorateur', emoji: '🔭' },
+  adultes: { label: 'Adultes et enseignants', name: 'Scientifique', emoji: '🎓' },
+};
+
+const LEVEL_KEY = 'niveau';
+let currentLevel = null;
+
+export function getLevel() {
+  if (currentLevel) return currentLevel;
+  try {
+    const saved = localStorage.getItem(LEVEL_KEY);
+    if (saved in LEVELS) currentLevel = saved;
+  } catch (e) { /* stockage indisponible */ }
+  return currentLevel || 'enfants';
+}
+
+export function hasChosenLevel() {
+  try { return localStorage.getItem(LEVEL_KEY) in LEVELS; } catch (e) { return currentLevel != null; }
+}
+
+export function setLevel(level) {
+  if (!(level in LEVELS)) return;
+  currentLevel = level;
+  try { localStorage.setItem(LEVEL_KEY, level); } catch (e) { /* ignoré */ }
+  document.documentElement.dataset.level = level;
+  document.dispatchEvent(new CustomEvent('level-change', { detail: { level } }));
+}
+
+// Texte principal d'un groupe selon l'âge.
+export function nodeSummary(node, level = getLevel()) {
+  if (level === 'petits') return node.description_petits || node.description_enfant;
+  if (level === 'enfants') return node.description_enfant;
+  return node.description;
+}
+
+export function nodeFunFact(node, level = getLevel()) {
+  return (level === 'petits' && node.fun_fact_petits) || node.fun_fact;
+}
+
+// Texte d'un chapitre du « Grand début » selon l'âge.
+export function chapterText(chapter, level = getLevel()) {
+  if (level === 'petits') return chapter.text_petits || chapter.text_enfant;
+  if (level === 'grands' || level === 'adultes') return chapter.text_expert || chapter.text_enfant;
+  return chapter.text_enfant;
+}

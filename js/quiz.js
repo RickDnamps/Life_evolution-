@@ -1,7 +1,7 @@
 // « Le grand quiz » : 10 questions tirées au hasard dans data.quiz.
 // Clavier : Tab + Entrée, ou 1 à 4 (A à D) pour répondre.
 
-import { h, prefersReducedMotion, shuffle } from './utils.js';
+import { getLevel, h, prefersReducedMotion, shuffle } from './utils.js';
 
 const QUESTIONS_PER_GAME = 10;
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -30,8 +30,15 @@ export function mount(container, ctx) {
 
   // ---------- Partie ----------
 
+  // Questions adaptées au profil d'âge choisi (champ `levels`), avec l'ensemble en secours.
+  function poolForLevel() {
+    const level = getLevel();
+    const pool = bank.filter((q) => !Array.isArray(q.levels) || q.levels.includes(level));
+    return pool.length >= 5 ? pool : bank;
+  }
+
   function start() {
-    game.questions = shuffle(bank).slice(0, QUESTIONS_PER_GAME).map((q) => {
+    game.questions = shuffle(poolForLevel()).slice(0, QUESTIONS_PER_GAME).map((q) => {
       const choices = shuffle(q.choices.map((text, i) => ({ text, correct: i === q.answer })));
       return { ...q, shuffled: choices };
     });
@@ -224,5 +231,6 @@ export function mount(container, ctx) {
   });
 
   start();
+  document.addEventListener('level-change', start);
   return {};
 }
