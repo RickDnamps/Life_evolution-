@@ -1,0 +1,53 @@
+name: Valider et déployer
+
+# À chaque push : on valide les données. Si la validation échoue, rien n'est déployé.
+# Sur la branche main, si tout est valide, le site est publié sur GitHub Pages.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Valider les données
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Valider data/evolution_tree.json
+        run: python3 scripts/validate.py
+      - name: Tester le validateur
+        run: python3 -m unittest discover -s scripts -p 'test_*.py' -v
+
+  deploy:
+    name: Publier sur GitHub Pages
+    needs: validate
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Préparer le site
+        run: |
+          mkdir _site
+          cp -r index.html css js data images CREDITS.md _site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
