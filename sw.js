@@ -2,7 +2,7 @@
 // Pages et données : le réseau d'abord (toujours à jour), le cache en secours.
 // Styles, scripts et images : le cache d'abord, mis à jour en arrière-plan.
 
-const CACHE = 'aventure-vie-v2';
+const CACHE = 'aventure-vie-v3';
 const CORE = [
   './',
   'index.html',
