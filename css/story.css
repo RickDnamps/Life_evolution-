@@ -1,0 +1,216 @@
+/* Le grand début : chapitres et décors animés */
+
+.st-map .jr-dot { border-color: #ffb703; }
+
+.st-stage { margin-top: 16px; }
+
+.st-card {
+  border-radius: calc(var(--radius) + 6px); overflow: hidden;
+  background: var(--surface); border: 4px solid var(--border);
+  box-shadow: var(--shadow-strong);
+  animation: jr-in 0.45s cubic-bezier(.2, 1.2, .4, 1) both;
+}
+.st-body { padding: clamp(16px, 3vw, 28px); }
+.st-title { font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2.3rem); margin: 6px 0 10px; }
+.st-text { font-size: 1.15em; font-weight: 600; }
+
+.st-next {
+  margin: 18px 0 6px; padding: 16px; border-radius: var(--radius-small);
+  background: color-mix(in srgb, var(--warning) 22%, var(--surface));
+}
+.st-next-title { font-family: var(--font-title); font-size: 1.2em; font-weight: 600; }
+
+/* ---------- Décor commun ---------- */
+
+.st-scene {
+  position: relative; overflow: hidden;
+  aspect-ratio: 16 / 7; min-height: 190px; max-height: 360px; width: 100%;
+  background: #14152b;
+}
+.st-scene * { position: absolute; display: block; }
+
+.st-star {
+  width: 4px; height: 4px; border-radius: 50%; background: #fff;
+  animation: st-twinkle 2.4s ease-in-out infinite; animation-delay: var(--d, 0s);
+}
+
+/* ---------- 1. Nébuleuse : le Soleil s'allume ---------- */
+
+.st-scene-nebuleuse { background: radial-gradient(circle at 50% 50%, #3b2a6b 0%, #1a1440 55%, #0b0a1f 100%); }
+.st-disc {
+  left: 50%; top: 50%; width: 120%; aspect-ratio: 1; translate: -50% -50%;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent, #ff9e6d55, transparent 25%, #c77dff55, transparent 50%, #6ea8ff55, transparent 75%, #ffd16655, transparent);
+  transform: scaleY(0.32);
+  animation: st-spin 18s linear infinite;
+}
+.st-sun {
+  left: 50%; top: 50%; width: 70px; height: 70px; translate: -50% -50%; border-radius: 50%;
+  background: radial-gradient(circle, #fff7c2 0%, #ffd166 45%, #ff9e3d 75%, transparent 76%);
+  box-shadow: 0 0 40px 18px #ffb70399, 0 0 90px 40px #ff8c4255;
+  animation: st-ignite 3s ease-out both, st-glow 3s ease-in-out 3s infinite;
+}
+.st-ring { left: 50%; top: 50%; width: 0; height: 0; animation: st-spin 14s linear infinite; }
+.st-rock {
+  left: -5px; top: -5px; width: 10px; height: 10px; border-radius: 40%; background: #b9a38c;
+  transform: rotate(var(--a)) translateX(min(28vw, 240px));
+}
+
+/* ---------- 2. La Terre de lave ---------- */
+
+.st-scene-lave { background: radial-gradient(circle at 70% 20%, #3a1a2f, #120914 70%); }
+.st-planet {
+  left: 50%; top: 55%; width: min(46vw, 230px); aspect-ratio: 1; translate: -50% -50%; border-radius: 50%;
+}
+.st-planet-lava {
+  background: radial-gradient(circle at 35% 30%, #ffd166 0%, #ff7b00 30%, #c1121f 65%, #5c0a0a 100%);
+  box-shadow: 0 0 50px 10px #ff5d0088;
+  animation: st-pulse 3s ease-in-out infinite;
+}
+.st-crack { height: 4px; border-radius: 2px; background: #fff3b0; opacity: 0.85; animation: st-flicker 1.6s ease-in-out infinite; }
+.c1 { left: 20%; top: 40%; width: 35%; rotate: 20deg; }
+.c2 { left: 45%; top: 62%; width: 30%; rotate: -15deg; animation-delay: 0.5s; }
+.c3 { left: 30%; top: 75%; width: 22%; rotate: 8deg; animation-delay: 1s; }
+.st-meteor {
+  top: -10%; width: 10px; height: 10px; border-radius: 50%; background: #d9c3a5;
+  box-shadow: 0 -14px 10px 2px #ffb70366;
+  animation: st-fall 3.5s ease-in infinite; animation-delay: var(--d);
+}
+
+/* ---------- 3. La naissance de la Lune ---------- */
+
+.st-scene-lune { background: radial-gradient(circle at 30% 50%, #22224a, #0b0a1f 70%); }
+.st-planet-young {
+  left: 38%; top: 50%; width: min(36vw, 180px);
+  background: radial-gradient(circle at 35% 30%, #f4a259, #a0522d 55%, #4a2512 100%);
+}
+.st-theia {
+  left: 95%; top: 30%; width: min(14vw, 70px); aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #d6ccc2, #7d6f62 70%);
+  animation: st-theia 6s ease-in infinite;
+}
+.st-flash {
+  left: 46%; top: 36%; width: 40px; height: 40px; border-radius: 50%;
+  background: radial-gradient(circle, #fff, #ffd166 40%, transparent 70%);
+  opacity: 0; animation: st-flash 6s ease-out infinite;
+}
+.st-moon-orbit {
+  left: 38%; top: 50%; width: min(60vw, 330px); aspect-ratio: 1; translate: -50% -50%;
+  animation: st-spin 12s linear infinite;
+}
+.st-moon {
+  right: 0; top: 50%; width: min(9vw, 46px); aspect-ratio: 1; translate: 0 -50%; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fffdf2, #d9d6c8 60%, #9e9a8a 100%);
+  box-shadow: 0 0 18px 4px #fffbe655;
+  opacity: 0; animation: st-appear 6s ease-out infinite;
+}
+
+/* ---------- 4. Les premiers océans ---------- */
+
+.st-scene-ocean { background: linear-gradient(#4a5568, #718096 60%, #8aa0b5); }
+.st-cloud {
+  width: 45%; height: 70px; border-radius: 40px; background: #3d4656;
+  box-shadow: 30px 10px 0 -6px #3d4656, -30px 14px 0 -10px #3d4656;
+  animation: st-drift 10s ease-in-out infinite alternate;
+}
+.k1 { left: 5%; top: 6%; }
+.k2 { left: 50%; top: 2%; animation-delay: -4s; }
+.st-rain {
+  inset: 0;
+  background: repeating-linear-gradient(105deg, transparent 0 18px, #cfe3ff99 18px 20px, transparent 20px 40px);
+  background-size: 100% 80px;
+  animation: st-rain 0.6s linear infinite;
+}
+.st-volcano {
+  left: 6%; bottom: 22%; width: 0; height: 0;
+  border-left: 70px solid transparent; border-right: 70px solid transparent; border-bottom: 90px solid #4a3426;
+}
+.st-steam {
+  left: -18px; top: -20px; width: 36px; height: 36px; border-radius: 50%; background: #e2e8f0aa;
+  animation: st-rise 3s ease-out infinite;
+}
+.st-sea {
+  left: -5%; right: -5%; bottom: 0; height: 30%;
+  background: radial-gradient(circle at 50% 0, #4ea8de 0 40px, transparent 41px) 0 0 / 80px 40px repeat-x, linear-gradient(#3a86ff, #1d4e89);
+  animation: st-wave 4s ease-in-out infinite alternate;
+}
+
+/* ---------- 5. La recette de la vie ---------- */
+
+.st-scene-recette, .st-scene-luca { background: #0d3b66; }
+.st-water { inset: 0; background: linear-gradient(#2a9df4 0%, #1768ac 45%, #0d3b66 100%); }
+.st-deep { background: linear-gradient(#1768ac 0%, #0b2545 60%, #06142a 100%); }
+.st-bubble {
+  bottom: -20px; width: var(--s); height: var(--s); border-radius: 50%;
+  border: 2px solid #cdeffd; background: #cdeffd33;
+  animation: st-bubble 5s ease-in infinite; animation-delay: var(--d);
+}
+.st-molecule { width: 80px; height: 40px; animation: st-bob 4s ease-in-out infinite; animation-delay: var(--d); }
+.st-molecule i { width: 22px; height: 22px; border-radius: 50%; top: 9px; }
+.st-molecule i:nth-child(1) { left: 0; background: #ffd166; }
+.st-molecule i:nth-child(2) { left: 28px; background: #ef476f; }
+.st-molecule i:nth-child(3) { left: 56px; background: #06d6a0; }
+.st-molecule::before { content: ''; position: absolute; left: 10px; right: 10px; top: 18px; height: 4px; background: #fff; border-radius: 2px; }
+
+/* ---------- 6. LUCA près d'une source chaude ---------- */
+
+.st-vent {
+  left: 12%; bottom: 0; width: 0; height: 0;
+  border-left: 45px solid transparent; border-right: 45px solid transparent; border-bottom: 120px solid #2b2d42;
+}
+.st-smoke {
+  left: -20px; top: -30px; width: 40px; height: 40px; border-radius: 50%; background: #5c677d99;
+  animation: st-rise 3.5s ease-out infinite;
+}
+.st-smoke.s2 { animation-delay: 1.7s; }
+.st-cell {
+  left: 55%; top: 45%; width: 90px; height: 70px; translate: -50% -50%; border-radius: 48% 52% 45% 55%;
+  background: radial-gradient(circle at 40% 35%, #b9fbc0cc, #57cc99aa 60%, #2a9d8f88);
+  border: 3px solid #b9fbc0; box-shadow: 0 0 30px 8px #57cc9966;
+  animation: st-wobble 4s ease-in-out infinite;
+}
+.st-cell-core { left: 30%; top: 30%; width: 30px; height: 22px; border-radius: 50%; background: #2a9d8f; opacity: 0.8; }
+
+/* ---------- 7. Les premières traces de vie ---------- */
+
+.st-scene-microbes { background: #8ecae6; }
+.st-sky { inset: 0; background: linear-gradient(#ffcf99 0%, #8ecae6 60%); }
+.st-sun-small {
+  left: 82%; top: 26%; width: 60px; height: 60px;
+  box-shadow: 0 0 30px 10px #ffd16688; animation: st-glow 4s ease-in-out infinite;
+}
+.st-shallow { left: 0; right: 0; bottom: 0; height: 45%; background: linear-gradient(#48cae4cc, #0096c7); }
+.st-stromatolite {
+  bottom: 0; width: var(--w); height: calc(var(--w) * 0.6); border-radius: 50% 50% 8px 8px;
+  background: repeating-linear-gradient(0deg, #9c6644 0 6px, #b08968 6px 12px);
+}
+.st-microbe {
+  width: 8px; height: 8px; border-radius: 50%; background: #2dc653;
+  box-shadow: 0 0 6px 2px #b9fbc088;
+  animation: st-bob 3s ease-in-out infinite; animation-delay: var(--d);
+}
+
+/* ---------- Animations ---------- */
+
+@keyframes st-twinkle { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+@keyframes st-spin { to { rotate: 360deg; } }
+@keyframes st-ignite { from { opacity: 0; scale: 0.2; } to { opacity: 1; scale: 1; } }
+@keyframes st-glow { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(1.25); } }
+@keyframes st-pulse { 0%, 100% { box-shadow: 0 0 40px 8px #ff5d0077; } 50% { box-shadow: 0 0 70px 20px #ff5d00aa; } }
+@keyframes st-flicker { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+@keyframes st-fall { from { translate: 0 0; opacity: 1; } 80% { opacity: 1; } to { translate: 60px 420px; opacity: 0; } }
+@keyframes st-theia { 0% { left: 95%; top: 20%; opacity: 1; } 40% { left: 47%; top: 36%; opacity: 1; } 45%, 100% { left: 47%; top: 36%; opacity: 0; } }
+@keyframes st-flash { 0%, 38% { opacity: 0; scale: 0.5; } 45% { opacity: 1; scale: 4; } 60%, 100% { opacity: 0; scale: 6; } }
+@keyframes st-appear { 0%, 50% { opacity: 0; } 70%, 100% { opacity: 1; } }
+@keyframes st-drift { from { translate: -10px 0; } to { translate: 20px 0; } }
+@keyframes st-rain { from { background-position: 0 0; } to { background-position: -20px 80px; } }
+@keyframes st-rise { from { translate: 0 0; scale: 0.6; opacity: 0.9; } to { translate: 10px -90px; scale: 2; opacity: 0; } }
+@keyframes st-wave { from { translate: -20px 0; } to { translate: 20px 4px; } }
+@keyframes st-bubble { from { translate: 0 0; opacity: 0.9; } to { translate: 10px -400px; opacity: 0; } }
+@keyframes st-bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -12px; } }
+@keyframes st-wobble { 0%, 100% { border-radius: 48% 52% 45% 55%; scale: 1; } 50% { border-radius: 55% 45% 52% 48%; scale: 1.08; } }
+
+@media (max-width: 720px) {
+  .st-scene { aspect-ratio: 4 / 3; max-height: 260px; }
+  .st-cloud { height: 50px; }
+}

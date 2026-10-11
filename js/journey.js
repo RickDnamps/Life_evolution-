@@ -99,6 +99,7 @@ export function mount(container, ctx) {
           : `Bravo ! ${path.length} étapes depuis les premières traces de vie.`) : null,
         h('div', { class: 'chips' },
           h('button', { type: 'button', class: 'btn btn-small btn-ghost', onclick: () => ctx.openCard(node.id) }, '📖 Voir la fiche'),
+          step === 0 ? h('a', { class: 'btn btn-small btn-secondary', href: '#debut' }, '🌋 Et avant la vie ?') : null,
           last ? h('button', { type: 'button', class: 'btn btn-small', onclick: () => go(0) }, '🔁 Recommencer') : null)));
 
     stage.replaceChildren(card);

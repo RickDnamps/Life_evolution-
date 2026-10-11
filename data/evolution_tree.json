@@ -2853,6 +2853,42 @@
       "color": null,
       "description_enfant": "Il y a environ 11 700 ans, les grands glaciers fondent et le climat se réchauffe : c'est le début de l'Holocène. Peu après, des humains inventent l'agriculture.",
       "source": "Base de l'Holocène, 11 700 ans avant 2000 (GSSP carotte de glace NGRIP2, Groenland ; ICS v2026/06)"
+    },
+    {
+      "id": "naissance_lune",
+      "type": "event",
+      "name_fr": "Naissance de la Lune",
+      "start_mya": 4510,
+      "end_mya": 4510,
+      "parent_id": null,
+      "color": null,
+      "emoji": "🌕",
+      "description_enfant": "Une planète de la taille de Mars, Théia, percute la jeune Terre : les débris forment la Lune.",
+      "source": "Barboni et al. 2017, Science Advances (au moins 4,51 milliards d'années ; âge discuté)."
+    },
+    {
+      "id": "premiers_oceans",
+      "type": "event",
+      "name_fr": "Premiers océans",
+      "start_mya": 4400,
+      "end_mya": 4400,
+      "parent_id": null,
+      "color": null,
+      "emoji": "🌊",
+      "description_enfant": "La Terre a refroidi : la pluie remplit les premiers océans. Un cristal de zircon australien en garde la trace.",
+      "source": "Wilde et al. 2001, Nature 409 (zircon de Jack Hills, environ 4 404 Ma)."
+    },
+    {
+      "id": "luca",
+      "type": "event",
+      "name_fr": "LUCA, notre ancêtre commun",
+      "start_mya": 4200,
+      "end_mya": 4200,
+      "parent_id": null,
+      "color": null,
+      "emoji": "🦠",
+      "description_enfant": "Le dernier ancêtre commun de tous les êtres vivants vivait probablement à cette époque. C'est une estimation faite en comparant l'ADN des êtres vivants actuels.",
+      "source": "Moody et al. 2024, Nature Ecology & Evolution 8 (horloge moléculaire ; date discutée)."
     }
   ],
   "quiz": [
@@ -3232,6 +3268,115 @@
       "answer": 3,
       "explanation": "Bravo ! Il y a environ 318 millions d'années, l'œuf amniotique a permis de pondre loin des mares. Toi aussi, tu as grandi dans une enveloppe héritée de cet œuf : l'amnios !",
       "node_id": "amniotes"
+    }
+  ],
+  "story": [
+    {
+      "id": "nuage",
+      "title": "Au commencement : un immense nuage",
+      "mya": 4567,
+      "emoji": "✨",
+      "scene": "nebuleuse",
+      "text_enfant": "Il y a environ 4,6 milliards d'années, un gigantesque nuage de gaz et de poussières s'est effondré sur lui-même. En son centre, le Soleil s'est allumé ! Tout autour, des grains de poussière se sont collés les uns aux autres pour former des cailloux, puis d'énormes rochers.",
+      "fun_fact": "Une partie de la matière dont tu es fait a été fabriquée dans des étoiles qui ont explosé bien avant la naissance du Soleil : tu es fait de poussière d'étoiles !",
+      "question": {
+        "question": "Comment les scientifiques savent-ils quel âge a le Système solaire ?",
+        "reponse": "Ils étudient des météorites, des cailloux tombés de l'espace. Certains grains à l'intérieur se sont formés en tout premier, il y a 4 567 millions d'années, et n'ont presque pas changé depuis !"
+      },
+      "source": "Plus vieux solides du Système solaire : inclusions réfractaires (CAI) des météorites, 4 567,3 Ma (Connelly et al. 2012, Science 338).",
+      "source_url": "https://doi.org/10.1126/science.1226919"
+    },
+    {
+      "id": "terre",
+      "title": "La Terre est née… et elle est brûlante !",
+      "mya": 4540,
+      "emoji": "🌋",
+      "scene": "lave",
+      "text_enfant": "Les rochers se sont rassemblés pour former notre planète. Au début, la Terre était une boule brûlante couverte de lave : pas d'eau liquide, pas d'air respirable, et aucun être vivant.",
+      "fun_fact": "Il faisait si chaud que toute la surface de la Terre était un océan de roche fondue, bien plus chaud qu'un four à pizza !",
+      "question": {
+        "question": "Si la Terre était si chaude, aurait-on pu y vivre ?",
+        "reponse": "Pas du tout ! Il n'y avait ni eau liquide, ni oxygène à respirer. Il a fallu des centaines de millions d'années pour que la Terre refroidisse et devienne accueillante."
+      },
+      "source": "Âge de la Terre : 4,54 milliards d'années (± 50 millions), d'après la datation des météorites et des plus vieilles roches (Dalrymple 2001, Geological Society of London Special Publications 190).",
+      "source_url": "https://en.wikipedia.org/wiki/Age_of_Earth"
+    },
+    {
+      "id": "lune",
+      "title": "Boum ! La naissance de la Lune",
+      "mya": 4510,
+      "emoji": "🌕",
+      "scene": "lune",
+      "text_enfant": "Une planète de la taille de Mars, que les scientifiques appellent Théia, a percuté la jeune Terre. Les morceaux projetés dans l'espace se sont rassemblés en orbite… et ont formé la Lune !",
+      "fun_fact": "La Lune s'éloigne encore de nous d'environ 3,8 cm chaque année, à peu près la vitesse à laquelle poussent tes ongles !",
+      "question": {
+        "question": "La Lune était-elle plus grosse dans le ciel autrefois ?",
+        "reponse": "Oui ! Juste après sa naissance, elle était beaucoup plus proche de la Terre. Elle devait paraître énorme dans le ciel. Depuis, elle s'éloigne tout doucement."
+      },
+      "source": "Zircons lunaires rapportés par Apollo 14 : la Lune a au moins 4,51 milliards d'années (Barboni et al. 2017, Science Advances) ; l'âge exact de la collision est encore discuté.",
+      "source_url": "https://www.princeton.edu/news/2017/01/12/earths-moon-formed-millions-years-earlier-previously-believed"
+    },
+    {
+      "id": "oceans",
+      "title": "Il pleut ! Les premiers océans",
+      "mya": 4400,
+      "emoji": "🌊",
+      "scene": "ocean",
+      "text_enfant": "En refroidissant, la Terre s'est couverte d'une croûte de roche. La vapeur d'eau rejetée par les volcans, et peut-être apportée par des météorites, est retombée en pluie. Peu à peu, les premiers océans se sont formés.",
+      "fun_fact": "Le plus vieux morceau de Terre connu est un minuscule cristal de zircon trouvé en Australie : il a environ 4,4 milliards d'années, et il montre qu'il y avait déjà de l'eau liquide !",
+      "question": {
+        "question": "Pourquoi l'eau est-elle si importante pour la vie ?",
+        "reponse": "Dans l'eau, les petites molécules peuvent se déplacer, se rencontrer et s'assembler. Toutes les formes de vie connues ont besoin d'eau liquide : ton corps est d'ailleurs fait d'environ 60 % d'eau !"
+      },
+      "source": "Zircon détritique de Jack Hills (Australie-Occidentale), environ 4 404 Ma ; ses isotopes de l'oxygène suggèrent la présence d'eau liquide (Wilde et al. 2001, Nature 409).",
+      "source_url": "https://earthobservatory.nasa.gov/features/Zircon"
+    },
+    {
+      "id": "recette",
+      "title": "La recette de la vie",
+      "mya": 4300,
+      "date_label": "Entre 4,4 et 4,2 milliards d'années (personne ne sait exactement quand)",
+      "emoji": "🧪",
+      "scene": "recette",
+      "text_enfant": "Dans l'eau, de minuscules briques se sont assemblées : des acides aminés, des sucres… Un jour, certaines molécules ont réussi à fabriquer des copies d'elles-mêmes. C'était le tout début de la vie !",
+      "fun_fact": "En 1953, le chercheur Stanley Miller a mis de l'eau et des gaz dans des bocaux, puis il a fait jaillir des étincelles, comme de petits éclairs. Quelques jours plus tard, des acides aminés, des briques de la vie, étaient apparus !",
+      "question": {
+        "question": "Où la vie est-elle apparue ?",
+        "reponse": "Personne ne le sait encore avec certitude ! Peut-être près de sources chaudes au fond de l'océan, peut-être dans de petites mares au bord des volcans. Les scientifiques cherchent toujours… et ce sera peut-être toi qui trouveras la réponse !"
+      },
+      "source": "Expérience de Miller (1953, Science 117) ; hypothèses actuelles : sources hydrothermales, mares volcaniques, « monde à ARN ». La date et le lieu de l'origine de la vie restent inconnus.",
+      "source_url": "https://en.wikipedia.org/wiki/Miller%E2%80%93Urey_experiment"
+    },
+    {
+      "id": "luca",
+      "title": "LUCA, l'ancêtre de tous les êtres vivants",
+      "mya": 4200,
+      "emoji": "🦠",
+      "scene": "luca",
+      "text_enfant": "Toutes les plantes, tous les animaux, tous les champignons et tous les microbes d'aujourd'hui descendent d'un même petit ancêtre : LUCA. C'était un microbe, invisible à l'œil nu, qui vivait dans l'eau.",
+      "fun_fact": "LUCA veut dire en anglais « Last Universal Common Ancestor » : le dernier ancêtre commun à tous les êtres vivants. Toi, un champignon et une bactérie, vous êtes donc tous cousins !",
+      "question": {
+        "question": "Comment peut-on connaître LUCA sans aucun fossile ?",
+        "reponse": "En comparant l'ADN des êtres vivants d'aujourd'hui ! Les gènes que tout le monde partage, des bactéries jusqu'aux humains, viennent sans doute de LUCA. On peut même estimer quand il vivait, mais ce n'est qu'une estimation."
+      },
+      "source": "Estimation par horloge moléculaire : environ 4,2 milliards d'années (Moody et al. 2024, Nature Ecology & Evolution 8) ; la date est encore discutée.",
+      "source_url": "https://bristol.ac.uk/news/2024/july/luca.html"
+    },
+    {
+      "id": "premieres_traces",
+      "title": "Les premières traces de vie",
+      "mya": 3700,
+      "emoji": "🔬",
+      "scene": "microbes",
+      "node_id": "vie",
+      "text_enfant": "Les plus vieilles traces de vie retrouvées ont environ 3,7 milliards d'années. Ce sont des microbes : pendant très, très longtemps, ils ont été les seuls habitants de la Terre !",
+      "fun_fact": "Certains microbes construisaient des sortes de coussins de pierre, les stromatolites. On peut encore en voir pousser aujourd'hui en Australie, dans la baie Shark Bay !",
+      "question": {
+        "question": "Et après les microbes, que s'est-il passé ?",
+        "reponse": "Certains microbes ont appris à fabriquer de l'oxygène grâce au soleil, d'autres sont devenus plus gros, puis se sont regroupés… jusqu'aux animaux, aux dinosaures… et à toi ! Pour découvrir la suite, explore l'arbre de la vie."
+      },
+      "source": "Indices chimiques (graphite) d'Isua, Groenland, environ 3 700 Ma, encore débattus ; stromatolites largement acceptés de la formation Dresser (Australie), 3 480 Ma.",
+      "source_url": "https://en.wikipedia.org/wiki/Earliest_known_life_forms"
     }
   ]
 }
