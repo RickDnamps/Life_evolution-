@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Dessin simple : Hippocampes, représenté par son emoji sur un fond aux couleurs de son ère">
+  <title>Hippocampes</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3d4ff"/>
+      <stop offset="1" stop-color="#dea7f2"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="286" cy="61" r="12" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="162" cy="200" r="20" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="755" cy="91" r="10" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="79" cy="402" r="14" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="645" cy="45" r="16" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="455" cy="72" r="21" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="289" cy="122" r="14" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="294" cy="41" r="18" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="579" cy="161" r="21" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <path d="M0 410 Q100 380 200 410 T400 410 T600 410 T800 410 V500 H0 Z" fill="#c090d1" fill-opacity="0.55"/>
+  <circle cx="400" cy="250" r="190" fill="url(#halo)"/>
+  <text x="400" y="250" font-size="220" text-anchor="middle" dominant-baseline="central"
+        font-family="'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif">🐴</text>
+</svg>

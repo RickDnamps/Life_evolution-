@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Dessin simple : Cochons et sangliers, représenté par son emoji sur un fond aux couleurs de son ère">
+  <title>Cochons et sangliers</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffcad8"/>
+      <stop offset="1" stop-color="#f297af"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="680" cy="90" r="52" fill="#fff6c2" fill-opacity="0.9"/>
+  <path d="M0 400 Q200 350 400 395 T800 380 V500 H0 Z" fill="#bf778a" fill-opacity="0.6"/>
+  <path d="M213 470 q4 -25 10 -31" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M320 470 q4 -29 10 -35" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M118 470 q4 -21 10 -27" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M730 470 q4 -22 10 -28" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M405 470 q4 -30 10 -36" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M379 470 q4 -37 10 -43" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M567 470 q4 -23 10 -29" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M212 470 q4 -28 10 -34" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M766 470 q4 -38 10 -44" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M206 470 q4 -23 10 -29" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M477 470 q4 -23 10 -29" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M88 470 q4 -22 10 -28" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M341 470 q4 -22 10 -28" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M478 470 q4 -19 10 -25" stroke="#995f6e" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <circle cx="400" cy="250" r="190" fill="url(#halo)"/>
+  <text x="400" y="250" font-size="220" text-anchor="middle" dominant-baseline="central"
+        font-family="'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif">🐖</text>
+</svg>

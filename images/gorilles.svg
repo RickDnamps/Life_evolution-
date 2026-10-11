@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Dessin simple : Gorilles, représenté par son emoji sur un fond aux couleurs de son ère">
+  <title>Gorilles</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3d4ff"/>
+      <stop offset="1" stop-color="#dea7f2"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="680" cy="90" r="52" fill="#fff6c2" fill-opacity="0.9"/>
+  <path d="M0 400 Q200 350 400 395 T800 380 V500 H0 Z" fill="#b084bf" fill-opacity="0.6"/>
+  <path d="M434 470 q4 -20 10 -26" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M567 470 q4 -26 10 -32" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M192 470 q4 -29 10 -35" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M639 470 q4 -27 10 -33" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M33 470 q4 -30 10 -36" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M531 470 q4 -40 10 -46" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M214 470 q4 -29 10 -35" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M101 470 q4 -26 10 -32" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M450 470 q4 -38 10 -44" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M179 470 q4 -27 10 -33" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M298 470 q4 -35 10 -41" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M175 470 q4 -36 10 -42" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M147 470 q4 -34 10 -40" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <path d="M764 470 q4 -22 10 -28" stroke="#8c6a99" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
+  <circle cx="400" cy="250" r="190" fill="url(#halo)"/>
+  <text x="400" y="250" font-size="220" text-anchor="middle" dominant-baseline="central"
+        font-family="'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif">🦍</text>
+</svg>

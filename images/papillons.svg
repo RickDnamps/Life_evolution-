@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Dessin simple : Papillons, représenté par son emoji sur un fond aux couleurs de son ère">
+  <title>Papillons</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffceae"/>
+      <stop offset="1" stop-color="#f29e66"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="675" cy="77" r="15" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="247" cy="384" r="19" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="764" cy="425" r="22" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="502" cy="395" r="21" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="268" cy="331" r="10" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="104" cy="52" r="20" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="571" cy="116" r="10" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="201" cy="104" r="16" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <circle cx="653" cy="384" r="22" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4"/>
+  <path d="M0 410 Q100 380 200 410 T400 410 T600 410 T800 410 V500 H0 Z" fill="#d18858" fill-opacity="0.55"/>
+  <circle cx="400" cy="250" r="190" fill="url(#halo)"/>
+  <text x="400" y="250" font-size="220" text-anchor="middle" dominant-baseline="central"
+        font-family="'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif">🦋</text>
+</svg>
