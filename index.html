@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La grande aventure de la vie sur Terre</title>
+  <meta name="description" content="Un site pour les enfants qui raconte l'évolution de la vie sur Terre : arbre de la vie, ligne du temps, horloge de 24 heures, jeux et quiz.">
+  <meta name="theme-color" content="#2b2d42">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/timeline.css">
+  <link rel="stylesheet" href="css/games.css">
+  <link rel="stylesheet" href="css/journey.css">
+  <script>
+    // Applique le thème mémorisé avant l'affichage, pour éviter un flash.
+    try {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+    } catch (e) { /* stockage indisponible : thème du système */ }
+  </script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Accueil : La grande aventure de la vie sur Terre">
+      <span class="brand-earth" aria-hidden="true">🌍</span>
+      <span class="brand-text">La grande aventure<br><strong>de la vie sur Terre</strong></span>
+    </a>
+    <div class="header-tools">
+      <div class="search" role="search">
+        <label class="visually-hidden" for="search-input">Chercher un être vivant</label>
+        <input id="search-input" type="search" placeholder="🔎 Cherche un animal…" autocomplete="off"
+               role="combobox" aria-expanded="false" aria-controls="search-results" aria-autocomplete="list">
+        <ul id="search-results" class="search-results" role="listbox" hidden></ul>
+      </div>
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Activer le mode sombre" title="Mode sombre / clair">🌙</button>
+    </div>
+  </header>
+
+  <nav class="main-nav" aria-label="Activités">
+    <ul>
+      <li><a href="#accueil" data-nav="accueil"><span aria-hidden="true">🏠</span> Accueil</a></li>
+      <li><a href="#arbre" data-nav="arbre"><span aria-hidden="true">🌳</span> Arbre de la vie</a></li>
+      <li><a href="#frise" data-nav="frise"><span aria-hidden="true">🕰️</span> Ligne du temps</a></li>
+      <li><a href="#horloge" data-nav="horloge"><span aria-hidden="true">⏰</span> La Terre en 24 h</a></li>
+      <li><a href="#voyage" data-nav="voyage"><span aria-hidden="true">🧬</span> Tes ancêtres</a></li>
+      <li><a href="#premier" data-nav="premier"><span aria-hidden="true">🤔</span> Qui est le premier ?</a></li>
+      <li><a href="#quiz" data-nav="quiz"><span aria-hidden="true">❓</span> Quiz</a></li>
+      <li><a href="#echelle" data-nav="echelle"><span aria-hidden="true">🚀</span> Remonter le temps</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <div id="data-status" class="data-status" role="status" aria-live="polite">Chargement de l'histoire de la vie…</div>
+
+    <section class="view" data-view="accueil" aria-labelledby="accueil-title" hidden>
+      <div class="hero">
+        <div class="hero-text">
+          <h1 id="accueil-title">Il était une fois… la vie !</h1>
+          <p class="lead">Il y a très, très longtemps, la Terre n'abritait aucun être vivant. Puis des êtres minuscules sont apparus et, petit à petit, ils ont donné naissance à tous les animaux que tu connais… et même à toi !</p>
+          <p class="lead">Pars à l'aventure pour découvrir comment c'est arrivé.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="float f1">🦠</span><span class="float f2">🐟</span><span class="float f3">🦖</span>
+          <span class="float f4">🐘</span><span class="float f5">🧑</span><span class="hero-planet">🌍</span>
+        </div>
+      </div>
+      <div id="did-you-know" class="did-you-know" aria-live="polite"></div>
+      <ul class="tiles" id="home-tiles"></ul>
+    </section>
+
+    <section class="view" data-view="arbre" aria-labelledby="arbre-title" hidden>
+      <h2 id="arbre-title" class="view-title"><span aria-hidden="true">🌳</span> L'arbre de la vie</h2>
+      <p class="view-intro">Tous les êtres vivants sont de la même grande famille ! Appuie sur la flèche <span class="kbd">▸</span> pour voir les descendants d'un groupe, et sur son nom pour lire sa fiche.</p>
+      <div class="tree-toolbar">
+        <button type="button" class="btn" data-tree="open">🌿 Tout ouvrir</button>
+        <button type="button" class="btn btn-ghost" data-tree="close">🍂 Tout fermer</button>
+      </div>
+      <div class="legend" id="tree-legend"></div>
+      <div id="tree" class="tree"></div>
+    </section>
+
+    <section class="view" data-view="frise" aria-labelledby="frise-title" hidden>
+      <h2 id="frise-title" class="view-title"><span aria-hidden="true">🕰️</span> La ligne du temps</h2>
+      <div id="timeline"></div>
+    </section>
+
+    <section class="view" data-view="horloge" aria-labelledby="horloge-title" hidden>
+      <h2 id="horloge-title" class="view-title"><span aria-hidden="true">⏰</span> Si l'histoire de la Terre tenait en 24 heures</h2>
+      <div id="clock"></div>
+    </section>
+
+    <section class="view" data-view="voyage" aria-labelledby="voyage-title" hidden>
+      <h2 id="voyage-title" class="view-title"><span aria-hidden="true">🧬</span> Le grand voyage de tes ancêtres</h2>
+      <div id="journey"></div>
+    </section>
+
+    <section class="view" data-view="premier" aria-labelledby="premier-title" hidden>
+      <h2 id="premier-title" class="view-title"><span aria-hidden="true">🤔</span> Qui est apparu en premier ?</h2>
+      <div id="whofirst"></div>
+    </section>
+
+    <section class="view" data-view="quiz" aria-labelledby="quiz-title" hidden>
+      <h2 id="quiz-title" class="view-title"><span aria-hidden="true">❓</span> Le grand quiz de l'évolution</h2>
+      <div id="quiz"></div>
+    </section>
+
+    <section class="view" data-view="echelle" aria-labelledby="echelle-title" hidden>
+      <h2 id="echelle-title" class="view-title"><span aria-hidden="true">🚀</span> Remonter le temps</h2>
+      <div id="scale"></div>
+    </section>
+  </main>
+
+  <dialog id="card" class="card-dialog" aria-labelledby="card-title">
+    <div class="card-body" id="card-body"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <p>Un site pour découvrir l'évolution de la vie, fait avec ❤️ pour les petits curieux.</p>
+    <p>Les dates sont les meilleures estimations des scientifiques aujourd'hui : elles peuvent changer avec de nouvelles découvertes !</p>
+    <p><a href="CREDITS.md">Crédits des images</a> · <a href="https://github.com/RickDnamps/Life_evolution-">Code source</a></p>
+    <p id="validation-summary" class="validation-summary"></p>
+  </footer>
+</body>
+</html>

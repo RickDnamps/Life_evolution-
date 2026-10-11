@@ -1,0 +1,80 @@
+/* Le grand voyage de tes ancêtres */
+
+.jr-intro { margin-bottom: 16px; }
+.jr-label { font-family: var(--font-title); font-weight: 600; margin-right: 6px; }
+.jr-select {
+  min-height: 48px; max-width: 100%; padding: 0 14px;
+  border-radius: 999px; border: 3px solid var(--border);
+  background: var(--surface); color: var(--text);
+  font: inherit; font-weight: 700;
+}
+
+.jr-map {
+  display: flex; gap: 6px; margin: 0 0 14px; padding: 8px 4px;
+  list-style: none; overflow-x: auto; scrollbar-width: thin;
+}
+.jr-map li { flex: none; display: flex; align-items: center; }
+.jr-map li + li::before {
+  content: ''; width: 10px; height: 4px; margin-right: 6px; border-radius: 2px;
+  background: var(--border);
+}
+.jr-dot {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 3px solid var(--era-color); background: var(--surface);
+  font-size: 1.3rem; cursor: pointer; display: grid; place-items: center;
+  transition: transform 0.2s, background 0.2s;
+}
+.jr-dot:hover { transform: scale(1.12); }
+.jr-dot.is-done { background: var(--era-color); }
+.jr-dot[aria-current="step"] {
+  transform: scale(1.25); background: var(--era-color);
+  box-shadow: 0 0 0 4px var(--surface), 0 0 0 7px var(--primary);
+}
+
+.jr-controls { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.jr-controls .btn[disabled] { opacity: 0.4; cursor: default; transform: none; }
+.jr-counter { font-family: var(--font-title); font-weight: 600; }
+
+.jr-bar { height: 12px; margin: 12px 0 18px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+.jr-bar span {
+  display: block; height: 100%; border-radius: inherit;
+  background: linear-gradient(90deg, #8e7cc3, #3a86ff, #57cc99, #ffb703, #ff6b35, #ef476f);
+  transition: width 0.4s ease;
+}
+
+.jr-card {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  border-radius: calc(var(--radius) + 6px); overflow: hidden;
+  background: var(--surface); border: 4px solid var(--era-color);
+  box-shadow: var(--shadow-strong);
+  animation: jr-in 0.45s cubic-bezier(.2, 1.2, .4, 1) both;
+}
+.jr-card-img { background: var(--era-color); min-height: 220px; }
+.jr-card-img .node-img { aspect-ratio: 1 / 1; height: 100%; }
+.jr-card-body { padding: clamp(16px, 3vw, 28px); }
+.jr-when { font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+.jr-heading { font-size: 1.15em; color: var(--primary); margin-bottom: 2px; }
+.jr-name { font-family: var(--font-title); font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.3rem); font-weight: 700; margin-bottom: 8px; line-height: 1.15; }
+
+.jr-heritage {
+  display: flex; gap: 12px; align-items: flex-start;
+  margin: 14px 0; padding: 14px 16px; border-radius: var(--radius-small);
+  background: color-mix(in srgb, var(--success) 18%, var(--surface));
+  border-left: 8px solid var(--success);
+}
+.jr-heritage-icon { font-size: 1.8rem; line-height: 1; }
+
+.jr-finish {
+  font-weight: 800; padding: 12px 16px; border-radius: var(--radius-small);
+  background: color-mix(in srgb, var(--warning) 25%, var(--surface));
+}
+
+@keyframes jr-in { from { opacity: 0; transform: translateX(30px) scale(0.97); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 720px) {
+  .jr-card { grid-template-columns: 1fr; }
+  .jr-card-img { min-height: 0; }
+  .jr-card-img .node-img { aspect-ratio: 16 / 9; }
+  .jr-controls .btn { flex: 1 1 40%; }
+  .jr-counter { order: -1; flex-basis: 100%; text-align: center; }
+}
