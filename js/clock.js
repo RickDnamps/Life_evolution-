@@ -261,7 +261,7 @@ export function mount(container, ctx) {
       const lit = !state.playing || state.lit.has(item.node.id);
       const g = svgEl('g', {
         class: `clk-marker ${lit ? 'is-lit' : ''} ${state.selected === item ? 'is-selected' : ''}`,
-        'data-id': item.node.id, style: `--cat: ${color}`,
+        'data-id': item.node.id, 'data-tip-node': item.node.id, style: `--cat: ${color}`,
       },
       svgEl('title', {}, `${item.node.name_fr} : ${formatClock(item.sec)}`),
       svgEl('line', { class: 'clk-lead', x1: lx1, y1: ly1, x2: lx2, y2: ly2 }),
