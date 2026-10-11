@@ -42,6 +42,8 @@ def write_credits(data, path=CREDITS_PATH):
         "",
         "Les illustrations originales du projet (fichiers `.svg`) sont placées dans le domaine public (CC0 1.0).",
         "",
+        "Les contours des continents du globe de l'accueil viennent de [Natural Earth](https://www.naturalearthdata.com/) (domaine public).",
+        "",
     ]
     with open(path, "w", encoding="utf-8") as handle:
         handle.write("\n".join(lines))

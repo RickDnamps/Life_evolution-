@@ -8,27 +8,47 @@ Le site est beau, coloré et interactif, et il reste scientifiquement exact. Cha
 
 ## Aperçu
 
+Au premier chargement, le site demande **qui explore** :
+
+| Profil | Ce qui change |
+|---|---|
+| 🧸 5-7 ans | Phrases très courtes, texte plus grand, lecture à voix haute mise en avant, quiz très simple |
+| 🎒 8-10 ans | Explications simples et faits étonnants |
+| 🔭 11-14 ans | Explications complètes avec les vrais mots des scientifiques, quiz expert |
+| 🎓 Adultes et enseignants | En plus : noms scientifiques et sources de chaque date |
+
+On peut changer de profil à tout moment avec le bouton en haut de la page.
+
 | Activité | Ce qu'on y fait |
 |---|---|
 | 🌋 **Le grand début** | L'histoire avant les animaux, en 7 chapitres animés : le nuage d'où naît le Soleil, la Terre de lave, la naissance de la Lune, les premiers océans, la « recette de la vie », LUCA et les premières traces de vie. |
-| 🌳 **Arbre de la vie** | Un arbre phylogénétique dépliable : la flèche ▸ dévoile les descendants d'un groupe, et les boutons « Tout ouvrir » et « Tout fermer » ouvrent ou referment tout l'arbre. |
-| 📖 **Fiche détaillée** | Une grande image, une description pour les enfants, un fait étonnant, l'âge et l'ère. La flèche « Pour les curieux » dit ce que le groupe mangeait, où il vivait, sa taille et son super-pouvoir, et pose une question à méditer. On y trouve aussi sa famille (ancêtres, descendants, groupes frères) et le bouton « En savoir plus » pour la version adulte et la source. |
-| 🕰️ **Ligne du temps** | Une frise horizontale en segments, pour voir à la fois 3 700 millions d'années et 300 000 ans. Les ères sont colorées et les cinq grandes extinctions sont marquées. |
-| ⏰ **La Terre en 24 heures** | Une horloge montre à quelle heure chaque groupe apparaît. Les humains arrivent dans les toutes dernières secondes ! |
-| 🧬 **Le voyage de tes ancêtres** | On remonte la lignée humaine étape par étape et on découvre ce qu'on a hérité de chaque ancêtre : la colonne vertébrale, les doigts, le coccyx… |
+| 🌳 **Arbre de la vie** | Un vrai arbre de l'évolution dessiné : le temps avance de gauche à droite, les branches se séparent à chaque ancêtre commun, les ères sont colorées et les extinctions marquées. Survoler un groupe illumine sa lignée. Les boutons « Montre ma lignée », « Le voyage » et « Plein écran » (pour le vidéoprojecteur) complètent l'arbre, et une vue « Liste » reste disponible. |
+| 📖 **Fiche détaillée** | Grande image, texte adapté à l'âge, fait étonnant, lecture à voix haute 🔊, lien à partager 🔗. La rubrique « Pour les curieux » dit ce qu'il mangeait, où il vivait, sa taille et son super-pouvoir. La fiche montre aussi sa famille (ancêtres, descendants, groupes frères). |
+| 🕰️ **Ligne du temps** | Une frise horizontale « en accordéon », pour voir à la fois 3 700 millions d'années et 300 000 ans. Les ères sont colorées et les cinq grandes extinctions marquées. |
+| ⏰ **La Terre en 24 heures** | Une horloge montre à quelle heure chaque groupe apparaît : les humains arrivent dans les toutes dernières secondes ! |
+| 🧬 **Le voyage de tes ancêtres** | On remonte la lignée humaine étape par étape et on découvre ce qu'on a hérité de chaque ancêtre. |
 | 🤔 **Qui est apparu en premier ?** | Deux groupes tirés au hasard : l'enfant devine, puis le jeu explique leur lien de parenté. |
-| ❓ **Quiz** | 10 questions tirées dans une banque de 30, avec un score et des encouragements. |
+| ❓ **Quiz** | 10 questions adaptées au profil d'âge, tirées dans une banque de 60. |
 | 🚀 **Remonter le temps** | « Si tu remontais le temps d'un an par seconde, il te faudrait… » |
+| 🍎 **Pour les enseignants** | Pistes d'utilisation par âge, notions clés, idées reçues corrigées, liens avec les programmes. |
 
-Le site a aussi un mode sombre et une recherche par nom. Il se parcourt entièrement au clavier, toutes les images ont un texte alternatif, et il s'affiche bien sur téléphone, tablette et ordinateur.
+Une **fenêtre flottante** résume chaque groupe ou événement au survol de la souris. Le site a aussi :
+- une recherche par nom et un mode sombre ;
+- une navigation complète au clavier, des textes alternatifs et le respect de « réduire les animations » ;
+- un affichage adapté au téléphone, à la tablette et à l'ordinateur ;
+- le fonctionnement **hors ligne** après une première visite, ce qui est utile en classe.
 
 ## Organisation du projet
 
 ```
 index.html                  page unique du site
+sw.js, manifest.webmanifest fonctionnement hors ligne et installation sur l'écran d'accueil
 css/                        styles (style.css commun + un fichier par activité)
 js/                         modules JavaScript (vanilla, sans framework ni étape de build)
   app.js                    chargement des données, navigation, recherche, thème
+  treeviz.js                l'arbre de l'évolution illustré (SVG)
+  level.js                  choix du profil d'âge
+  tooltip.js, speech.js     fenêtres flottantes, lecture à voix haute
   validate.js               même validation que scripts/validate.py, dans le navigateur
 data/evolution_tree.json    LA source de vérité : arbre, ères, extinctions, quiz, « Le grand début »
 data/SCHEMA.md              description de chaque champ

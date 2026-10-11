@@ -2,11 +2,24 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>La grande aventure de la vie sur Terre</title>
-  <meta name="description" content="Un site pour les enfants qui raconte l'évolution de la vie sur Terre : arbre de la vie, ligne du temps, horloge de 24 heures, jeux et quiz.">
-  <meta name="theme-color" content="#2b2d42">
+  <meta name="description" content="Un site pour les enfants qui raconte l'évolution de la vie sur Terre : arbre de la vie, ligne du temps, horloge de 24 heures, jeux et quiz. Gratuit, sans publicité et sans inscription.">
+  <meta name="theme-color" content="#0b1238">
+  <meta name="color-scheme" content="light dark">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta property="og:title" content="La grande aventure de la vie sur Terre">
+  <meta property="og:description" content="L'évolution de la vie racontée aux enfants : arbre de la vie, ligne du temps, horloge de 24 heures, jeux et quiz. Gratuit et sans publicité.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="La grande aventure de la vie sur Terre">
+  <meta property="og:image" content="https://rickdnamps.github.io/Life_evolution-/images/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="La Terre vue de l'espace, avec une petite pousse : La grande aventure de la vie sur Terre">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
@@ -15,11 +28,14 @@
   <link rel="stylesheet" href="css/games.css">
   <link rel="stylesheet" href="css/journey.css">
   <link rel="stylesheet" href="css/story.css">
+  <link rel="stylesheet" href="css/treeviz.css">
   <script>
     // Applique le thème mémorisé avant l'affichage, pour éviter un flash.
     try {
       const theme = localStorage.getItem('theme');
       if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+      const level = localStorage.getItem('niveau');
+      if (level) document.documentElement.dataset.level = level;
     } catch (e) { /* stockage indisponible : thème du système */ }
   </script>
   <script type="module" src="js/app.js"></script>
@@ -27,100 +43,417 @@
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
 
+  <!-- Icônes du site : chaque activité a son icône et sa couleur (--duo). -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="logo-ocean" cx="36%" cy="30%" r="80%">
+        <stop offset="0" stop-color="#7ccaff"/><stop offset=".45" stop-color="#2f7cf6"/><stop offset="1" stop-color="#15338f"/>
+      </radialGradient>
+      <radialGradient id="logo-land" gradientUnits="userSpaceOnUse" cx="24" cy="28" r="34">
+        <stop offset="0" stop-color="#a4f7bd"/><stop offset=".5" stop-color="#46d48b"/><stop offset="1" stop-color="#1c9a5f"/>
+      </radialGradient>
+      <radialGradient id="logo-night" cx="36%" cy="32%" r="90%">
+        <stop offset=".55" stop-color="#030622" stop-opacity="0"/><stop offset="1" stop-color="#030622" stop-opacity=".55"/>
+      </radialGradient>
+      <linearGradient id="logo-leaf" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#8ef7b4"/><stop offset="1" stop-color="#22b573"/>
+      </linearGradient>
+      <clipPath id="logo-clip"><circle cx="32" cy="38" r="22"/></clipPath>
+
+      <symbol id="logo" viewBox="0 0 64 64">
+        <circle cx="32" cy="38" r="22" fill="url(#logo-ocean)"/>
+        <g clip-path="url(#logo-clip)">
+          <path fill="url(#logo-land)" d="M44.6 48.2L44 49.7L43.2 51.3L42.4 52.2L42.1 51.2L42.6 50L43.2 49.1L44.3 47.8ZM28.6 23.6L28.7 24.9L29 25.8L27.8 26L27.8 25L27.9 23.9ZM48.2 23.1L48.8 23.8L50.2 25.6L51.3 27.5L52.3 29.5L52.7 30.6L53.1 31.9L53.6 33.9L53.8 34.8L53.5 33.8L53.6 35.3L54 36.8L53.7 35.7L53.5 34.4L53.2 33.5L52.9 32.7L52.2 31.9L51.7 32.8L51.5 34.1L51.6 35.9L51.8 36.9L51.5 38.1L51.1 37.2L50.7 36.4L50.2 35.5L49.9 34.6L49.5 33.6L48.2 33.2L47.3 32.9L46.2 33.3L45.2 33L44.3 33.1L43.2 32.3L43.3 33.2L44 34.1L44.9 34.2L45.3 33.1L45.7 34L46.6 34.4L46.3 35.9L45.9 36.8L44.7 37.8L43.3 38.8L42.3 38.4L41.3 36.8L40.7 36.1L39.8 34.8L38.8 33.8L38 33.1L38.5 34L39 34.8L39.4 35.6L40.1 36.6L41.1 37.9L41.8 38.6L42.6 39.2L43.7 39.6L45 39L44.7 40.4L44.4 41.3L44.1 42.2L43 43.6L42.4 44.3L41.8 45L41.3 45.8L41.2 47.2L41.5 48.8L40.7 50.1L39.4 51.1L39.4 52.3L38.3 52.8L37.7 54L36.5 54.8L35.1 55.3L33.7 55.5L33.3 54.7L32.3 53.6L32.2 52.1L31.3 50.9L31.3 49.8L31.8 49L31.6 47.8L31.2 46.6L30.7 45.9L30.1 45.1L30.5 43.7L29.9 42.9L28.9 43.1L28.4 42.3L26.8 42.6L25 42.6L23.8 42.6L23 42L22.3 41.3L21.5 40L20.9 38.4L21.5 37.1L21.5 35.6L22 34.8L22.6 34L23.8 33.3L24.6 32L25.9 30.9L27 31.4L28.2 30.9L29.8 30.7L31.1 30.8L30.9 31.9L32.2 32.6L33.7 33.2L34.4 32.3L36.1 32.7L37.5 32.6L38.4 32.7L38.8 31.3L37.8 30.7L36.1 30.9L35.5 29.8L36.3 29.2L37.5 28.8L38.9 28.9L38 27.6L38.3 26.7L37.4 27.2L36.3 27.3L35.8 28.7L35.1 29.4L35 30.6L34.1 30.3L33.6 29.2L32.3 28.3L32.7 29.3L32.6 30.5L31.8 29.2L30.6 28.2L29.4 28.6L28.3 29.3L27.8 30.1L27.1 30.8L26.1 30.9L25.1 30.4L25.4 29L26.3 28.3L27.8 28.2L27.7 27.1L28.1 26.2L29.4 25.8L30.2 25.3L30.9 24.6L32 25L33.2 24.9L33.5 24L34.4 23.3L33.4 23.1L33.6 22.1L32.7 22.6L32.6 23.7L32.1 24.5L31.3 23.4L30.3 23.7L30.4 22.7L31.3 22L32 21.3L32.9 20.6L34 20.4L35 20.8L35.9 21.1L34.9 21.4L35.8 21.9L36.5 21.3L37 20.3L37.9 20L37.3 19.1L38.3 19.4L39.4 20.3L38.6 19.6L37.6 19L37.4 18.1L38.1 17.5L37.4 16.9L36.5 16.5L38.1 16.9L40.4 17.7L42.6 18.7L44.6 20L46.5 21.4L48.2 23.1ZM41.5 28.3L41.8 29.2L42.5 29.8L42.9 28.9L42.4 27.9L41.3 27.2L40.4 27.4ZM24.5 17.8L23.6 18.2L24.6 18L23.6 18.4L22.6 18.5L21.7 18.8L20.5 19.4L19.7 20.2L19 20.8L18.2 21.4L19.3 20.7L20.3 20.2L21.8 19.3L20.7 20.5L20.4 21.4L19.9 22.2L19.3 23L18.4 23.2L17.5 22.9L17 23.9L16.3 24.5L15.4 24.5L14.4 25.4L13.8 26.1L12.9 27.2L12.1 28.7L12.7 27.5L13.3 26.4L12.3 28.2L11.5 30.1L10.8 32.2L10.3 34.3L10.3 35.3L10.6 34.3L10.7 35.3L11 36.6L11.3 38L11.9 38.8L12.2 40.4L12.5 41.5L13.3 42.5L14.2 43.1L15.3 44.2L15.7 45.2L15.3 46.2L15.1 47.5L15.2 48.9L14.7 49.7L14.8 50.7L15.2 51.9L13.9 50.5L12.6 48.4L11.6 46.2L10.8 43.8L10.3 41.4L10 39L10.1 36.5L10.1 35.5L10.3 34.5L10.8 32.1L11.6 29.7L12.7 27.5L13.9 25.4L15.4 23.5L17.2 21.8L19.1 20.2L21.1 18.9L23.3 17.8L25.6 16.9L28 16.4L27 16.6L26.2 16.8L25.2 17.2L24.3 17.7L25.6 17.4L24.6 17.7Z"/>
+          <path fill="#eef6ff" d="M25.7 17.6L25 18.3L24.2 18.8L22.9 19.6L22 20L22.5 19.2L23.6 18.8L24.5 18.2L25.4 17.6ZM30.4 17.8L29.7 18.5L28.9 19.3L28 19.8L27.1 20.1L25.9 20.5L24.6 20.6L23.5 21.2L22.7 21.7L23 20.7L23.7 19.9L24.6 19.5L25.4 18.9L26.4 18.4L27.1 17.7L28.1 17.7L29 17.5L29.9 17.7Z"/>
+        </g>
+        <circle cx="32" cy="38" r="22" fill="url(#logo-night)"/>
+        <ellipse cx="23.5" cy="28.5" rx="8" ry="4.2" fill="#fff" opacity=".24" transform="rotate(-32 23.5 28.5)"/>
+        <circle cx="32" cy="38" r="21.4" fill="none" stroke="#bfe6ff" stroke-opacity=".55" stroke-width="1.2"/>
+        <path d="M32 18V9.5" stroke="#178a55" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+        <path d="M31.4 13C28.8 5.6 21.6 2.4 13.8 3.9c1.2 7 7.9 10.6 17.6 9.1z" fill="url(#logo-leaf)"/>
+        <path d="M32.6 11C35.2 3.6 42.4.7 50.4 2c-1.3 7-8 10.5-17.8 9z" fill="url(#logo-leaf)"/>
+        <path d="M30.2 11.8C26.5 8.9 22.4 6.8 17.6 5.6M33.8 9.9c3.6-2.8 7.6-4.6 12.6-5.6" stroke="#eafff2" stroke-opacity=".55" stroke-width="1" stroke-linecap="round" fill="none"/>
+      </symbol>
+
+      <symbol id="i-home" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path style="fill:var(--duo,none)" d="M7 14 16 6.5l9 7.5v12.5H7z"/>
+        <path d="M3.5 16 16 5.5 28.5 16"/>
+        <path d="M13.5 26.5v-6h5v6"/>
+      </symbol>
+      <symbol id="i-volcano" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path style="fill:var(--duo,none)" d="M3.5 27.5 11 15h10l7.5 12.5z"/>
+        <path d="M11 15c1.2 2.4 2.6 1.4 3.4 3s2.4 1.2 3.2-.6c.6-1.4 1.6-1.6 3.4-2.4"/>
+        <path d="M16 11V6.5M11.5 10.5 9 7.5M20.5 10.5 23 7.5"/>
+      </symbol>
+      <symbol id="i-tree" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path style="fill:var(--duo,none)" d="M8.5 19.5a4.6 4.6 0 0 1-.6-9.1A6.2 6.2 0 0 1 16 4a6.2 6.2 0 0 1 8.1 6.4 4.6 4.6 0 0 1-.6 9.1z"/>
+        <path d="M16 28V15.5M16 21l-4-3.2M16 18.5l3.6-3"/>
+        <path d="M11 28h10"/>
+      </symbol>
+      <symbol id="i-timeline" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3.5 25h25M25.5 22l3 3-3 3"/>
+        <path d="M8 25v-7M15.5 25V13M22 25v-5"/>
+        <circle style="fill:var(--duo,none)" cx="8" cy="15" r="3"/>
+        <circle style="fill:var(--duo,none)" cx="15.5" cy="9.5" r="3.5"/>
+        <circle style="fill:var(--duo,none)" cx="22" cy="17" r="3"/>
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle style="fill:var(--duo,none)" cx="16" cy="17.5" r="10"/>
+        <path d="M16 12v5.5l3.6 2.4"/>
+        <path d="M4.8 8.6 8.6 4.8M27.2 8.6 23.4 4.8M9.5 27.8l1.6-2M22.5 27.8l-1.6-2"/>
+      </symbol>
+      <symbol id="i-dna" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path style="stroke:var(--duo,currentColor)" stroke-width="2.6" d="M12 6.5h8M11.5 16h9M12 25.5h8"/>
+        <path d="M10 3.5c0 6 12 6.5 12 12.5s-12 6.5-12 12.5"/>
+        <path d="M22 3.5c0 6-12 6.5-12 12.5s12 6.5 12 12.5"/>
+      </symbol>
+      <symbol id="i-medal" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9.5 3.5h4.5l3.4 8M22.5 3.5H18l-3.4 8"/>
+        <circle style="fill:var(--duo,none)" cx="16" cy="19.5" r="8.5"/>
+        <path d="M14.2 17.4 16.4 16v7.5"/>
+      </symbol>
+      <symbol id="i-quiz" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path style="fill:var(--duo,none)" d="M6.5 5.5h19a2.5 2.5 0 0 1 2.5 2.5v12.5a2.5 2.5 0 0 1-2.5 2.5H14l-6 5v-5H6.5A2.5 2.5 0 0 1 4 20.5V8a2.5 2.5 0 0 1 2.5-2.5z"/>
+        <path d="M13 11.5a3 3 0 1 1 4.4 2.7c-.9.5-1.4 1.1-1.4 2v.6"/>
+        <path d="M16 19.6v.1" stroke-width="2.6"/>
+      </symbol>
+      <symbol id="i-rocket" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path style="fill:var(--duo,none)" d="M16 3.5c4 3 6 7.5 6 12.5v5.5H10V16c0-5 2-9.5 6-12.5z"/>
+        <circle cx="16" cy="13" r="2.4"/>
+        <path d="M10 16.5 6.5 20v4.5H10M22 16.5l3.5 3.5v4.5H22"/>
+        <path d="M13.5 25v2M16 25v3.5M18.5 25v2"/>
+      </symbol>
+      <symbol id="i-apple" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path style="fill:var(--duo,none)" d="M16 10.5c-2.2-1.7-5.6-2-7.9.1-3.2 3-2.6 9 0 13 1.6 2.6 3.7 4.4 5.6 3.9 1-.3 1.5-.7 2.3-.7s1.3.4 2.3.7c1.9.5 4-1.3 5.6-3.9 2.6-4 3.2-10 0-13-2.3-2.1-5.7-1.8-7.9-.1z"/>
+        <path d="M16 10.5c0-2.6.7-4.6 2.4-6.2"/>
+        <path d="M18 7.6c.8-2.4 3.2-3.6 5.8-3.2-.7 2.5-3.2 3.7-5.8 3.2z"/>
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path style="fill:var(--duo,none)" d="M4 7.5c4.2-1.6 8.2-1.2 12 1.6v17c-3.8-2.8-7.8-3.2-12-1.6zM28 7.5c-4.2-1.6-8.2-1.2-12 1.6v17c3.8-2.8 7.8-3.2 12-1.6z"/>
+      </symbol>
+      <symbol id="i-key" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle style="fill:var(--duo,none)" cx="10.5" cy="16" r="6"/>
+        <path d="M16.5 16h12M24.5 16v4.5M28.5 16v3"/>
+        <circle cx="9.5" cy="16" r="1.4"/>
+      </symbol>
+      <symbol id="i-bulb" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path style="fill:var(--duo,none)" d="M16 4a8.5 8.5 0 0 0-5 15.4c1 .8 1.5 1.8 1.5 3V23h7v-.6c0-1.2.5-2.2 1.5-3A8.5 8.5 0 0 0 16 4z"/>
+        <path d="M13 27h6M14.5 23v-4.5l-2-2M17.5 23v-4.5l2-2"/>
+      </symbol>
+      <symbol id="i-cap" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path style="fill:var(--duo,none)" d="M2.5 12.5 16 6l13.5 6.5L16 19z"/>
+        <path d="M8 15.5v6c2.2 2.3 4.9 3.5 8 3.5s5.8-1.2 8-3.5v-6M29.5 12.5v8"/>
+      </symbol>
+      <symbol id="i-flask" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path style="fill:var(--duo,none)" d="M9.2 19h13.6l3 5.3a2 2 0 0 1-1.8 3.2H8a2 2 0 0 1-1.8-3.2z"/>
+        <path d="M12 4h8M13.5 4v8.3L6.2 24.3a2 2 0 0 0 1.8 3.2h16a2 2 0 0 0 1.8-3.2L18.5 12.3V4"/>
+      </symbol>
+      <symbol id="i-board" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect style="fill:var(--duo,none)" x="4" y="5" width="24" height="16" rx="2"/>
+        <path d="M16 21v4M10.5 28.5 16 25l5.5 3.5M9 15l4-4 3 3 5-5"/>
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+        <circle cx="14" cy="14" r="8.5"/><path d="M20.5 20.5 27 27"/>
+      </symbol>
+      <symbol id="i-play" viewBox="0 0 32 32">
+        <path fill="currentColor" d="M11 7.6c0-1.2 1.3-1.9 2.3-1.3l12 8.4c.9.6.9 1.9 0 2.6l-12 8.4c-1 .6-2.3-.1-2.3-1.3z"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 16h19M18 9l7 7-7 7"/>
+      </symbol>
+      <symbol id="i-sparkle" viewBox="0 0 32 32">
+        <path fill="currentColor" d="M16 3c.6 6.6 3.4 9.4 10 10-6.6.6-9.4 3.4-10 10-.6-6.6-3.4-9.4-10-10 6.6-.6 9.4-3.4 10-10zM25 20c.3 2.8 1.2 3.7 4 4-2.8.3-3.7 1.2-4 4-.3-2.8-1.2-3.7-4-4 2.8-.3 3.7-1.2 4-4z"/>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 16.5l6 6L25 10"/>
+      </symbol>
+      <symbol id="i-code" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 9 4 16l7 7M21 9l7 7-7 7M18 6l-4 20"/>
+      </symbol>
+      <symbol id="i-image" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="6" width="24" height="20" rx="3"/><circle cx="11.5" cy="12.5" r="2.2"/><path d="M5 23l7-7 5 5 3.5-3.5L27 24"/>
+      </symbol>
+    </defs>
+  </svg>
+
   <header class="site-header">
-    <a class="brand" href="#accueil" aria-label="Accueil : La grande aventure de la vie sur Terre">
-      <span class="brand-earth" aria-hidden="true">🌍</span>
-      <span class="brand-text">La grande aventure<br><strong>de la vie sur Terre</strong></span>
-    </a>
-    <div class="header-tools">
-      <div class="search" role="search">
-        <label class="visually-hidden" for="search-input">Chercher un être vivant</label>
-        <input id="search-input" type="search" placeholder="🔎 Cherche un animal…" autocomplete="off"
-               role="combobox" aria-expanded="false" aria-controls="search-results" aria-autocomplete="list">
-        <ul id="search-results" class="search-results" role="listbox" hidden></ul>
+    <div class="header-inner">
+      <a class="brand" href="#accueil" aria-label="Accueil : La grande aventure de la vie sur Terre">
+        <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#logo"/></svg>
+        <span class="brand-text">La grande aventure<br><strong>de la vie sur Terre</strong></span>
+      </a>
+      <div class="header-tools">
+        <div class="search" role="search">
+          <label class="visually-hidden" for="search-input">Chercher un être vivant</label>
+          <svg class="search-icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg>
+          <input id="search-input" type="search" placeholder="Cherche un animal…" autocomplete="off"
+                 role="combobox" aria-expanded="false" aria-controls="search-results" aria-autocomplete="list">
+          <ul id="search-results" class="search-results" role="listbox" hidden></ul>
+        </div>
+        <button id="level-button" class="level-button" type="button" aria-haspopup="dialog"></button>
+        <button id="theme-toggle" class="icon-button theme-toggle" type="button" aria-label="Activer le mode sombre" title="Mode sombre / clair">🌙</button>
       </div>
-      <button id="theme-toggle" class="icon-button" type="button" aria-label="Activer le mode sombre" title="Mode sombre / clair">🌙</button>
     </div>
   </header>
 
   <nav class="main-nav" aria-label="Activités">
     <ul>
-      <li><a href="#accueil" data-nav="accueil"><span aria-hidden="true">🏠</span> Accueil</a></li>
-      <li><a href="#debut" data-nav="debut"><span aria-hidden="true">🌋</span> Le grand début</a></li>
-      <li><a href="#arbre" data-nav="arbre"><span aria-hidden="true">🌳</span> Arbre de la vie</a></li>
-      <li><a href="#frise" data-nav="frise"><span aria-hidden="true">🕰️</span> Ligne du temps</a></li>
-      <li><a href="#horloge" data-nav="horloge"><span aria-hidden="true">⏰</span> La Terre en 24 h</a></li>
-      <li><a href="#voyage" data-nav="voyage"><span aria-hidden="true">🧬</span> Tes ancêtres</a></li>
-      <li><a href="#premier" data-nav="premier"><span aria-hidden="true">🤔</span> Qui est le premier ?</a></li>
-      <li><a href="#quiz" data-nav="quiz"><span aria-hidden="true">❓</span> Quiz</a></li>
-      <li><a href="#echelle" data-nav="echelle"><span aria-hidden="true">🚀</span> Remonter le temps</a></li>
+      <li><a href="#accueil" data-nav="accueil" style="--accent:#a5b4fc"><svg class="nav-icon" aria-hidden="true" focusable="false"><use href="#i-home"/></svg><span class="nav-label">Accueil</span></a></li>
+      <li><a href="#debut" data-nav="debut" style="--accent:#ff6b3d"><svg class="nav-icon" aria-hidden="true" focusable="false"><use href="#i-volcano"/></svg><span class="nav-label">Le grand début</span></a></li>
+      <li><a href="#arbre" data-nav="arbre" style="--accent:#22b573"><svg class="nav-icon" aria-hidden="true" focusable="false"><use href="#i-tree"/></svg><span class="nav-label">Arbre de la vie</span></a></li>
+      <li><a href="#frise" data-nav="frise" style="--accent:#3d7bfa"><svg class="nav-icon" aria-hidden="true" focusable="false"><use href="#i-timeline"/></svg><span class="nav-label">Ligne du temps</span></a></li>
+      <li><a href="#horloge" data-nav="horloge" style="--accent:#f5a524"><svg class="nav-icon" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg><span class="nav-label">La Terre en 24 h</span></a></li>
+      <li><a href="#voyage" data-nav="voyage" style="--accent:#ec4f9f"><svg class="nav-icon" aria-hidden="true" focusable="false"><use href="#i-dna"/></svg><span class="nav-label">Tes ancêtres</span></a></li>
+      <li><a href="#premier" data-nav="premier" style="--accent:#8b5cf6"><svg class="nav-icon" aria-hidden="true" focusable="false"><use href="#i-medal"/></svg><span class="nav-label">Qui est le premier ?</span></a></li>
+      <li><a href="#quiz" data-nav="quiz" style="--accent:#0fb5a6"><svg class="nav-icon" aria-hidden="true" focusable="false"><use href="#i-quiz"/></svg><span class="nav-label">Quiz</span></a></li>
+      <li><a href="#echelle" data-nav="echelle" style="--accent:#ef4444"><svg class="nav-icon" aria-hidden="true" focusable="false"><use href="#i-rocket"/></svg><span class="nav-label">Remonter le temps</span></a></li>
+      <li><a href="#enseignants" data-nav="enseignants" style="--accent:#84cc16"><svg class="nav-icon" aria-hidden="true" focusable="false"><use href="#i-apple"/></svg><span class="nav-label">Enseignants</span></a></li>
     </ul>
   </nav>
 
   <main id="main" tabindex="-1">
     <div id="data-status" class="data-status" role="status" aria-live="polite">Chargement de l'histoire de la vie…</div>
 
-    <section class="view" data-view="accueil" aria-labelledby="accueil-title" hidden>
+    <section class="view home" data-view="accueil" aria-labelledby="accueil-title" hidden>
       <div class="hero">
-        <div class="hero-text">
-          <h1 id="accueil-title">Il était une fois… la vie !</h1>
-          <p class="lead">Il y a très, très longtemps, la Terre n'abritait aucun être vivant. Puis des êtres minuscules sont apparus et, petit à petit, ils ont donné naissance à tous les animaux que tu connais… et même à toi !</p>
-          <p class="lead">Pars à l'aventure pour découvrir comment c'est arrivé.</p>
-          <a class="btn hero-start" href="#debut">▶ Commencer au tout début</a>
+        <span class="shooting-star" aria-hidden="true"></span>
+        <div class="hero-inner">
+          <div class="hero-text">
+            <p class="hero-kicker"><svg aria-hidden="true" focusable="false"><use href="#i-sparkle"/></svg> L'évolution racontée aux enfants</p>
+            <h1 id="accueil-title">Il était une fois… <span class="hero-accent">la vie !</span></h1>
+            <p class="lead">Il y a très, très longtemps, la Terre n'abritait aucun être vivant. Puis des êtres minuscules sont apparus et, petit à petit, ils ont donné naissance à tous les animaux que tu connais… et même à toi !</p>
+            <p class="lead lead-strong">Pars à l'aventure pour découvrir comment c'est arrivé.</p>
+            <div class="hero-actions">
+              <a class="btn btn-glow hero-start" href="#debut"><svg class="btn-icon" aria-hidden="true" focusable="false"><use href="#i-play"/></svg> Commencer au tout début</a>
+              <a class="btn btn-glass" href="#arbre"><svg class="btn-icon" aria-hidden="true" focusable="false" style="--duo:#4fd38b"><use href="#i-tree"/></svg> Explorer l'arbre de la vie</a>
+            </div>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <div class="globe">
+              <div class="globe-halo"></div>
+              <svg class="globe-svg" viewBox="0 0 400 400" focusable="false">
+                <defs>
+                  <radialGradient id="globe-ocean" cx="38%" cy="32%" r="75%">
+                    <stop offset="0" stop-color="#74c8ff"/>
+                    <stop offset=".38" stop-color="#2f86f0"/>
+                    <stop offset=".72" stop-color="#1a4fc4"/>
+                    <stop offset="1" stop-color="#0c2470"/>
+                  </radialGradient>
+                  <radialGradient id="globe-landfill" gradientUnits="userSpaceOnUse" cx="140" cy="120" r="300">
+                    <stop offset="0" stop-color="#8ef0a6"/>
+                    <stop offset=".45" stop-color="#3fcf83"/>
+                    <stop offset="1" stop-color="#17885a"/>
+                  </radialGradient>
+                  <radialGradient id="globe-night" cx="34%" cy="30%" r="92%">
+                    <stop offset=".46" stop-color="#030622" stop-opacity="0"/>
+                    <stop offset=".78" stop-color="#030622" stop-opacity=".5"/>
+                    <stop offset="1" stop-color="#030622" stop-opacity=".88"/>
+                  </radialGradient>
+                  <radialGradient id="globe-shine" cx="33%" cy="27%" r="38%">
+                    <stop offset="0" stop-color="#ffffff" stop-opacity=".38"/>
+                    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+                  </radialGradient>
+                  <linearGradient id="globe-rim" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#bfe6ff" stop-opacity=".95"/>
+                    <stop offset=".55" stop-color="#6cb8ff" stop-opacity=".25"/>
+                    <stop offset="1" stop-color="#6cb8ff" stop-opacity="0"/>
+                  </linearGradient>
+                  <filter id="globe-soft" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.8"/></filter>
+                  <clipPath id="globe-clip"><circle cx="200" cy="200" r="170"/></clipPath>
+                </defs>
+                <circle cx="200" cy="200" r="170" fill="url(#globe-ocean)"/>
+                <g clip-path="url(#globe-clip)">
+                  <g class="globe-world" transform="rotate(-16 200 200)">
+                    <path class="globe-land" fill="url(#globe-landfill)" d=""/>
+                    <path class="globe-ice" fill="#f2f8ff" d=""/>
+                    <path class="globe-clouds" fill="#ffffff" filter="url(#globe-soft)" d=""/>
+                  </g>
+                </g>
+                <circle cx="200" cy="200" r="170" fill="url(#globe-night)"/>
+                <circle cx="200" cy="200" r="170" fill="url(#globe-shine)"/>
+                <circle cx="200" cy="200" r="169" fill="none" stroke="url(#globe-rim)" stroke-width="3"/>
+              </svg>
+              <div class="moon-orbit"><div class="moon-track"><div class="moon-x"><div class="moon"></div></div></div></div>
+            </div>
+          </div>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <span class="float f1">🦠</span><span class="float f2">🐟</span><span class="float f3">🦖</span>
-          <span class="float f4">🐘</span><span class="float f5">🧑</span><span class="hero-planet">🌍</span>
-        </div>
+
+        <ul class="hero-stats" aria-label="La grande aventure en chiffres">
+          <li><strong class="stat-num" data-stat="years">4,6</strong><span class="stat-label">milliards d'années d'histoire</span></li>
+          <li><strong class="stat-num" data-stat="nodes">66</strong><span class="stat-label">groupes d'êtres vivants</span></li>
+          <li><strong class="stat-num" data-stat="chapters">7</strong><span class="stat-label">chapitres pour tout commencer</span></li>
+          <li><strong class="stat-num" data-stat="extinctions">5</strong><span class="stat-label">grandes extinctions</span></li>
+        </ul>
       </div>
-      <div id="did-you-know" class="did-you-know" aria-live="polite"></div>
-      <ul class="tiles" id="home-tiles"></ul>
+
+      <div class="home-section">
+        <div class="section-head">
+          <p class="kicker">8 activités à explorer</p>
+          <h2 class="section-title">Choisis ton aventure</h2>
+          <p class="section-lead">Écoute l'histoire de la Terre, explore la grande famille des êtres vivants, puis mets tes connaissances à l'épreuve !</p>
+        </div>
+        <ul class="tiles" id="home-tiles"></ul>
+      </div>
+
+      <div class="home-section">
+        <div id="did-you-know" class="did-you-know" aria-live="polite"></div>
+      </div>
+
+      <div class="home-section">
+        <aside class="teacher-band" aria-labelledby="teacher-band-title">
+          <div class="teacher-band-art" aria-hidden="true">
+            <svg focusable="false" style="--duo:#ffd166"><use href="#i-book"/></svg>
+          </div>
+          <div class="teacher-band-text">
+            <p class="kicker">Enseignants et parents</p>
+            <h2 id="teacher-band-title">Un outil pour la classe, prêt à l'emploi</h2>
+            <p>Des explications adaptées de 5 à 14 ans, des liens avec les programmes, une source scientifique pour chaque date et un site qui fonctionne même hors ligne.</p>
+            <ul class="trust-badges">
+              <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Gratuit</li>
+              <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Sans publicité</li>
+              <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Sans inscription</li>
+            </ul>
+          </div>
+          <a class="btn btn-light" href="#enseignants">Le guide pour la classe <svg class="btn-icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </aside>
+      </div>
     </section>
 
-    <section class="view" data-view="debut" aria-labelledby="debut-title" hidden>
-      <h2 id="debut-title" class="view-title"><span aria-hidden="true">🌋</span> Le grand début</h2>
+    <section class="view" data-view="debut" aria-labelledby="debut-title" hidden style="--accent:#ff6b3d">
+      <h2 id="debut-title" class="view-title"><svg class="view-icon" aria-hidden="true" focusable="false"><use href="#i-volcano"/></svg> Le grand début</h2>
       <div id="story"></div>
     </section>
 
-    <section class="view" data-view="arbre" aria-labelledby="arbre-title" hidden>
-      <h2 id="arbre-title" class="view-title"><span aria-hidden="true">🌳</span> L'arbre de la vie</h2>
-      <p class="view-intro">Tous les êtres vivants sont de la même grande famille ! Appuie sur la flèche <span class="kbd">▸</span> pour voir les descendants d'un groupe, et sur son nom pour lire sa fiche.</p>
-      <div class="tree-toolbar">
-        <button type="button" class="btn" data-tree="open">🌿 Tout ouvrir</button>
-        <button type="button" class="btn btn-ghost" data-tree="close">🍂 Tout fermer</button>
+    <section class="view" data-view="arbre" aria-labelledby="arbre-title" hidden style="--accent:#22b573">
+      <h2 id="arbre-title" class="view-title"><svg class="view-icon" aria-hidden="true" focusable="false"><use href="#i-tree"/></svg> L'arbre de la vie</h2>
+      <p class="view-intro">Tous les êtres vivants sont de la même grande famille ! Chaque branche est une lignée : là où elle se sépare en deux, un ancêtre commun a donné naissance à deux familles différentes.</p>
+      <div class="tree-modes" role="tablist" aria-label="Affichage de l'arbre">
+        <button type="button" role="tab" class="tree-mode" id="tab-illustre" aria-controls="tree-panel-illustre" aria-selected="true" data-tree-mode="illustre">🌳 Arbre illustré</button>
+        <button type="button" role="tab" class="tree-mode" id="tab-liste" aria-controls="tree-panel-liste" aria-selected="false" data-tree-mode="liste">📋 Liste</button>
       </div>
-      <div class="legend" id="tree-legend"></div>
-      <div id="tree" class="tree"></div>
+      <div id="tree-panel-illustre" role="tabpanel" aria-labelledby="tab-illustre">
+        <div id="treeviz"></div>
+      </div>
+      <div id="tree-panel-liste" role="tabpanel" aria-labelledby="tab-liste" hidden>
+        <p class="view-intro">Appuie sur la flèche <span class="kbd">▸</span> pour voir les descendants d'un groupe, et sur son nom pour lire sa fiche.</p>
+        <div class="tree-toolbar">
+          <button type="button" class="btn" data-tree="open">🌿 Tout ouvrir</button>
+          <button type="button" class="btn btn-ghost" data-tree="close">🍂 Tout fermer</button>
+        </div>
+        <div class="legend" id="tree-legend"></div>
+        <div id="tree" class="tree"></div>
+      </div>
     </section>
 
-    <section class="view" data-view="frise" aria-labelledby="frise-title" hidden>
-      <h2 id="frise-title" class="view-title"><span aria-hidden="true">🕰️</span> La ligne du temps</h2>
+    <section class="view" data-view="frise" aria-labelledby="frise-title" hidden style="--accent:#3d7bfa">
+      <h2 id="frise-title" class="view-title"><svg class="view-icon" aria-hidden="true" focusable="false"><use href="#i-timeline"/></svg> La ligne du temps</h2>
       <div id="timeline"></div>
     </section>
 
-    <section class="view" data-view="horloge" aria-labelledby="horloge-title" hidden>
-      <h2 id="horloge-title" class="view-title"><span aria-hidden="true">⏰</span> Si l'histoire de la Terre tenait en 24 heures</h2>
+    <section class="view" data-view="horloge" aria-labelledby="horloge-title" hidden style="--accent:#f5a524">
+      <h2 id="horloge-title" class="view-title"><svg class="view-icon" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg> Si l'histoire de la Terre tenait en 24 heures</h2>
       <div id="clock"></div>
     </section>
 
-    <section class="view" data-view="voyage" aria-labelledby="voyage-title" hidden>
-      <h2 id="voyage-title" class="view-title"><span aria-hidden="true">🧬</span> Le grand voyage de tes ancêtres</h2>
+    <section class="view" data-view="voyage" aria-labelledby="voyage-title" hidden style="--accent:#ec4f9f">
+      <h2 id="voyage-title" class="view-title"><svg class="view-icon" aria-hidden="true" focusable="false"><use href="#i-dna"/></svg> Le grand voyage de tes ancêtres</h2>
       <div id="journey"></div>
     </section>
 
-    <section class="view" data-view="premier" aria-labelledby="premier-title" hidden>
-      <h2 id="premier-title" class="view-title"><span aria-hidden="true">🤔</span> Qui est apparu en premier ?</h2>
+    <section class="view" data-view="premier" aria-labelledby="premier-title" hidden style="--accent:#8b5cf6">
+      <h2 id="premier-title" class="view-title"><svg class="view-icon" aria-hidden="true" focusable="false"><use href="#i-medal"/></svg> Qui est apparu en premier ?</h2>
       <div id="whofirst"></div>
     </section>
 
-    <section class="view" data-view="quiz" aria-labelledby="quiz-title" hidden>
-      <h2 id="quiz-title" class="view-title"><span aria-hidden="true">❓</span> Le grand quiz de l'évolution</h2>
+    <section class="view" data-view="quiz" aria-labelledby="quiz-title" hidden style="--accent:#0fb5a6">
+      <h2 id="quiz-title" class="view-title"><svg class="view-icon" aria-hidden="true" focusable="false"><use href="#i-quiz"/></svg> Le grand quiz de l'évolution</h2>
       <div id="quiz"></div>
     </section>
 
-    <section class="view" data-view="echelle" aria-labelledby="echelle-title" hidden>
-      <h2 id="echelle-title" class="view-title"><span aria-hidden="true">🚀</span> Remonter le temps</h2>
+    <section class="view" data-view="echelle" aria-labelledby="echelle-title" hidden style="--accent:#ef4444">
+      <h2 id="echelle-title" class="view-title"><svg class="view-icon" aria-hidden="true" focusable="false"><use href="#i-rocket"/></svg> Remonter le temps</h2>
       <div id="scale"></div>
+    </section>
+
+    <section class="view teacher" data-view="enseignants" aria-labelledby="enseignants-title" hidden style="--accent:#84cc16">
+      <h2 id="enseignants-title" class="view-title"><svg class="view-icon" aria-hidden="true" focusable="false"><use href="#i-apple"/></svg> Pour les enseignants et les parents</h2>
+      <p class="view-intro">« La grande aventure de la vie sur Terre » est un outil gratuit, sans publicité ni inscription, pour faire découvrir l'évolution de la vie de la maternelle au collège. Les explications s'adaptent à l'âge choisi au premier chargement (bouton en haut de la page).</p>
+
+      <div class="teacher-grid">
+        <article class="teacher-card teacher-card-petits">
+          <h3><span class="teacher-age-emoji" aria-hidden="true">🧸</span> 5-7 ans</h3>
+          <ul>
+            <li><a href="#debut">Le grand début</a> lu à voix haute (bouton 🔊) : la naissance de la Terre et de la vie.</li>
+            <li><a href="#premier">Qui est apparu en premier ?</a> pour s'approprier l'idée d'un ordre dans le temps.</li>
+            <li>Les fiches : « Au menu », « Sa maison », « Sa taille ».</li>
+          </ul>
+        </article>
+        <article class="teacher-card teacher-card-enfants">
+          <h3><span class="teacher-age-emoji" aria-hidden="true">🎒</span> 8-10 ans</h3>
+          <ul>
+            <li><a href="#arbre">L'arbre de la vie</a> : repérer des groupes frères (baleine et hippopotame, humain et chimpanzé).</li>
+            <li><a href="#voyage">Le voyage de tes ancêtres</a> : ce que nous avons hérité des poissons, des premiers mammifères…</li>
+            <li><a href="#quiz">Le quiz</a> en fin de séance.</li>
+          </ul>
+        </article>
+        <article class="teacher-card teacher-card-grands">
+          <h3><span class="teacher-age-emoji" aria-hidden="true">🔭</span> 11-14 ans</h3>
+          <ul>
+            <li><a href="#frise">La ligne du temps</a> et ses cinq grandes extinctions.</li>
+            <li><a href="#horloge">La Terre en 24 heures</a> et <a href="#echelle">Remonter le temps</a> : proportionnalité et ordres de grandeur.</li>
+            <li>Profil « Adultes » : noms scientifiques et sources de chaque date.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="teacher-sections">
+        <section class="teacher-block" aria-labelledby="t-notions">
+          <h3 class="teacher-title" id="t-notions"><svg class="teacher-icon" aria-hidden="true" focusable="false" style="--duo:#ffd166"><use href="#i-key"/></svg> Les notions clés</h3>
+          <ul class="teacher-list">
+            <li><strong>Ancêtre commun :</strong> deux groupes qui se ressemblent descendent d'un même ancêtre, ils ne descendent pas l'un de l'autre.</li>
+            <li><strong>Temps profond :</strong> la vie existe depuis au moins 3,5 milliards d'années ; les animaux n'occupent que la fin de l'histoire.</li>
+            <li><strong>Fossiles et datation :</strong> chaque date indique le plus ancien fossile accepté ; de nouvelles découvertes peuvent la faire reculer.</li>
+            <li><strong>Extinctions :</strong> cinq grandes crises ont transformé la vie, dont celle des dinosaures non aviens il y a 66 millions d'années.</li>
+          </ul>
+        </section>
+
+        <section class="teacher-block" aria-labelledby="t-idees">
+          <h3 class="teacher-title" id="t-idees"><svg class="teacher-icon" aria-hidden="true" focusable="false" style="--duo:#ff9db8"><use href="#i-bulb"/></svg> Idées reçues corrigées dans le site</h3>
+          <ul class="teacher-list">
+            <li>L'humain ne descend pas du chimpanzé : ce sont nos plus proches cousins vivants, nous partageons un ancêtre commun.</li>
+            <li>La baleine ne descend pas de l'hippopotame : ce sont des groupes frères.</li>
+            <li>Les oiseaux sont des dinosaures ; les ptérosaures, eux, n'en sont pas.</li>
+            <li>Les humains n'ont jamais vécu avec les dinosaures non aviens : 66 millions d'années les séparent.</li>
+            <li>L'évolution n'est pas une échelle vers le « progrès » : c'est un buisson de lignées.</li>
+          </ul>
+        </section>
+
+        <section class="teacher-block" aria-labelledby="t-programmes">
+          <h3 class="teacher-title" id="t-programmes"><svg class="teacher-icon" aria-hidden="true" focusable="false" style="--duo:#9ec5ff"><use href="#i-cap"/></svg> Liens avec les programmes</h3>
+          <ul class="teacher-list">
+            <li><strong>France, cycle 3 :</strong> « Le vivant, sa diversité et les fonctions qui le caractérisent » : classer les organismes et exploiter les liens de parenté pour comprendre l'évolution.</li>
+            <li><strong>France, cycle 4 :</strong> « Le vivant et son évolution ».</li>
+            <li><strong>Québec :</strong> Science et technologie, univers vivant (primaire) et science et technologie (secondaire).</li>
+          </ul>
+        </section>
+
+        <section class="teacher-block" aria-labelledby="t-rigueur">
+          <h3 class="teacher-title" id="t-rigueur"><svg class="teacher-icon" aria-hidden="true" focusable="false" style="--duo:#8ef0c0"><use href="#i-flask"/></svg> Rigueur scientifique</h3>
+          <p>Chaque date est la meilleure estimation actuelle, accompagnée de sa source (Wikipédia, Smithsonian, UCMP Berkeley, articles de <em>Nature</em> et <em>Science</em>). Quand les scientifiques en discutent encore, la fiche le dit. Toutes les données sont dans un seul fichier, vérifié automatiquement à chaque modification.</p>
+        </section>
+
+        <section class="teacher-block" aria-labelledby="t-pratique">
+          <h3 class="teacher-title" id="t-pratique"><svg class="teacher-icon" aria-hidden="true" focusable="false" style="--duo:#c4b5fd"><use href="#i-board"/></svg> Pratique en classe</h3>
+          <ul class="teacher-list">
+            <li><strong>Liens directs :</strong> le bouton « 🔗 Partager » d'une fiche donne un lien à projeter ou à envoyer aux élèves.</li>
+            <li><strong>Accessibilité :</strong> navigation complète au clavier, compatible lecteur d'écran, lecture à voix haute, mode sombre.</li>
+            <li><strong>Hors ligne :</strong> une fois le site visité, il continue de fonctionner sans connexion.</li>
+          </ul>
+        </section>
+      </div>
+
+      <p class="teacher-contact">Une erreur, une idée ? Le projet est ouvert : <a href="https://github.com/RickDnamps/Life_evolution-/issues">proposer une correction sur GitHub</a>.</p>
     </section>
   </main>
 
@@ -129,10 +462,53 @@
   </dialog>
 
   <footer class="site-footer">
-    <p>Un site pour découvrir l'évolution de la vie, fait avec ❤️ pour les petits curieux.</p>
-    <p>Les dates sont les meilleures estimations des scientifiques aujourd'hui : elles peuvent changer avec de nouvelles découvertes !</p>
-    <p><a href="CREDITS.md">Crédits des images</a> · <a href="https://github.com/RickDnamps/Life_evolution-">Code source</a></p>
-    <p id="validation-summary" class="validation-summary"></p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="#accueil">
+          <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#logo"/></svg>
+          <span class="brand-text">La grande aventure<br><strong>de la vie sur Terre</strong></span>
+        </a>
+        <p>Un site pour découvrir l'évolution de la vie, fait avec <span aria-label="amour">❤️</span> pour les petits curieux.</p>
+        <ul class="trust-badges">
+          <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Gratuit</li>
+          <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Sans publicité</li>
+          <li><svg aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Sans inscription</li>
+        </ul>
+      </div>
+      <nav class="footer-col" aria-labelledby="footer-explore">
+        <h2 class="footer-title" id="footer-explore">Explorer</h2>
+        <ul>
+          <li><a href="#debut">Le grand début</a></li>
+          <li><a href="#arbre">L'arbre de la vie</a></li>
+          <li><a href="#frise">La ligne du temps</a></li>
+          <li><a href="#horloge">La Terre en 24 heures</a></li>
+          <li><a href="#voyage">Le voyage de tes ancêtres</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="footer-games">
+        <h2 class="footer-title" id="footer-games">Jouer</h2>
+        <ul>
+          <li><a href="#premier">Qui est apparu en premier ?</a></li>
+          <li><a href="#quiz">Le grand quiz</a></li>
+          <li><a href="#echelle">Remonter le temps</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="footer-adults">
+        <h2 class="footer-title" id="footer-adults">Pour les adultes</h2>
+        <ul>
+          <li><a href="#enseignants"><svg aria-hidden="true" focusable="false"><use href="#i-apple"/></svg> Pour les enseignants</a></li>
+          <li><a href="CREDITS.md"><svg aria-hidden="true" focusable="false"><use href="#i-image"/></svg> Crédits des images</a></li>
+          <li><a href="https://github.com/RickDnamps/Life_evolution-"><svg aria-hidden="true" focusable="false"><use href="#i-code"/></svg> Code source</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>Les dates sont les meilleures estimations des scientifiques aujourd'hui : elles peuvent changer avec de nouvelles découvertes !</p>
+      <p id="validation-summary" class="validation-summary"></p>
+    </div>
   </footer>
+
+  <!-- Contours des continents pour le globe de l'accueil (Natural Earth, domaine public, simplifiés). -->
+  <script type="application/json" id="earth-land">[[-90,-156,-88,-157,-87,-160,-108,-161,-97,-156],[-198,-144,-192,-145,-199,-145,-205,-144],[-137,-142,-138,-144,-142,-145,-150,-144,-148,-143,-144,-142,-143,-139,-141,-138],[-360,-169,-340,-168,-316,-171,-286,-170,-307,-167,-306,-164,-314,-162,-301,-163,-293,-161,-311,-158,-316,-156,-317,-154,-303,-155,-292,-153,-292,-151,-290,-150,-228,-147,-225,-149,-201,-151,-200,-150,-205,-148,-207,-145,-193,-147,-180,-147,-178,-145,-152,-148,-138,-146,-134,-144,-137,-139,-135,-134,-116,-127,-115,-128,-124,-130,-124,-132,-131,-136,-124,-141,-122,-147,-141,-153,-154,-153,-147,-156,-156,-157,-153,-160,-116,-166,-100,-163,-86,-164,-57,-161,-59,-159,-71,-159,-72,-157,-40,-151,-31,-149,-32,-147,-21,-143,0,-143,15,-140,22,-142,27,-140,54,-141,68,-137,77,-140,109,-132,123,-136,138,-136,139,-138,136,-141,138,-141,136,-144,140,-145,148,-140,176,-132,179,-134,192,-135,199,-134,206,-131,212,-134,227,-132,240,-135,270,-132,270,-131,275,-134,291,-134,298,-137,309,-137,323,-141,342,-143,339,-147,332,-149,327,-152,329,-156,334,-158,324,-158,320,-162,339,-168,357,-169],[-136,-108,-130,-109,-136,-111,-145,-109,-149,-106,-142,-108,-139,-105],[-117,-102,-116,-104,-121,-105,-122,-104],[291,-82,297,-82,295,-86,292,-87,289,-82],[346,-82,348,-83,346,-88,337,-93,333,-92,334,-90],[349,-72,354,-76,357,-75,350,-83,350,-80,348,-79,349,-75,345,-69],[100,-27,101,-31,99,-31,94,-50,91,-51,88,-50,87,-43,89,-40,89,-32,95,-29,98,-24],[287,-28,291,-30,293,-38,298,-41,306,-52,306,-63,299,-76,293,-78,290,-76,287,-78,281,-76,279,-72,276,-71,276,-69,274,-71,276,-66,272,-70,269,-65,263,-63,233,-70,230,-68,232,-64,229,-57,227,-52,228,-53,227,-49,228,-44,228,-45,233,-41,242,-39,251,-28,254,-28,259,-30,261,-25,265,-24,265,-22,273,-24,271,-30,280,-35,283,-30,284,-22],[249,-20,247,-20,248,-19,252,-17,255,-17],[217,-14,222,-13,231,-17,221,-16,211,-14,212,-12],[304,-11,299,-13,297,-11,300,-10,302,-11,304,-8],[268,-2,271,-7,277,-3,289,-8,295,-12,294,-15,297,-18,302,-21,296,-20,289,-15,285,-19,275,-17,277,-15,276,-11,267,-7,266,-8,264,-6,267,-4,261,-2,265,-1],[250,3,247,0,240,0,242,-3,247,-1,243,-4,246,-11,244,-11,245,-9,243,-9,242,-5,241,-6,241,-11,239,-11,238,-6,240,1],[257,2,257,-2,255,-1,255,4],[212,-12,205,-8,191,10,195,10,208,0,207,-1,212,-6],[236,4,238,2,236,2,232,-8,230,-8,220,-6,218,1,219,4,221,3,233,14,238,11,235,6],[253,17,251,11,247,16,246,15,244,14,245,16,251,18,251,20],[162,12,160,14,160,20,162,19,164,15],[243,37,244,37,245,34,243,29,248,28,248,25,247,26,241,28,242,29,240,30,240,33],[-145,40,-137,37,-142,37,-143,35,-149,37,-145,37,-147,39],[221,37,217,37,217,39,220,40,222,39],[-159,46,-148,41,-156,40,-154,41,-159,43,-164,45,-170,44,-165,46],[242,46,241,44,240,46,241,49,244,50],[31,76,30,73,28,74,25,76],[18,82,19,78,17,78,16,82],[282,74,281,70,272,67,270,69,262,68,264,66,261,62,259,67,265,71,271,71,273,75,275,74,279,76,281,82,283,83,284,80],[288,88,291,89,291,87,280,83,284,91],[-247,97,-251,98,-257,102,-252,101],[-112,101,-114,100,-106,97,-106,93,-108,94,-108,96,-111,94,-119,95,-115,101,-112,103],[287,101,289,98,286,99,285,96,287,92,285,93,284,92,284,99,284,108],[-14,105,-20,104,-18,106,-19,108,-15,110,-11,109],[-6,117,-8,115,-4,115,-6,112,3,105,3,103,-12,100,-7,103,-11,104,-8,105,-9,107,-6,108,-10,110,-10,112,-11,111,-12,114,-10,117],[-170,131,-160,127,-165,127,-174,127],[-29,133,-27,130,-37,127,-46,128,-44,129,-48,130,-44,130,-49,131,-47,133],[-360,138,-349,133,-349,134,-344,134,-340,132,-345,131,-346,129,-357,132,-360,132,-360,130,360,130,355,129,358,125,347,123,341,120,338,121,327,120,324,116,326,115,324,110,321,109,320,106,317,106,314,102,311,111,312,114,327,122,329,125,320,121,319,124,313,123,308,120,310,118,284,118,270,109,276,108,280,108,283,104,280,97,276,93,270,87,265,87,255,80,259,74,258,70,253,69,252,73,254,74,249,76,251,79,242,78,244,81,243,82,236,78,235,77,238,75,245,75,238,70,244,63,243,56,237,49,232,46,222,43,221,41,217,43,212,40,219,27,218,23,210,17,210,20,200,27,198,18,206,11,208,3,203,6,200,13,197,16,198,23,194,34,191,31,188,32,189,36,183,46,174,43,173,40,161,32,160,21,155,16,147,32,145,43,141,42,133,51,115,51,113,54,109,53,103,56,100,60,96,60,102,50,103,52,104,48,108,48,113,53,114,48,120,45,115,38,111,34,97,28,87,25,85,34,78,43,77,47,69,56,70,59,68,55,65,60,71,46,74,44,75,37,87,25,85,23,89,21,102,24,102,21,95,8,81,-5,78,-9,78,-17,81,-22,80,-32,70,-40,71,-48,65,-51,65,-57,60,-62,52,-68,39,-70,36,-68,36,-63,30,-54,29,-44,24,-36,24,-29,27,-24,26,-17,24,-10,18,-2,20,6,17,10,14,9,12,9,9,13,5,13,-4,9,-9,10,-16,9,-25,15,-33,24,-35,29,-32,36,-34,44,-29,53,-19,60,-19,65,-12,72,-4,70,3,73,19,75,22,74,21,68,38,61,40,64,43,66,58,62,62,63,68,62,72,69,72,73,55,73,52,79,58,82,67,84,77,82,83,84,73,90,78,95,70,93,73,90,68,89,65,91,67,92,61,93,55,85,58,82,45,81,48,75,46,76,46,73,45,73,39,81,39,83,26,91,25,91,25,88,37,80,34,81,34,78,32,76,31,80,18,89,13,86,6,86,6,84,2,82,0,77,-4,73,-11,72,-13,74,-18,74,-19,86,-3,88,-2,92,-9,97,-3,97,-4,100,3,100,9,106,16,107,18,108,17,114,21,115,22,113,19,111,22,108,39,109,43,110,43,115,48,114,49,117,47,118,58,120,46,120,43,121,43,126,51,130,48,132,36,125,34,123,38,120,34,117,32,112,26,111,21,119,17,117,11,117,10,124,38,140,56,142,63,141,60,140,62,139,81,136,82,134,80,133,66,133,70,132,70,129,74,128,73,130,74,130,79,129,81,130,80,131,84,133,88,132,89,134,87,137,93,136,94,135,91,134,93,133,107,138,109,138,107,136,118,138,120,137,122,138,120,139,121,140,137,136,138,137,134,139,133,142,140,146,146,144,144,143,146,141,145,138,147,137,143,133,145,132,150,136,150,138,147,139,149,141,146,143,150,144,149,146,151,145,151,143,153,142,152,144,155,145,163,143,161,147,174,148,172,149,174,150,202,153,209,155,214,153,228,152,219,148,246,146,247,147,254,147,263,142,265,144,280,143,278,145,281,146,299,144,306,142,318,142,322,139,336,139,339,137,342,138,341,140,357,139],[98,83,101,81,98,78,98,75,105,73,108,74,106,82,109,82,107,84,106,82,105,86,101,89,106,91,106,92,102,94,93,89],[-191,138,-197,138,-200,139,-198,139],[-181,139,-181,137,-178,139,-175,134,-171,140,-165,139,-163,138,-164,136,-163,135,-167,133,-172,133,-175,130,-186,124,-189,118,-186,118,-185,114,-165,110,-164,107,-160,102,-157,105,-160,109,-153,113,-157,118,-155,120,-156,125,-148,125,-139,122,-139,118,-135,116,-129,121,-123,114,-124,113,-115,109,-111,104,-120,100,-133,100,-142,94,-130,98,-128,97,-130,96,-129,92,-123,92,-121,94,-120,92,-131,87,-132,89,-129,91,-134,90,-141,86,-140,83,-147,82,-144,82,-148,82,-150,78,-151,79,-150,77,-152,74,-153,78,-153,76,-154,76,-151,71,-163,63,-161,50,-163,52,-168,60,-178,61,-178,59,-180,58,-188,59,-193,57,-196,45,-193,39,-189,36,-184,37,-182,39,-181,42,-174,43,-178,32,-167,31,-168,22,-163,18,-159,19,-154,17,-150,22,-144,25,-142,24,-144,23,-143,18,-143,22,-140,24,-136,21,-124,21,-125,20,-114,12,-108,12,-103,8,-100,3,-101,0,-97,0,-97,-2,-96,-1,-90,-3,-89,-5,-80,-6,-71,-10,-69,-15,-70,-18,-77,-26,-79,-36,-82,-44,-95,-50,-98,-57,-108,-69,-112,-70,-117,-68,-114,-74,-118,-77,-125,-78,-125,-82,-130,-82,-130,-84,-127,-85,-130,-87,-131,-90,-135,-91,-135,-93,-131,-94,-138,-101,-136,-105,-142,-106,-143,-108,-151,-103,-151,-97,-148,-94,-151,-93,-149,-88,-146,-89,-145,-85,-149,-86,-146,-79,-147,-74,-143,-65,-140,-40,-143,-35,-152,-29,-160,-14,-163,-12,-163,-9,-160,-5,-162,-4,-162,-2,-154,8,-156,17,-159,18,-162,14,-171,20,-175,27,-182,28,-189,32,-193,31,-207,37,-211,40,-212,46,-228,63,-230,64,-229,60,-219,47,-220,46,-224,49,-225,52,-230,55,-228,57,-235,66,-241,69,-249,81,-248,91,-249,96,-245,94,-246,98,-255,102,-256,105,-268,116,-294,122,-303,118,-301,123,-317,112,-330,109,-315,115,-314,118,-324,117,-324,119,-328,120,-332,123,-329,126,-322,128,-323,129,-322,130,-330,129,-336,131,-329,133,-323,132,-334,137,-313,143,-273,138,-256,141,-252,139,-243,140,-230,138,-228,137,-231,136,-218,135,-216,136,-218,137,-216,137,-212,138,-203,135,-195,137,-192,136,-192,135,-188,138,-193,140,-190,144,-186,143,-183,140,-185,139],[-228,146,-220,146,-216,143,-217,146,-211,145,-209,142,-202,139,-205,139,-205,138,-214,138,-227,137,-232,138,-235,140,-225,141,-236,141,-232,143,-239,143,-236,145],[-153,146,-160,146,-162,147,-161,148],[-173,146,-172,145,-165,148,-162,144,-156,146,-148,143,-144,143,-136,140,-134,138,-138,137,-124,134,-128,130,-136,133,-129,127,-130,125,-138,127,-132,124,-150,129,-157,129,-148,131,-146,135,-158,140,-177,141,-179,142,-177,142,-180,142,-180,144,-177,147,-172,148],[-201,148,-194,147,-196,146,-193,145,-193,143,-197,143,-205,145,-201,145,-203,147],[-186,146,-191,144,-191,148,-181,148],[-241,143,-246,142,-252,144,-248,147,-250,149,-243,149,-231,147],[-187,150,-191,149,-194,150,-193,151],[290,151,289,150,278,149,274,151,278,152],[-197,153,-195,153,-196,150,-202,151,-205,151,-205,153],[-216,152,-212,152,-213,150,-227,149,-224,150,-233,150,-235,150,-231,153,-218,151,-221,153],[115,141,107,142,103,144,111,150,122,153,138,153,117,149,111,145],[-189,154,-178,151,-162,151,-160,151,-161,149,-185,150,-188,153,-194,154],[-232,155,-234,153,-243,152,-246,152,-242,154],[37,159,43,158,38,157,34,154,26,156,21,159],[51,161,55,160,52,159,37,160],[200,158,190,158,182,161,192,163,200,160],[-174,159,-172,159,-182,156,-192,159,-193,160,-189,162,-185,163],[-137,166,-124,165,-135,163,-131,163,-142,160,-154,159,-151,157,-160,154,-156,154,-179,153,-176,154,-177,156,-170,155,-176,157,-170,159,-174,161,-164,161,-175,161,-183,164],[-54,167,-42,165,-63,164,-24,163,-40,160,-35,160,-39,158,-39,155,-37,154,-43,153,-40,152,-39,150,-41,150,-39,149,-47,147,-45,144,-50,145,-44,141,-51,143,-50,142,-53,140,-45,140,-80,131,-86,125,-87,120,-93,122,-98,123,-107,132,-108,134,-102,140,-109,139,-109,142,-103,141,-112,143,-109,145,-115,149,-123,152,-137,152,-143,154,-134,155,-146,157,-131,159,-136,160,-121,164,-101,165,-89,163,-94,165,-87,166]]</script>
 </body>
 </html>
