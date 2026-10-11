@@ -503,6 +503,28 @@ function setupTreeModes(context) {
     viz.onShow?.();
   };
 
+  // Raccourcis « Trouve dans l'arbre » : déplient l'arbre jusqu'à un animal connu.
+  const FINDER = {
+    chiens: 'Chien', chat: 'Chat', lion: 'Lion', tigre: 'Tigre', dauphins: 'Dauphin', chevaux_modernes: 'Cheval',
+    t_rex: 'T. rex', poules: 'Poule', grand_requin_blanc: 'Requin blanc', papillons: 'Papillon',
+    cephalopodes: 'Pieuvre', homo_sapiens: 'Toi !',
+  };
+  const finder = document.getElementById('tree-finder');
+  if (finder) {
+    finder.replaceChildren(...Object.entries(FINDER).filter(([id]) => context.index.byId.has(id)).map(([id, label]) => {
+      const node = context.index.byId.get(id);
+      return h('button', {
+        type: 'button', class: 'tree-finder-chip', 'data-tip-node': id,
+        'aria-label': `Montrer ${node.name_fr} dans l'arbre`,
+        onclick: async () => {
+          if (!viz) await select('illustre');
+          document.getElementById('treeviz').scrollIntoView({ block: 'start', behavior: 'smooth' });
+          viz?.reveal?.(id);
+        },
+      }, h('span', { 'aria-hidden': 'true' }, node.emoji), label);
+    }));
+  }
+
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => select(tab.dataset.treeMode));
     tab.addEventListener('keydown', (event) => {

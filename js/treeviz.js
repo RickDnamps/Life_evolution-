@@ -95,7 +95,11 @@ export function mountTreeViz(container, ctx) {
   collect(root, 0, null);
 
   // État initial : tout est déplié, sauf quelques familles à découvrir (badge « +N »).
-  const INITIAL_CLOSED = ['arthropodes', 'oiseaux', 'cetaces', 'equides'];
+  const INITIAL_CLOSED = [
+    'arthropodes', 'mollusques', 'actinopterygiens', 'requins', 'squamates', 'pterosaures',
+    'sauropodomorphes', 'ornithischiens', 'theropodes', 'marsupiaux', 'elephants', 'rongeurs',
+    'carnivores', 'artiodactyles', 'perissodactyles',
+  ];
   const open = new Set([...info.values()].filter((it) => it.kids.length).map((it) => it.id));
   INITIAL_CLOSED.forEach((closed) => open.delete(closed));
 
