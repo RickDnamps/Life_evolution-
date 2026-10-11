@@ -9,6 +9,7 @@ import { mountTree } from './tree.js';
 
 const VIEWS = {
   accueil: { title: 'Accueil' },
+  debut:   { title: 'Le grand début', module: './story.js', container: 'story' },
   arbre:   { title: "L'arbre de la vie" },
   frise:   { title: 'La ligne du temps', module: './timeline.js', container: 'timeline' },
   horloge: { title: 'La Terre en 24 heures', module: './clock.js', container: 'clock' },
@@ -19,6 +20,7 @@ const VIEWS = {
 };
 
 const TILES = [
+  { view: 'debut',   emoji: '🌋', title: 'Le grand début',            text: 'La naissance de la Terre, de la Lune, des océans… et de la vie !', color: '#ffadad' },
   { view: 'arbre',   emoji: '🌳', title: "L'arbre de la vie",          text: 'Découvre la grande famille de tous les êtres vivants.', color: '#b9fbc0' },
   { view: 'frise',   emoji: '🕰️', title: 'La ligne du temps',          text: 'Voyage à travers les ères, de la première cellule à aujourd\'hui.', color: '#a0c4ff' },
   { view: 'horloge', emoji: '⏰', title: 'La Terre en 24 heures',      text: 'À quelle heure sont arrivés les dinosaures ? Et toi ?', color: '#ffd6a5' },

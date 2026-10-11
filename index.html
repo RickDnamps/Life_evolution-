@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/timeline.css">
   <link rel="stylesheet" href="css/games.css">
   <link rel="stylesheet" href="css/journey.css">
+  <link rel="stylesheet" href="css/story.css">
   <script>
     // Applique le thème mémorisé avant l'affichage, pour éviter un flash.
     try {
@@ -45,6 +46,7 @@
   <nav class="main-nav" aria-label="Activités">
     <ul>
       <li><a href="#accueil" data-nav="accueil"><span aria-hidden="true">🏠</span> Accueil</a></li>
+      <li><a href="#debut" data-nav="debut"><span aria-hidden="true">🌋</span> Le grand début</a></li>
       <li><a href="#arbre" data-nav="arbre"><span aria-hidden="true">🌳</span> Arbre de la vie</a></li>
       <li><a href="#frise" data-nav="frise"><span aria-hidden="true">🕰️</span> Ligne du temps</a></li>
       <li><a href="#horloge" data-nav="horloge"><span aria-hidden="true">⏰</span> La Terre en 24 h</a></li>
@@ -64,6 +66,7 @@
           <h1 id="accueil-title">Il était une fois… la vie !</h1>
           <p class="lead">Il y a très, très longtemps, la Terre n'abritait aucun être vivant. Puis des êtres minuscules sont apparus et, petit à petit, ils ont donné naissance à tous les animaux que tu connais… et même à toi !</p>
           <p class="lead">Pars à l'aventure pour découvrir comment c'est arrivé.</p>
+          <a class="btn hero-start" href="#debut">▶ Commencer au tout début</a>
         </div>
         <div class="hero-art" aria-hidden="true">
           <span class="float f1">🦠</span><span class="float f2">🐟</span><span class="float f3">🦖</span>
@@ -72,6 +75,11 @@
       </div>
       <div id="did-you-know" class="did-you-know" aria-live="polite"></div>
       <ul class="tiles" id="home-tiles"></ul>
+    </section>
+
+    <section class="view" data-view="debut" aria-labelledby="debut-title" hidden>
+      <h2 id="debut-title" class="view-title"><span aria-hidden="true">🌋</span> Le grand début</h2>
+      <div id="story"></div>
     </section>
 
     <section class="view" data-view="arbre" aria-labelledby="arbre-title" hidden>

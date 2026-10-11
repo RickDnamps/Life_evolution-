@@ -10,6 +10,7 @@ Le site est beau, coloré et interactif, et il reste scientifiquement exact. Cha
 
 | Activité | Ce qu'on y fait |
 |---|---|
+| 🌋 **Le grand début** | L'histoire avant les animaux, en 7 chapitres animés : le nuage d'où naît le Soleil, la Terre de lave, la naissance de la Lune, les premiers océans, la « recette de la vie », LUCA et les premières traces de vie. |
 | 🌳 **Arbre de la vie** | Un arbre phylogénétique dépliable : la flèche ▸ dévoile les descendants d'un groupe, et les boutons « Tout ouvrir » et « Tout fermer » ouvrent ou referment tout l'arbre. |
 | 📖 **Fiche détaillée** | Une grande image, une description pour les enfants, un fait étonnant, l'âge et l'ère. La flèche « Pour les curieux » dit ce que le groupe mangeait, où il vivait, sa taille et son super-pouvoir, et pose une question à méditer. On y trouve aussi sa famille (ancêtres, descendants, groupes frères) et le bouton « En savoir plus » pour la version adulte et la source. |
 | 🕰️ **Ligne du temps** | Une frise horizontale en segments, pour voir à la fois 3 700 millions d'années et 300 000 ans. Les ères sont colorées et les cinq grandes extinctions sont marquées. |
@@ -29,7 +30,7 @@ css/                        styles (style.css commun + un fichier par activité)
 js/                         modules JavaScript (vanilla, sans framework ni étape de build)
   app.js                    chargement des données, navigation, recherche, thème
   validate.js               même validation que scripts/validate.py, dans le navigateur
-data/evolution_tree.json    LA source de vérité : arbre, ères, extinctions, quiz
+data/evolution_tree.json    LA source de vérité : arbre, ères, extinctions, quiz, « Le grand début »
 data/SCHEMA.md              description de chaque champ
 images/                     images des groupes (WebP ou illustrations SVG)
 scripts/validate.py         validateur (Python, bibliothèque standard seulement)
@@ -61,7 +62,7 @@ Le validateur vérifie :
 - **aucun descendant n'apparaît avant son ancêtre** (`enfant.appeared_mya <= parent.appeared_mya`) ;
 - les champs obligatoires sont présents et bien typés, et `category` fait partie de la liste permise ;
 - chaque image existe et a un crédit et une licence ;
-- les ères, les extinctions et le quiz sont bien formés.
+- les ères, les extinctions, le quiz et les chapitres du « Grand début » sont bien formés.
 
 En cas d'erreur, il affiche le chemin complet du nœud fautif (par exemple `vie › animaux › bilateriens › vertebres`) et les dates en conflit, puis se termine avec un code non nul. Dans la page, un nœud invalide porte un badge rouge.
 
